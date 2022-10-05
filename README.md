@@ -15,6 +15,7 @@ DEPLOYED BACKEND REPOSITORY - [CLICK HERE](https://github.com/Jbachtiger/ci-pp5-
 
 ## Table of Contents
 - [User Experience (UX)](#user-experience)
+    - [Site Purpose](#site-purpose)
     - [Site Goals](#site-goals)
     - [Epics](#epics)
     - [User Stories](#user-stories)
@@ -54,9 +55,18 @@ DEPLOYED BACKEND REPOSITORY - [CLICK HERE](https://github.com/Jbachtiger/ci-pp5-
 
 
 ## User Experience
+### Site Purpose
+To be the go-to gaming community by sharing latest news, reviews, and interesting gaming trivia that users can then comment on and have friendly discussion to share their passion. 
+
 ### Site Goals
+- To provide users with the latest news, reviews, and trivia about gaming
+- To bring people together and create a sense of belonging
+- To share with the community and create interesting discussions
+- To share local events with each other
 
 __Sites Ideal Users__
+- An interest in gaming no matter what medium
+- Looking for a gaming community to reach out and connect with like-minded individuals
 
 
 ### Epics
