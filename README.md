@@ -85,10 +85,22 @@ Below are links to each of the individual user stories that were completed withi
     - Keep secret keys secure [#3](https://github.com/Jbachtiger/ci-pp4-the-unconventional-programmer/issues/3)
     - Early deployment of the site to Heroku [#4](https://github.com/Jbachtiger/ci-pp4-the-unconventional-programmer/issues/4)
 
-
-
 ## Design
 ### Wireframes
+- About
+![About](docs/wireframes/about.png)
+
+- Events
+![Events](docs/wireframes/events.png)
+
+- Forms
+![Forms](docs/wireframes/forms.png)
+
+- Homepage
+![Homepage](docs/wireframes/homepage.png)
+
+- Profile
+![Profile](docs/wireframes/profile.png)
 
 ### Color Scheme
 
