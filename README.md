@@ -114,7 +114,7 @@ Below are links to each of the individual user stories that were completed withi
 
 ## Database Schema
 
-![Database Schema](docs/database-schema/database-schema.png)
+![Database Schema](docs/database_schema/gamer_verse%20_database_schema.png)
 
 ## Features
 
