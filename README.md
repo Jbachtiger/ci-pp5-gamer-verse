@@ -70,10 +70,16 @@ __Sites Ideal Users__
 
 
 ### Epics
-6 Epics were created which were further developed into 20 User Stories. The details of each epic along with the associated user stories can be found in the kanban board [here](https://github.com/users/Jbachtiger/projects/2). 
+8 Epics were created which were further developed into 32 User Stories. The details of each epic along with the associated user stories can be found in the kanban board [here](https://github.com/users/Jbachtiger/projects/3). 
 
-1. Initial Django Setup [#1](https://github.com/Jbachtiger/ci-pp4-the-unconventional-programmer/issues/1)
-
+1. Initial Django REST and React Setup [#1](https://github.com/Jbachtiger/ci-pp5-gamer-verse/issues/1)
+2. Authentication [#2](https://github.com/Jbachtiger/ci-pp5-gamer-verse/issues/2)
+3. Navigation [#3](https://github.com/Jbachtiger/ci-pp5-gamer-verse/issues/3)
+4. Posts [#4](https://github.com/Jbachtiger/ci-pp5-gamer-verse/issues/4)
+5. Comments [#5](https://github.com/Jbachtiger/ci-pp5-gamer-verse/issues/5)
+6. Profiles [#6](https://github.com/Jbachtiger/ci-pp5-gamer-verse/issues/6)
+7. Events [#7](https://github.com/Jbachtiger/ci-pp5-gamer-verse/issues/7)
+8. Reviews [#38](https://github.com/Jbachtiger/ci-pp5-gamer-verse/issues/38)
 
 ### User Stories 
 
