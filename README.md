@@ -1,6 +1,11 @@
 # PP5 - Advanced Frontend  - Gamer Verse
 
 ## Introduction
+Gamer Verse is a content sharing platform to share reviews, posts and have social interactions with likeminded individuals about games. Users will be able to find posts and reviews relating to the gaming space, along with community events in local cities. This is the frontend section of the project built to work in conjuction with the backend DRF API as the database.
+
+DEPLOYED FRONTEND (HEROKU) - CLICK HERE
+DEPLOYED API (HEROKU) - [CLICK HERE](https://gamer-verse-drf-api.herokuapp.com/)
+DEPLOYED BACKEND REPOSITORY - [CLICK HERE](https://github.com/Jbachtiger/ci-pp5-gamer-verse-drf-api)
 
 
 ![Mockup]()
