@@ -11,13 +11,13 @@ const NavBar = () => {
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="mr-auto">
-            <Nav.Link>Community Hub</Nav.Link>
-            <Nav.Link>Reviews</Nav.Link>
-            <Nav.Link>Events</Nav.Link>
-            <Nav.Link>Login</Nav.Link>
-            <Nav.Link>Sign Up</Nav.Link>
-            <Nav.Link>About</Nav.Link>
+          <Nav className="ml-auto">
+            <Nav.Link><i class="fas fa-users"></i> Community Hub</Nav.Link>
+            <Nav.Link><i class="fas fa-star"></i> Reviews</Nav.Link>
+            <Nav.Link><i class="fas fa-calendar-check"></i> Events</Nav.Link>
+            <Nav.Link><i class="fas fa-sign-in-alt"></i> Login</Nav.Link>
+            <Nav.Link><i class="fas fa-user-plus"></i> Sign Up</Nav.Link>
+            <Nav.Link><i class="fas fa-address-card"></i> About</Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>
