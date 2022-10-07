@@ -84,27 +84,11 @@ const SignInForm = () => {
           </Alert>
         ))}
 
-        <Form.Group controlId="password2">
-          <Form.Label>Confirm password</Form.Label>
-          <Form.Control
-            type="password"
-            placeholder="Re-enter password"
-            name="password2"
-            value={password2}
-            onChange={handleChange}
-          />
-        </Form.Group>
-        {errors.password2?.map((message, idx) => (
-          <Alert variant="warning" key={idx}>
-            {message}
-          </Alert>
-        ))}
-
         <Button
           className={`${btnStyles.Button} ${btnStyles.Wide}`}
           type="submit"
         >
-          Sign Up
+          Sign In
         </Button>
         {errors.non_field_errors?.map((message, idx) => (
           <Alert variant="warning" className="mt-4" key={idx}>
@@ -116,8 +100,8 @@ const SignInForm = () => {
       <div>
         <p>
           Already have an account?
-          <Link to="/signin" className={styles.Link}>
-            <strong> Sign in here!</strong>
+          <Link to="/signup" className={styles.Link}>
+            <strong> Sign up here!</strong>
           </Link>
         </p>
       </div>
