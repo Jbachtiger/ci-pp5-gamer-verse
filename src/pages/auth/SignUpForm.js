@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { Form, Button, Container } from "react-bootstrap";
 import styles from "../../styles/SignUpForm.module.css";
+import btnStyles from "../../styles/Button.module.css";
 
 const SignUpForm = () => {
   return (
@@ -36,7 +37,7 @@ const SignUpForm = () => {
           />
         </Form.Group>
 
-        <Button variant="primary" type="submit">
+        <Button className={`${btnStyles.Button} ${btnStyles.Wide}`} type="submit">
           Sign Up
         </Button>
       </Form>
