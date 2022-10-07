@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+  }
+
 .App {
     font-family: "Roboto", sans-serif;
     background-color: #E9EFFF;
@@ -7,3 +11,22 @@
 .Main {
     padding-top: 81px;
   }
+
+a {
+    color: #fff;
+    transition: color ease-in-out 0.3s;
+}
+
+a:hover {
+  text-decoration: none;
+  color: #096A2E;
+}
+
+a:hover i {
+    color: #096A2E;
+    transition: color ease-in-out 0.3s;
+}
+
+i {
+  padding: 3px;
+}
