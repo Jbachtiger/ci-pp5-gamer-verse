@@ -9,41 +9,40 @@ import axios from "axios";
  * Renders SignUp form
  * Moments walkthrough used as a guide for variables, data handling and error handling code
  */
-const SignInForm = () => {
-  const [signUpData, setSignUpData] = useState({
+function SignInForm() {
+  const [signInData, setSignInData] = useState({
     username: "",
-    password1: "",
-    password2: "",
+    password: "",
   });
-  const { username, password1, password2 } = signUpData;
+  const { username, password } = signInData;
 
   const [errors, setErrors] = useState({});
 
   const history = useHistory();
 
   /**
-   * Converts inputed data into Key:Value pairs
-   */
-  const handleChange = (event) => {
-    setSignUpData({
-      ...signUpData,
-      [event.target.name]: event.target.value,
-    });
-  };
-  
-  /**
    * Pushes data to API
-   * Redirects the user to signin page
+   * Redirects the user to homepage
    * Error messages displayed for invalid data inputs
    */
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-      await axios.post("/dj-rest-auth/registration/", signUpData);
-      history.push("/signin");
+      await axios.post("/dj-rest-auth/login/", signInData);
+      history.push("/");
     } catch (err) {
       setErrors(err.response?.data);
     }
+  };
+
+  /**
+   * Converts inputed data into Key:Value pairs
+   */
+  const handleChange = (event) => {
+    setSignInData({
+      ...signInData,
+      [event.target.name]: event.target.value,
+    });
   };
 
   return (
@@ -55,30 +54,29 @@ const SignInForm = () => {
           <Form.Label>Username</Form.Label>
           <Form.Control
             type="text"
-            placeholder="Enter username"
+            placeholder="Username"
             name="username"
             value={username}
             onChange={handleChange}
           />
-          <Form.Text className="text-muted"></Form.Text>
         </Form.Group>
         {errors.username?.map((message, idx) => (
-          <Alert variant="warning" key={idx}>
+          <Alert key={idx} variant="warning">
             {message}
           </Alert>
         ))}
 
-        <Form.Group controlId="password1">
+        <Form.Group controlId="password">
           <Form.Label>Password</Form.Label>
           <Form.Control
             type="password"
             placeholder="Enter password"
-            name="password1"
-            value={password1}
+            name="password"
+            value={password}
             onChange={handleChange}
           />
         </Form.Group>
-        {errors.password1?.map((message, idx) => (
+        {errors.password?.map((message, idx) => (
           <Alert variant="warning" key={idx}>
             {message}
           </Alert>
@@ -99,7 +97,7 @@ const SignInForm = () => {
 
       <div>
         <p>
-          Already have an account?
+          Don't have an account?
           <Link to="/signup" className={styles.Link}>
             <strong> Sign up here!</strong>
           </Link>
@@ -107,6 +105,6 @@ const SignInForm = () => {
       </div>
     </Container>
   );
-};
+}
 
 export default SignInForm;
