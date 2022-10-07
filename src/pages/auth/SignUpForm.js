@@ -1,10 +1,31 @@
-import React from "react";
+import React, {useState} from "react";
 import { Link } from "react-router-dom";
 import { Form, Button, Container } from "react-bootstrap";
 import styles from "../../styles/SignUpForm.module.css";
 import btnStyles from "../../styles/Button.module.css";
 
+/**
+ * Renders SignUp form
+ * Moments walkthrough used as a guide for variables, data handling and error handling code
+ */
 const SignUpForm = () => {
+  const [signUpData, setSignUpData] = useState({
+    username: '',
+    password1: '',
+    password2: '',
+  })
+  const { username, password1, password2 } = signUpData;
+
+  /**
+   * Converts inputed data into Key:Value pairs
+   */
+  const handleChange = (event) => {
+    setSignUpData({
+      ...signUpData,
+      [event.target.name]: event.target.value,
+    });
+  };
+
   return (
     <Container className={styles.Container}>
       <h1>Sign Up!</h1>
@@ -15,6 +36,8 @@ const SignUpForm = () => {
             type="text"
             placeholder="Enter username"
             name="username"
+            value={username}
+            onChange={handleChange}
           />
           <Form.Text className="text-muted"></Form.Text>
         </Form.Group>
@@ -24,7 +47,9 @@ const SignUpForm = () => {
           <Form.Control
             type="password"
             placeholder="Enter password"
-            name="password"
+            name="password1"
+            value={password1}
+            onChange={handleChange}
           />
         </Form.Group>
 
@@ -34,6 +59,8 @@ const SignUpForm = () => {
             type="password"
             placeholder="Re-enter password"
             name="password2"
+            value={password2}
+            onChange={handleChange}
           />
         </Form.Group>
 
