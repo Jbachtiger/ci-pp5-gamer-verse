@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link, useHistory } from "react-router-dom";
 import { Form, Button, Container, Alert } from "react-bootstrap";
-import styles from "../../styles/SignUpForm.module.css";
+import styles from "../../styles/SignInForm.module.css";
 import btnStyles from "../../styles/Button.module.css";
 import axios from "axios";
 
