@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "..styles/Avatar.module.css";
+import styles from "../styles/Avatar.module.css";
 
 /**
  * Code provided by Moments walthrough
