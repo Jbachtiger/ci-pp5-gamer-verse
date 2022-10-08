@@ -27,7 +27,6 @@ const NavBar = () => {
       <NavLink
         to="/"
         className={styles.NavLink}
-        activeClassName={styles.Active}
         onClick={handleSignOut}
       >
         <i className="fas fa-sign-out-alt"></i>Sign out
