@@ -93,7 +93,7 @@ const PostCreateForm = () => {
         <Form.Group>
           <Form.Label>What's on your mind?</Form.Label>
           <Form.Control
-            type="textarea"
+            as="textarea"
             rows={6}
             name="description"
             value={description}
