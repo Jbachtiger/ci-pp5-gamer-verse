@@ -1,7 +1,15 @@
 import React, { useRef, useState } from "react";
-import { Container, Form, Button, Alert } from "react-bootstrap";
+
+import { Container, Form, Button, Alert, Image } from "react-bootstrap";
 import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 import { axiosReq } from "../../api/axiosDefaults";
+
+import Asset from "../../components/Asset";
+
+import Upload from "../../assets/upload.png";
+
+import appStyles from "../../App.module.css";
+import btnStyles from "../../styles/Button.module.css";
 
 /**
  * Render PostCreate form
@@ -85,10 +93,10 @@ const PostCreateForm = () => {
           />
         </Form.Group>
         {errors?.title?.map((message, idx) => (
-        <Alert variant="warning" key={idx}>
-          {message}
-        </Alert>
-      ))}
+          <Alert variant="warning" key={idx}>
+            {message}
+          </Alert>
+        ))}
 
         <Form.Group>
           <Form.Label>What's on your mind?</Form.Label>
@@ -103,10 +111,10 @@ const PostCreateForm = () => {
           />
         </Form.Group>
         {errors?.description?.map((message, idx) => (
-        <Alert variant="warning" key={idx}>
-          {message}
-        </Alert>
-      ))}
+          <Alert variant="warning" key={idx}>
+            {message}
+          </Alert>
+        ))}
 
         <Form.Group>
           <Form.Label>Topic you want to talk about:</Form.Label>
@@ -126,21 +134,44 @@ const PostCreateForm = () => {
           </Form.Control>
         </Form.Group>
         {errors?.game_medium?.map((message, idx) => (
-        <Alert variant="warning" key={idx}>
-          {message}
-        </Alert>
-      ))}
+          <Alert variant="warning" key={idx}>
+            {message}
+          </Alert>
+        ))}
 
-        <Form.Group controlId="formBasicEmail">
-          <Form.Label>IMAGE</Form.Label>
-          <Form.Control type="email" placeholder="Enter email" />
-          <Form.File id="exampleFormControlFile1" label="Example file input" />
+        <Form.Group>
+          {image ? (
+            <>
+              <figure>
+                <Image className={appStyles.Image} src={image} rounded />
+              </figure>
+              <div>
+                <Form.Label
+                  className={`${btnStyles.Button} ${btnStyles.Wide} btn`}
+                  htmlFor="image-upload"
+                >
+                  Replace image
+                </Form.Label>
+              </div>
+            </>
+          ) : (
+            <Form.Label htmlFor="image-upload">
+              <Asset src={Upload} message="Click here to upload an image" />
+            </Form.Label>
+          )}
+
+          <Form.File
+            id="image-upload"
+            accept="image/*"
+            onChange={handleChangeImage}
+            ref={imageInput}
+          />
         </Form.Group>
         {errors?.image?.map((message, idx) => (
-        <Alert variant="warning" key={idx}>
-          {message}
-        </Alert>
-      ))}
+          <Alert variant="warning" key={idx}>
+            {message}
+          </Alert>
+        ))}
 
         <Button variant="primary" type="submit">
           Post
