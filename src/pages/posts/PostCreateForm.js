@@ -31,6 +31,21 @@ const PostCreateForm = () => {
         });
     };
 
+    /**
+     * Change uploaded image and clear previously uploaded image
+     */
+    const handleChangeImage = (event) => {
+        if (event.target.files.length) {
+          URL.revokeObjectURL(image);
+          setPostData({
+            ...postData,
+            image: URL.createObjectURL(event.target.files[0]),
+          });
+        }
+      };
+
+
+
   return (
     <Container>
       <Form>
