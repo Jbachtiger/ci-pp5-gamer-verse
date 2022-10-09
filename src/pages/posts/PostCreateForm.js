@@ -66,7 +66,7 @@ const PostCreateForm = () => {
       const { data } = await axiosReq.post("/posts/", formData);
       history.push(`/posts/${data.id}`);
     } catch (err) {
-      console.log(err);
+      //   console.log(err);
       if (err.response?.status !== 401) {
         setErrors(err.response?.data);
       }
@@ -176,7 +176,7 @@ const PostCreateForm = () => {
         <Button variant="primary" type="submit">
           Post
         </Button>
-        <Button variant="primary" type="submit">
+        <Button onClick={() => history.goBack()} variant="primary" type="submit">
           Cancel
         </Button>
       </Form>
