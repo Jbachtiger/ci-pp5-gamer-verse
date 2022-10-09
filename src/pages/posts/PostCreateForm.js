@@ -1,5 +1,5 @@
 import React, { useRef, useState } from "react";
-import { Container, Form, Button } from "react-bootstrap";
+import { Container, Form, Button, Alert } from "react-bootstrap";
 import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 import { axiosReq } from "../../api/axiosDefaults";
 
@@ -84,6 +84,11 @@ const PostCreateForm = () => {
             placeholder="Be creative, give us an idea of what your post is about"
           />
         </Form.Group>
+        {errors?.title?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+          {message}
+        </Alert>
+      ))}
 
         <Form.Group>
           <Form.Label>What's on your mind?</Form.Label>
@@ -97,8 +102,13 @@ const PostCreateForm = () => {
             placeholder="It's time to get those writing juices flowing"
           />
         </Form.Group>
+        {errors?.description?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+          {message}
+        </Alert>
+      ))}
 
-        <Form.Group controlId="formBasicEmail">
+        <Form.Group>
           <Form.Label>Topic you want to talk about:</Form.Label>
           <Form.Control
             as="select"
@@ -115,12 +125,22 @@ const PostCreateForm = () => {
             <option value="other">Other</option>
           </Form.Control>
         </Form.Group>
+        {errors?.game_medium?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+          {message}
+        </Alert>
+      ))}
 
         <Form.Group controlId="formBasicEmail">
           <Form.Label>IMAGE</Form.Label>
           <Form.Control type="email" placeholder="Enter email" />
           <Form.File id="exampleFormControlFile1" label="Example file input" />
         </Form.Group>
+        {errors?.image?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+          {message}
+        </Alert>
+      ))}
 
         <Button variant="primary" type="submit">
           Post
