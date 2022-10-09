@@ -1,6 +1,7 @@
 import React, { useRef, useState } from "react";
 import { Container, Form, Button } from "react-bootstrap";
 import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
+import { axiosReq } from "../../api/axiosDefaults";
 
 /**
  * Render PostCreate form
@@ -44,7 +45,25 @@ const PostCreateForm = () => {
         }
       };
 
+      const handleSubmit = async (event) => {
+        event.preventDefault();
+        const formData = new FormData();
 
+        formData.append("title", title);
+        formData.append("description", description);
+        formData.append("game_medium", game_medium);
+        formData.append("image", image);
+
+        try {
+            const { data } = await axiosReq.post("/posts/", formData);
+            history.push(`/posts/${data.id}`);
+          } catch (err) {
+            console.log(err);
+            if (err.response?.status !== 401) {
+              setErrors(err.response?.data);
+            }
+          }
+        };
 
   return (
     <Container>
