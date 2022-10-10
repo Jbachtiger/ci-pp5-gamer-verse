@@ -80,7 +80,7 @@ const PostCreateForm = () => {
         Share your passion for everything gaming
       </h1>
       <strong>
-        <p className={createFormStyles.p}>
+        <p className={`${createFormStyles.p} ${createFormStyles.BlackFont}`}>
           Discuss your favourite games, gaming art or gaming related topic! Our
           community is inclusive and we'd love to see what you've got to share!
         </p>
@@ -152,16 +152,16 @@ const PostCreateForm = () => {
               </figure>
               <div>
                 <Form.Label
-                  className={`${btnStyles.Button} ${btnStyles.Wide} btn`}
+                  className={`${btnStyles.Button} ${btnStyles.Wide} ${createFormStyles.FormLabels} btn`}
                   htmlFor="image-upload"
                 >
-                  Replace image
+                  Update image
                 </Form.Label>
               </div>
             </>
           ) : (
-            <Form.Label htmlFor="image-upload">
-              <Asset src={Upload} message="Click here to upload an image" />
+            <Form.Label htmlFor="image-upload" >
+              <Asset className={createFormStyles.Asset} src={Upload} message="Click here to upload an image" />
             </Form.Label>
           )}
 
