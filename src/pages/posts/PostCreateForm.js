@@ -10,6 +10,7 @@ import Upload from "../../assets/upload.png";
 
 import appStyles from "../../App.module.css";
 import btnStyles from "../../styles/Button.module.css";
+import createFormStyles from "../../styles/PostCreateForm.module.css";
 
 /**
  * Render PostCreate form
@@ -20,7 +21,7 @@ const PostCreateForm = () => {
 
   const [postData, setPostData] = useState({
     title: "",
-    decription: "",
+    description: "",
     game_medium: "",
     image: "",
   });
@@ -75,12 +76,12 @@ const PostCreateForm = () => {
 
   return (
     <Container>
-      <h1>Share your passion for everything gaming</h1>
-      <p>
+      <h1 className={`${createFormStyles.h1} mt-5`}>Share your passion for everything gaming</h1>
+      <strong><p className={createFormStyles.p}>
         Discuss your favourite games, gaming art or gaming related topic! Our
         community is inclusive and we'd love to see what you've got to share!
-      </p>
-      <Form onSubmit={handleSubmit}>
+      </p></strong>
+      <Form onSubmit={handleSubmit} className= {createFormStyles.Container}>
         <Form.Group>
           <Form.Label>Title</Form.Label>
           <Form.Control
@@ -139,7 +140,7 @@ const PostCreateForm = () => {
           </Alert>
         ))}
 
-        <Form.Group>
+        <Form.Group className="text-center">
           {image ? (
             <>
               <figure>
@@ -165,6 +166,7 @@ const PostCreateForm = () => {
             accept="image/*"
             onChange={handleChangeImage}
             ref={imageInput}
+            className="d-none"
           />
         </Form.Group>
         {errors?.image?.map((message, idx) => (
@@ -173,13 +175,14 @@ const PostCreateForm = () => {
           </Alert>
         ))}
 
-        <Button variant="primary" type="submit">
+        <Button className={`${btnStyles.Button}`} type="submit">
           Post
         </Button>
-        <Button onClick={() => history.goBack()} variant="primary" type="submit">
+        <Button onClick={() => history.goBack()} className={`${btnStyles.Button}`} type="submit">
           Cancel
         </Button>
       </Form>
+      <br />
     </Container>
   );
 };
