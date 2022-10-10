@@ -76,11 +76,11 @@ const PostCreateForm = () => {
 
   return (
     <Container>
-      <h1 className={`${createFormStyles.h1} mt-5`}>
+      <h1 className={`${createFormStyles.MainTitle} mt-5`}>
         Share your passion for everything gaming
       </h1>
       <strong>
-        <p className={`${createFormStyles.p} ${createFormStyles.BlackFont}`}>
+        <p className={`${createFormStyles.Paragraph} ${createFormStyles.BlackFont}`}>
           Discuss your favourite games, gaming art or gaming related topic! Our
           community is inclusive and we'd love to see what you've got to share!
         </p>
