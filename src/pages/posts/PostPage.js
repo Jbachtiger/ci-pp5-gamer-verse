@@ -4,6 +4,7 @@ import { useParams } from 'react-router-dom/cjs/react-router-dom.min'
 import { axiosReq } from '../../api/axiosDefaults'
 import appStyles from "../../App.module.css"
 import postPageStyle from "../../styles/PostPage.module.css"
+import Post from './Post'
 
 
 
@@ -32,7 +33,7 @@ const PostPage = () => {
         <Row className="h-100">
           <Col className="py-2 p-0 p-lg-2" lg={8}>
             <p className={postPageStyle.TextColour}>Popular profiles for mobile</p>
-            <p className={postPageStyle.TextColour}>Post component</p>
+            <Post {...post.results[0]} />
             <Container className={appStyles.Content}>
               Comments
             </Container>
