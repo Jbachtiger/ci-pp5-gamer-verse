@@ -182,6 +182,9 @@ __W3C CSS Markup Validatior__ - https://jigsaw.w3.org/css-validator/validator
 ### Lighthouse Tool
 
 ## Solved Bugs
+validation errors not showing for post create form. Updated model in drf api to make field required.
+
+The submitted data was not a file. Check the encoding type on the form. fixed by changing formData.append('image', image) needed to be changed to formData.append('image', imageInput.current.files[0]);
 
 ## Known Bugs
 

@@ -61,7 +61,7 @@ const PostCreateForm = () => {
     formData.append("title", title);
     formData.append("description", description);
     formData.append("game_medium", game_medium);
-    formData.append("image", image);
+    formData.append('image', imageInput.current.files[0]);
 
     try {
       const { data } = await axiosReq.post("/posts/", formData);
@@ -76,12 +76,16 @@ const PostCreateForm = () => {
 
   return (
     <Container>
-      <h1 className={`${createFormStyles.h1} mt-5`}>Share your passion for everything gaming</h1>
-      <strong><p className={createFormStyles.p}>
-        Discuss your favourite games, gaming art or gaming related topic! Our
-        community is inclusive and we'd love to see what you've got to share!
-      </p></strong>
-      <Form onSubmit={handleSubmit} className= {createFormStyles.Container}>
+      <h1 className={`${createFormStyles.h1} mt-5`}>
+        Share your passion for everything gaming
+      </h1>
+      <strong>
+        <p className={createFormStyles.p}>
+          Discuss your favourite games, gaming art or gaming related topic! Our
+          community is inclusive and we'd love to see what you've got to share!
+        </p>
+      </strong>
+      <Form onSubmit={handleSubmit} className={createFormStyles.Container}>
         <Form.Group>
           <Form.Label>Title</Form.Label>
           <Form.Control
@@ -166,7 +170,6 @@ const PostCreateForm = () => {
             accept="image/*"
             onChange={handleChangeImage}
             ref={imageInput}
-            className="d-none"
           />
         </Form.Group>
         {errors?.image?.map((message, idx) => (
@@ -178,7 +181,11 @@ const PostCreateForm = () => {
         <Button className={`${btnStyles.Button}`} type="submit">
           Post
         </Button>
-        <Button onClick={() => history.goBack()} className={`${btnStyles.Button}`} type="submit">
+        <Button
+          onClick={() => history.goBack()}
+          className={`${btnStyles.Button}`}
+          type="submit"
+        >
           Cancel
         </Button>
       </Form>
