@@ -1,16 +1,17 @@
 .Post {
-    background-color: #ffffff;
+    background-color: #856BA5;
     border: 1px solid #dadadf;
     border-radius: 2px;
     margin-bottom: 16px;
     text-align: center;
+    color: #fff;
   }
   
   .Post figure,
   h5 {
     margin: 0 0;
   }
-  
+
   .Heart {
     color: #f85032;
   }
