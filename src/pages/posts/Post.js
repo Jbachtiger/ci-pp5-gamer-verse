@@ -69,8 +69,12 @@ const Post = (props) => {
             {owner}
           </Link>
           <div className="d-flex align-items-center">
-            <span>{modified_on}</span>
+            <div className={styles.Date}>
+            <span>Created on: {created_on}</span>
+            <span>Last modified: {modified_on}</span>
             {is_owner && postPage && "..."}
+            </div>
+            
           </div>
         </Media>
       </Card.Body> 
@@ -94,7 +98,7 @@ const Post = (props) => {
               <i className={`fas fa-heart ${styles.Heart}`} />
             </span>
           ) : currentUser ? (
-            <span onClick={() => {}}>
+            <span onClick={handleLike}>
               <i className={`far fa-heart ${styles.HeartOutline}`} />
             </span>
           ) : (

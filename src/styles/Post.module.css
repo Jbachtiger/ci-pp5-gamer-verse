@@ -23,3 +23,10 @@
   .HeartOutline:hover {
     color: #f85032;
   }
+  
+  .Date {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    
+  }
