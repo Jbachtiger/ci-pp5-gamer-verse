@@ -1,14 +1,17 @@
 import React from "react";
 import { Card, Media, OverlayTrigger, Tooltip } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 import { axiosRes } from "../../api/axiosDefaults";
 import Avatar from "../../components/Avatar";
+import { MoreDropdown } from "../../components/MoreDropdown";
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
 import styles from "../../styles/Post.module.css";
+import dropdownStyles from "../../styles/MoreDropdown.module.css";
 
 /**
  * Code used by Moments walkthrough as foundation and tweaked to suite project
- * Displays a single post 
+ * Displays a single post
  */
 
 const Post = (props) => {
@@ -32,6 +35,20 @@ const Post = (props) => {
 
   const currentUser = useCurrentUser();
   const is_owner = currentUser?.username === owner;
+  const history = useHistory();
+
+  const handleEdit = () => {
+    history.push(`/posts/${id}/edit`);
+  };
+
+  const handleDelete = async () => {
+    try {
+      await axiosRes.delete(`/posts/${id}/`);
+      history.goBack();
+    } catch (err) {
+      console.log(err);
+    }
+  };
 
   const handleLike = async () => {
     try {
@@ -74,23 +91,26 @@ const Post = (props) => {
             {owner}
           </Link>
           <div className="d-flex align-items-center">
-            <div className={styles.Date}>
-            <span>Created on: {created_on}</span>
-            <span>Last modified: {modified_on}</span>
-            {is_owner && postPage && "..."}
-            </div>
-            
+              <span>Created on: {created_on}</span>
+              {is_owner && postPage && (
+                <MoreDropdown
+                  handleEdit={handleEdit}
+                  handleDelete={handleDelete}
+                />
+              )}
           </div>
         </Media>
-      </Card.Body> 
+      </Card.Body>
 
       <Link to={`/posts/${id}`}>
         <Card.Img src={image} alt={title} />
       </Link>
       <Card.Body>
         {title && <Card.Title className="text-center">{title}</Card.Title>}
-        {game_medium && <Card.Text>Game Medium: {game_medium }</Card.Text>}
+        {game_medium && <Card.Text>Game Medium: {game_medium}</Card.Text>}
         {description && <Card.Text>{description}</Card.Text>}
+        {modified_on && <Card.Text>Last modified: {modified_on}</Card.Text>}
+  
         <div className={styles.PostBar}>
           {is_owner ? (
             <OverlayTrigger
