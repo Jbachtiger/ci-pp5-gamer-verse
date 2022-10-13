@@ -11,12 +11,16 @@ import styles from "../../styles/PostsPage.module.css";
 
 import Post from "./Post";
 import Asset from "../../components/Asset";
-import { fetchMoreData } from "../../utils/utils"
+import { fetchMoreData } from "../../utils/utils";
 
 import NoResults from "../../assets/no-results.png";
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
 import { NavLink } from "react-router-dom";
 import InfiniteScroll from "react-infinite-scroll-component";
+
+/**
+ * Displays all posts
+ */
 
 function PostsPage({ message, filter = "" }) {
   const [posts, setPosts] = useState({ results: [] });
@@ -27,6 +31,9 @@ function PostsPage({ message, filter = "" }) {
 
   const currentUser = useCurrentUser();
 
+  /**
+ * Displays addPost icon
+ */
   const addPostIcon = (
     <NavLink
       className={styles.NavLink}
@@ -37,6 +44,10 @@ function PostsPage({ message, filter = "" }) {
     </NavLink>
   );
 
+   /**
+ * Fetches posts from Gamer Verse API
+ * Returns search results
+ */
   useEffect(() => {
     const fetchPosts = async () => {
       try {
