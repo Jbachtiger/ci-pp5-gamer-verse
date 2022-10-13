@@ -227,6 +227,8 @@ You can create a clone of your repository by:
 https://logo.com/
 https://favicon.io/favicon-converter/
 
+<a href="https://www.freepik.com/free-vector/oops-404-error-with-broken-robot-concept-illustration_8030430.htm#query=404&position=3&from_view=search">Image by storyset</a> on Freepik
+
 ### Resources
 
 ### Acknowledgements
