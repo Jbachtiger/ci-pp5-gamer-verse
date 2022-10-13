@@ -6,6 +6,11 @@ import Avatar from "../../components/Avatar";
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
 import styles from "../../styles/Post.module.css";
 
+/**
+ * Code used by Moments walkthrough as foundation and tweaked to suite project
+ * Displays a single post 
+ */
+
 const Post = (props) => {
   const {
     id,
