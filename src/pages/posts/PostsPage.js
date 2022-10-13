@@ -13,6 +13,8 @@ import Post from "./Post";
 import Asset from "../../components/Asset";
 
 import NoResults from "../../assets/no-results.png";
+import { useCurrentUser } from "../../contexts/CurrentUserContext";
+import { NavLink } from "react-router-dom";
 
 function PostsPage({ message, filter = "" }) {
   const [posts, setPosts] = useState({ results: [] });
@@ -20,6 +22,19 @@ function PostsPage({ message, filter = "" }) {
   const { pathname } = useLocation();
 
   const [query, setQuery] = useState("");
+
+  const currentUser = useCurrentUser();
+  
+
+  const addPostIcon = (
+    <NavLink
+      className={styles.NavLink}
+      activeClassName={styles.Active}
+      to="/posts/create"
+    >
+      <i className="far fa-plus-square"></i>Add post
+    </NavLink>
+  );
 
   useEffect(() => {
     const fetchPosts = async () => {
@@ -46,6 +61,7 @@ function PostsPage({ message, filter = "" }) {
     <Row className="h-100">
       <Col className="py-2 p-0 p-lg-2" lg={8}>
         <p>Popular profiles mobile</p>
+        <Container>{currentUser && addPostIcon}</Container>
         <i className={`fas fa-search ${styles.SearchIcon}`} />
         <Form
           className={styles.SearchBar}
