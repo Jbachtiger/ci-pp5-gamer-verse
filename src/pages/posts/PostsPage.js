@@ -11,10 +11,12 @@ import styles from "../../styles/PostsPage.module.css";
 
 import Post from "./Post";
 import Asset from "../../components/Asset";
+import { fetchMoreData } from "../../utils/utils"
 
 import NoResults from "../../assets/no-results.png";
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
 import { NavLink } from "react-router-dom";
+import InfiniteScroll from "react-infinite-scroll-component";
 
 function PostsPage({ message, filter = "" }) {
   const [posts, setPosts] = useState({ results: [] });
@@ -24,7 +26,6 @@ function PostsPage({ message, filter = "" }) {
   const [query, setQuery] = useState("");
 
   const currentUser = useCurrentUser();
-  
 
   const addPostIcon = (
     <NavLink
@@ -79,9 +80,15 @@ function PostsPage({ message, filter = "" }) {
         {hasLoaded ? (
           <>
             {posts.results.length ? (
-              posts.results.map((post) => (
-                <Post key={post.id} {...post} setPosts={setPosts} />
-              ))
+              <InfiniteScroll
+                children={posts.results.map((post) => (
+                  <Post key={post.id} {...post} setPosts={setPosts} />
+                ))}
+                dataLength={posts.results.length}
+                loader={<Asset spinner />}
+                hasMore={!!posts.next}
+                next={() => fetchMoreData(posts, setPosts)}
+              />
             ) : (
               <Container className={appStyles.Content}>
                 <Asset src={NoResults} message={message} />
