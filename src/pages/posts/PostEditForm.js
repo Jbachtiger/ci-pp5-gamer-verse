@@ -12,7 +12,7 @@ import btnStyles from "../../styles/Button.module.css";
 import createFormStyles from "../../styles/PostCreateForm.module.css";
 
 /**
- * Render PostCreate form
+ * Render PostEdit form
  * Provide user with input fields to create a post
  */
 const PostEditForm = () => {
@@ -31,6 +31,9 @@ const PostEditForm = () => {
   const history = useHistory();
   const { id } = useParams();
 
+  /**
+   * Populates form fields with post data
+   */
   useEffect(() => {
     const handleMount = async () => {
       try {

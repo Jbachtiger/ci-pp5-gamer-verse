@@ -7,7 +7,6 @@ import Avatar from "../../components/Avatar";
 import { MoreDropdown } from "../../components/MoreDropdown";
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
 import styles from "../../styles/Post.module.css";
-import dropdownStyles from "../../styles/MoreDropdown.module.css";
 
 /**
  * Code used by Moments walkthrough as foundation and tweaked to suite project
