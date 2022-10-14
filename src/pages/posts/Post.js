@@ -91,17 +91,16 @@ const Post = (props) => {
             {owner}
           </Link>
           <div className="d-flex align-items-center">
-              <span>Created on: {created_on}</span>
-              {is_owner && postPage && (
-                <MoreDropdown
-                  handleEdit={handleEdit}
-                  handleDelete={handleDelete}
-                />
-              )}
+            <span>Created on: {created_on}</span>
+            {is_owner && postPage && (
+              <MoreDropdown
+                handleEdit={handleEdit}
+                handleDelete={handleDelete}
+              />
+            )}
           </div>
         </Media>
       </Card.Body>
-
       <Link to={`/posts/${id}`}>
         <Card.Img src={image} alt={title} />
       </Link>
@@ -110,7 +109,7 @@ const Post = (props) => {
         {game_medium && <Card.Text>Game Medium: {game_medium}</Card.Text>}
         {description && <Card.Text>{description}</Card.Text>}
         {modified_on && <Card.Text>Last modified: {modified_on}</Card.Text>}
-  
+
         <div className={styles.PostBar}>
           {is_owner ? (
             <OverlayTrigger
