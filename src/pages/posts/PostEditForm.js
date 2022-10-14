@@ -1,12 +1,11 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 
 import { Container, Form, Button, Alert, Image } from "react-bootstrap";
-import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
+import {
+  useHistory,
+  useParams,
+} from "react-router-dom/cjs/react-router-dom.min";
 import { axiosReq } from "../../api/axiosDefaults";
-
-import Asset from "../../components/Asset";
-
-import Upload from "../../assets/upload.png";
 
 import appStyles from "../../App.module.css";
 import btnStyles from "../../styles/Button.module.css";
@@ -30,6 +29,24 @@ const PostEditForm = () => {
 
   const imageInput = useRef(null);
   const history = useHistory();
+  const { id } = useParams();
+
+  useEffect(() => {
+    const handleMount = async () => {
+      try {
+        const { data } = await axiosReq.get(`/posts/${id}/`);
+        const { title, description, game_medium, image, is_owner } = data;
+
+        is_owner
+          ? setPostData({ title, description, game_medium, image })
+          : history.push("/");
+      } catch (err) {
+        console.log(err);
+      }
+    };
+
+    handleMount();
+  }, [history, id]);
 
   /**
    * Populate the postData strings
@@ -61,11 +78,14 @@ const PostEditForm = () => {
     formData.append("title", title);
     formData.append("description", description);
     formData.append("game_medium", game_medium);
-    formData.append('image', imageInput.current.files[0]);
+
+    if (imageInput?.current?.files[0]) {
+      formData.append("image", imageInput.current.files[0]);
+    }
 
     try {
-      const { data } = await axiosReq.post("/posts/", formData);
-      history.push(`/posts/${data.id}`);
+      await axiosReq.put(`/posts/${id}/`, formData);
+      history.push(`/posts/${id}`);
     } catch (err) {
       //   console.log(err);
       if (err.response?.status !== 401) {
@@ -80,7 +100,9 @@ const PostEditForm = () => {
         Share your passion for everything gaming
       </h1>
       <strong>
-        <p className={`${createFormStyles.Paragraph} ${createFormStyles.BlackFont}`}>
+        <p
+          className={`${createFormStyles.Paragraph} ${createFormStyles.BlackFont}`}
+        >
           Discuss your favourite games, gaming art or gaming related topic! Our
           community is inclusive and we'd love to see what you've got to share!
         </p>
@@ -145,25 +167,17 @@ const PostEditForm = () => {
         ))}
 
         <Form.Group className="text-center">
-          {image ? (
-            <>
-              <figure>
-                <Image className={appStyles.Image} src={image} rounded />
-              </figure>
-              <div>
-                <Form.Label
-                  className={`${btnStyles.Button} ${btnStyles.Wide} ${createFormStyles.FormLabels} btn`}
-                  htmlFor="image-upload"
-                >
-                  Update image
-                </Form.Label>
-              </div>
-            </>
-          ) : (
-            <Form.Label htmlFor="image-upload" >
-              <Asset className={createFormStyles.Asset} src={Upload} message="Click here to upload an image" />
+          <figure>
+            <Image className={appStyles.Image} src={image} rounded />
+          </figure>
+          <div>
+            <Form.Label
+              className={`${btnStyles.Button} ${btnStyles.Wide} ${createFormStyles.FormLabels} btn`}
+              htmlFor="image-upload"
+            >
+              Update image
             </Form.Label>
-          )}
+          </div>
 
           <Form.File
             id="image-upload"
@@ -179,7 +193,7 @@ const PostEditForm = () => {
         ))}
 
         <Button className={`${btnStyles.Button}`} type="submit">
-          Post
+          Update
         </Button>
         <Button
           onClick={() => history.goBack()}
