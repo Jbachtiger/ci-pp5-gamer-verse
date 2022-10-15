@@ -7,6 +7,7 @@ import { useCurrentUser } from "../../contexts/CurrentUserContext";
 import postPageStyle from "../../styles/PostPage.module.css";
 import CommentCreateForm from "../comments/CommentCreateForm";
 import Post from "./Post";
+import Comment from "../comments/Comment";
 
 const PostPage = () => {
   const { id } = useParams();
@@ -52,8 +53,9 @@ const PostPage = () => {
           ) : null}
           {comments.results.length ? (
             comments.results.map(comment => (
-              <p key={comment.id}>{comment.owner}: {comment.content}</p>
+              <Comment key={comment.id} {...comment} />
             ))
+           
           ): currentUser ? (
             <span>No comments posted, kick things off and be the first to comment!</span>
           ) : (
