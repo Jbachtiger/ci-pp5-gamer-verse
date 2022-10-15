@@ -114,7 +114,7 @@ const SignUpForm = () => {
       </Form>
 
       <div>
-        <p>
+        <p className={styles.WhiteText}>
           Already have an account?
           <Link to="/signin" className={styles.Link}>
             <strong> Sign in here!</strong>

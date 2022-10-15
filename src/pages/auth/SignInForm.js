@@ -100,7 +100,7 @@ function SignInForm() {
       </Form>
 
       <div>
-        <p>
+        <p className={styles.WhiteText}>
           Don't have an account?
           <Link to="/signup" className={styles.Link}>
             <strong> Sign up here!</strong>
