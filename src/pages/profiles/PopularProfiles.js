@@ -1,12 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { Container } from "react-bootstrap";
-import { axiosReq } from "../../api/axiosDefaults";
 import Asset from "../../components/Asset";
-import { useCurrentUser } from "../../contexts/CurrentUserContext";
 import appStyles from "../../App.module.css";
 import styles from "../../styles/PopularProfiles.module.css";
+import { useProfileData } from "../../contexts/ProfileDataContext";
 import Profile from "./Profile";
-
 
 /**
  * Retrieves profiles from Gamer Verse API
@@ -14,33 +12,14 @@ import Profile from "./Profile";
  * Code for functions provided by Moments walkthrough
  */
 const PopularProfiles = ({ mobile }) => {
-  const [profileData, setProfileData] = useState({
-    pageprofile: { results: [] },
-    popularProfiles: { results: [] },
-  });
-  const { popularProfiles } = profileData;
-  const currentUser = useCurrentUser();
-
-  useEffect(() => {
-    const handleMount = async () => {
-      try {
-        const { data } = await axiosReq.get(
-          "/profiles/?ordering=-followers_count"
-        );
-        setProfileData((prevState) => ({
-          ...prevState,
-          popularProfiles: data,
-        }));
-      } catch (err) {
-        console.log(err);
-      }
-    };
-
-    handleMount();
-  }, [currentUser]);
+  const { popularProfiles } = useProfileData();
 
   return (
-    <Container className={`${appStyles.Content} ${mobile && "d-lg-none text-center mb-3"} mt-4`}>
+    <Container
+      className={`${appStyles.Content} ${
+        mobile && "d-lg-none text-center mb-3"
+      } mt-4`}
+    >
       {popularProfiles.results.length ? (
         <>
           <h4 className={styles.Header}>Most active community gamers:</h4>
