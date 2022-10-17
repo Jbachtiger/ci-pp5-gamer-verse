@@ -5,6 +5,7 @@ import { useCurrentUser } from '../../contexts/CurrentUserContext';
 import styles from '../../styles/Profile.module.css'
 import btnStyles from '../../styles/Button.module.css'
 import Avatar from "../../components/Avatar";
+import { useSetProfileData } from '../../contexts/ProfileDataContext';
 
 /**
  * Displays profile avatar and follow/unfollow buttons
@@ -16,6 +17,8 @@ const Profile = (props) => {
 
   const currentUser = useCurrentUser();
   const is_owner = currentUser?.username === owner;
+
+  const {handleFollow, handleUnfollow} = useSetProfileData();
   
   return (
     <div
@@ -36,14 +39,14 @@ const Profile = (props) => {
           (following_id ? (
             <Button
               className={btnStyles.Button}
-              onClick={() => {}}
+              onClick={() => handleUnfollow(profile)}
             >
               Unfollow
             </Button>
           ) : (
             <Button
               className={btnStyles.Button}
-              onClick={() => {}}
+              onClick={() => handleFollow(profile)}
             >
               Follow
             </Button>

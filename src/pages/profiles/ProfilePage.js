@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Button, Col, Container, Row } from "react-bootstrap";
+import { Button, Col, Container, Row, Image } from "react-bootstrap";
 import { useParams } from "react-router-dom/cjs/react-router-dom.min";
 import { axiosReq } from "../../api/axiosDefaults";
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
@@ -27,7 +27,7 @@ function ProfilePage() {
   const currentUser = useCurrentUser();
   const { id } = useParams();
 
-  const setProfileData = useSetProfileData();
+  const {setProfileData, handleFollow, handleUnfollow} = useSetProfileData();
   const { pageProfile } = useProfileData();
 
   const [profile] = pageProfile.results;
@@ -61,7 +61,7 @@ function ProfilePage() {
     <>
       <Row noGutters className="px-3 text-center">
         <Col lg={3} className="text-lg-left">
-          <image
+          <Image
             className={styles.ProfileImage}
             roundedCircle
             src={profile?.image}
@@ -88,11 +88,11 @@ function ProfilePage() {
           {currentUser &&
             !is_owner &&
             (profile?.following_id ? (
-              <Button className={btnStyles.Button} onClick={() => {}}>
+              <Button className={btnStyles.Button} onClick={() => handleUnfollow(profile)}>
                 Unfollow
               </Button>
             ) : (
-              <Button className={btnStyles.Button} onClick={() => {}}>
+              <Button className={btnStyles.Button} onClick={() => handleFollow(profile)}>
                 Follow
               </Button>
             ))}

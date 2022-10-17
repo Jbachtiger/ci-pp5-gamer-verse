@@ -11,6 +11,7 @@ import Comment from "../comments/Comment";
 import InfiniteScroll from "react-infinite-scroll-component";
 import { fetchMoreData } from "../../utils/utils";
 import Asset from "../../components/Asset";
+import PopularProfiles from "../profiles/PopularProfiles";
 
 /**
  * Display single post detials and comments
@@ -28,7 +29,7 @@ const PostPage = () => {
   useEffect(() => {
     const handleMount = async () => {
       try {
-        const [{ data: post }, {data: comments}] = await Promise.all([
+        const [{ data: post }, { data: comments }] = await Promise.all([
           axiosReq.get(`/posts/${id}`),
           axiosReq.get(`/comments/?post=${id}`),
         ]);
@@ -45,7 +46,7 @@ const PostPage = () => {
   return (
     <Row className="h-100">
       <Col className="py-2 p-0 p-lg-2" lg={8}>
-        <p className={postPageStyle.TextColour}>Popular profiles for mobile</p>
+        <PopularProfiles className={postPageStyle.TextColour} mobile />
         <Post {...post.results[0]} setPosts={setPost} postPage />
         <Container className={appStyles.Content}>
           {currentUser ? (
@@ -74,16 +75,17 @@ const PostPage = () => {
               hasMore={!!comments.next}
               next={() => fetchMoreData(comments, setComments)}
             />
-           
-          ): currentUser ? (
-            <span>No comments posted, kick things off and be the first to comment!</span>
+          ) : currentUser ? (
+            <span>
+              No comments posted, kick things off and be the first to comment!
+            </span>
           ) : (
             <span>No comments, login to leave a comment</span>
           )}
         </Container>
       </Col>
       <Col lg={4} className="d-none d-lg-block p-0 p-lg-2">
-        Popular profiles for desktop
+        <PopularProfiles />
       </Col>
     </Row>
   );
