@@ -3,6 +3,10 @@ import { Container } from "react-bootstrap";
 import { axiosReq } from "../../api/axiosDefaults";
 import Asset from "../../components/Asset";
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
+import appStyles from "../../App.module.css";
+import styles from "../../styles/PopularProfiles.module.css";
+import Profile from "./Profile";
+
 
 /**
  * Retrieves profiles from Gamer Verse API
@@ -36,19 +40,19 @@ const PopularProfiles = ({ mobile }) => {
   }, [currentUser]);
 
   return (
-    <Container className={mobile && "d-lg-none text-center mb-3"}>
+    <Container className={`${appStyles.Content} ${mobile && "d-lg-none text-center mb-3"} mt-4`}>
       {popularProfiles.results.length ? (
         <>
-          <p>Most active community gamers:</p>
+          <h4 className={styles.Header}>Most active community gamers:</h4>
           {mobile ? (
             <div className="d-flex justify-content-around">
               {popularProfiles.results.slice(0, 4).map((profile) => (
-                <p key={profile.id}>{profile.owner}</p>
+                <Profile key={profile.id} profile={profile} mobile />
               ))}
             </div>
           ) : (
             popularProfiles.results.map((profile) => (
-              <p key={profile.id}>{profile.owner}</p>
+              <Profile key={profile.id} profile={profile} />
             ))
           )}
         </>
