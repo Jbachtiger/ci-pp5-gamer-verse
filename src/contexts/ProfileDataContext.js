@@ -1,7 +1,7 @@
 import { createContext, useContext, useEffect, useState } from "react";
-import { axiosReq, axiosRes } from "../api/axiosDefaults";
+import { axiosReq } from "../api/axiosDefaults";
 import { useCurrentUser } from "../contexts/CurrentUserContext";
-import { followHelper, unfollowHelper } from "../utils/utils";
+// import { followHelper, unfollowHelper } from "../utils/utils";
 
 /**
  * Code provided in Moments walkthrough
@@ -20,35 +20,35 @@ export const ProfileDataProvider = ({ children }) => {
   });
 
   const currentUser = useCurrentUser();
-  
-/**
- * Map user follow count in Gamer Verse API
- * Update the follow count when button is clicked
- */
-  const handleFollow = async (clickedProfile) => {
-    try {
-      const { data } = await axiosRes.post("/followers/", {
-        followed: clickedProfile.id,
-      });
 
-      setProfileData((prevState) => ({
-        ...prevState,
-        pageProfile: {
-          results: prevState.pageProfile.results.map((profile) =>
-            followHelper(profile, clickedProfile, data.id)
-          ),
-        },
-        popularProfiles: {
-          ...prevState.popularProfiles,
-          results: prevState.popularProfiles.results.map((profile) =>
-            followHelper(profile, clickedProfile, data.id)
-          ),
-        },
-      }));
-    } catch (err) {
-      // console.log(err);
-    }
-  };
+  /**
+   * Map user follow count in Gamer Verse API
+   * Update the follow count when button is clicked
+   */
+  // const handleFollow = async (clickedProfile) => {
+  //   try {
+  //     const { data } = await axiosRes.post("/followers/", {
+  //       followed: clickedProfile.id,
+  //     });
+
+  //     setProfileData((prevState) => ({
+  //       ...prevState,
+  //       pageProfile: {
+  //         results: prevState.pageProfile.results.map((profile) =>
+  //           followHelper(profile, clickedProfile, data.id)
+  //         ),
+  //       },
+  //       popularProfiles: {
+  //         ...prevState.popularProfiles,
+  //         results: prevState.popularProfiles.results.map((profile) =>
+  //           followHelper(profile, clickedProfile, data.id)
+  //         ),
+  //       },
+  //     }));
+  //   } catch (err) {
+  //     // console.log(err);
+  //   }
+  // };
 
   /**
    * Delete follow from Gamer Verse API
@@ -56,28 +56,28 @@ export const ProfileDataProvider = ({ children }) => {
    * with page refresh
    */
 
-  const handleUnfollow = async (clickedProfile) => {
-    try {
-      await axiosRes.delete(`/followers/${clickedProfile.following_id}/`);
+  // const handleUnfollow = async (clickedProfile) => {
+  //   try {
+  //     await axiosRes.delete(`/followers/${clickedProfile.following_id}/`);
 
-      setProfileData((prevState) => ({
-        ...prevState,
-        pageProfile: {
-          results: prevState.pageProfile.results.map((profile) =>
-            unfollowHelper(profile, clickedProfile)
-          ),
-        },
-        popularProfiles: {
-          ...prevState.popularProfiles,
-          results: prevState.popularProfiles.results.map((profile) =>
-            unfollowHelper(profile, clickedProfile)
-          ),
-        },
-      }));
-    } catch (err) {
-      // console.log(err);
-    }
-  };
+  //     setProfileData((prevState) => ({
+  //       ...prevState,
+  //       pageProfile: {
+  //         results: prevState.pageProfile.results.map((profile) =>
+  //           unfollowHelper(profile, clickedProfile)
+  //         ),
+  //       },
+  //       popularProfiles: {
+  //         ...prevState.popularProfiles,
+  //         results: prevState.popularProfiles.results.map((profile) =>
+  //           unfollowHelper(profile, clickedProfile)
+  //         ),
+  //       },
+  //     }));
+  //   } catch (err) {
+  //     // console.log(err);
+  //   }
+  // };
 
   /**
    * Retreive the profile data from the Gamer Verse API
@@ -104,9 +104,7 @@ export const ProfileDataProvider = ({ children }) => {
 
   return (
     <ProfileDataContext.Provider value={profileData}>
-      <SetProfileDataContext.Provider
-        value={{ setProfileData, handleFollow, handleUnfollow }}
-      >
+      <SetProfileDataContext.Provider value={setProfileData}>
         {children}
       </SetProfileDataContext.Provider>
     </ProfileDataContext.Provider>
