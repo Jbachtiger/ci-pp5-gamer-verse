@@ -14,7 +14,7 @@ import PopularProfiles from "./PopularProfiles";
 
 import styles from "../../styles/ProfilePage.module.css";
 import btnStyles from "../../styles/Button.module.css";
-import appStyles from "../../App.module.css"
+import appStyles from "../../App.module.css";
 
 function ProfilePage() {
   const [hasLoaded, setHasLoaded] = useState(false);
@@ -91,12 +91,26 @@ function ProfilePage() {
     </>
   );
 
+  const profilePosts = (
+    <>
+      <hr />
+      <p className="text-center">Profile owner's posts</p>
+      <hr />
+    </>
+  );
+
   return (
     <Row>
       <Col className="py-2 p-0 p-lg-2" lg={8}>
         <PopularProfiles mobile />
         <Container className={appStyles.Content}>
-          {hasLoaded ? <>{profileSummary}</> : <Asset spinner />}
+          {hasLoaded ? (
+            <>
+              {profileSummary} {profilePosts}{" "}
+            </>
+          ) : (
+            <Asset spinner />
+          )}
         </Container>
       </Col>
       <Col lg={4} className="d-none d-lg-block p-0 p-lg-2">
