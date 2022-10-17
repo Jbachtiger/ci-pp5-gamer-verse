@@ -46,7 +46,7 @@ function ProfilePage() {
     fetchData();
   }, [id, setProfileData]);
 
-  const profileSummary = (
+  const profilePageHeader = (
     <>
       <Row noGutters className="px-3 text-center">
         <Col lg={3} className="text-lg-left">
@@ -106,7 +106,7 @@ function ProfilePage() {
         <Container className={appStyles.Content}>
           {hasLoaded ? (
             <>
-              {profileSummary} {profilePosts}{" "}
+              {profilePageHeader} {profilePosts}{" "}
             </>
           ) : (
             <Asset spinner />
