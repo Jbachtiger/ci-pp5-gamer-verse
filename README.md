@@ -222,6 +222,11 @@ You can create a clone of your repository by:
 ### Code
 
 ### Content 
+god of war - https://www.radiotimes.com/technology/gaming/god-of-war-ragnarok-release-date/
+skyrim - https://www.eurogamer.net/the-elder-scrolls-5-skyrim-review
+everdale - https://boardgamegeek.com/image/3918905/everdell
+zelda - eurogamer
+boardgame art - https://islaythedragon.com/featured/a-top-10-board-game-art-id-like-to-frame/
 
 ### Media
 https://logo.com/
