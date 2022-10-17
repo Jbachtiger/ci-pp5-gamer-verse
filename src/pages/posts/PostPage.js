@@ -12,6 +12,11 @@ import InfiniteScroll from "react-infinite-scroll-component";
 import { fetchMoreData } from "../../utils/utils";
 import Asset from "../../components/Asset";
 
+/**
+ * Display single post detials and comments
+ * Code used from Moments walkthrough and amended
+ */
+
 const PostPage = () => {
   const { id } = useParams();
   const [post, setPost] = useState({ results: [] });
