@@ -1,9 +1,11 @@
-import React from 'react'
+import React from "react";
 
 const UsernameForm = () => {
   return (
-    <div>UsernameForm</div>
-  )
-}
+    <div>
+      <h2>UsernameForm</h2>
+    </div>
+  );
+};
 
-export default UsernameForm
+export default UsernameForm;
