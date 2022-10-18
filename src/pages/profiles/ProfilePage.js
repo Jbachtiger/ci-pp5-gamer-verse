@@ -11,6 +11,7 @@ import {
 import Asset from "../../components/Asset";
 
 import PopularProfiles from "./PopularProfiles";
+import { ProfileEditDropdown } from "../../components/MoreDropdown";
 
 import styles from "../../styles/ProfilePage.module.css";
 import btnStyles from "../../styles/Button.module.css";
@@ -27,7 +28,7 @@ function ProfilePage() {
   const currentUser = useCurrentUser();
   const { id } = useParams();
 
-  const {setProfileData, handleFollow, handleUnfollow} = useSetProfileData();
+  const { setProfileData, handleFollow, handleUnfollow } = useSetProfileData();
   const { pageProfile } = useProfileData();
 
   const [profile] = pageProfile.results;
@@ -59,6 +60,7 @@ function ProfilePage() {
 
   const profilePageHeader = (
     <>
+      {profile?.is_owner && <ProfileEditDropdown id={profile?.id} />}
       <Row noGutters className="px-3 text-center">
         <Col lg={3} className="text-lg-left">
           <Image
@@ -88,11 +90,17 @@ function ProfilePage() {
           {currentUser &&
             !is_owner &&
             (profile?.following_id ? (
-              <Button className={btnStyles.Button} onClick={() => handleUnfollow(profile)}>
+              <Button
+                className={btnStyles.Button}
+                onClick={() => handleUnfollow(profile)}
+              >
                 Unfollow
               </Button>
             ) : (
-              <Button className={btnStyles.Button} onClick={() => handleFollow(profile)}>
+              <Button
+                className={btnStyles.Button}
+                onClick={() => handleFollow(profile)}
+              >
                 Follow
               </Button>
             ))}
@@ -104,27 +112,27 @@ function ProfilePage() {
 
   const mainProfilePosts = (
     <>
-    <hr />
-    <p className="text-center">{profile?.owner}'s posts</p>
-    <hr />
-    {profilePosts.results.length ? (
-      <InfiniteScroll
-        children={profilePosts.results.map((post) => (
-          <Post key={post.id} {...post} setPosts={setProfilePosts} />
-        ))}
-        dataLength={profilePosts.results.length}
-        loader={<Asset spinner />}
-        hasMore={!!profilePosts.next}
-        next={() => fetchMoreData(profilePosts, setProfilePosts)}
-      />
-    ) : (
-      <Asset
-        src={NoResults}
-        message={`No results found, ${profile?.owner} hasn't posted yet.`}
-      />
-    )}
-  </>
-);
+      <hr />
+      <p className="text-center">{profile?.owner}'s posts</p>
+      <hr />
+      {profilePosts.results.length ? (
+        <InfiniteScroll
+          children={profilePosts.results.map((post) => (
+            <Post key={post.id} {...post} setPosts={setProfilePosts} />
+          ))}
+          dataLength={profilePosts.results.length}
+          loader={<Asset spinner />}
+          hasMore={!!profilePosts.next}
+          next={() => fetchMoreData(profilePosts, setProfilePosts)}
+        />
+      ) : (
+        <Asset
+          src={NoResults}
+          message={`No results found, ${profile?.owner} hasn't posted yet.`}
+        />
+      )}
+    </>
+  );
 
   return (
     <Row>
