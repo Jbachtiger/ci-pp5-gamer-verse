@@ -1,18 +1,26 @@
 import React from "react";
 import { Dropdown } from "react-bootstrap";
 import styles from "../styles/MoreDropdown.module.css";
+import { useHistory } from "react-router";
 
+/**
+ * Position the three dots drop down menu correctly
+ */
 const ThreeDots = React.forwardRef(({ onClick }, ref) => (
-    <i
-      className={`${styles.Ellipsis} fas fa-ellipsis-v`}
-      ref={ref}
-      onClick={(e) => {
-        e.preventDefault();
-        onClick(e);
-      }}
-    />
-  ));
+  <i
+    className={`${styles.Ellipsis} fas fa-ellipsis-v`}
+    ref={ref}
+    onClick={(e) => {
+      e.preventDefault();
+      onClick(e);
+    }}
+  />
+));
 
+/**
+ * Dropdown menu component
+ * Function code provided in Moments walkthrough
+ */
 export const MoreDropdown = ({ handleEdit, handleDelete }) => {
   return (
     <Dropdown className="ml-auto" drop="left">
@@ -40,3 +48,37 @@ export const MoreDropdown = ({ handleEdit, handleDelete }) => {
     </Dropdown>
   );
 };
+
+/**
+ * Add edit dropdown button to each profile element
+ */
+export function ProfileEditDropdown({ id }) {
+  const history = useHistory();
+  return (
+    <Dropdown className={`ml-auto px-3 ${styles.Absolute}`} drop="left">
+      <Dropdown.Toggle as={ThreeDots} />
+      <Dropdown.Menu>
+        <Dropdown.Item
+          onClick={() => history.push(`/profiles/${id}/edit`)}
+          aria-label="edit-profile"
+        >
+          <i className="fas fa-edit" /> edit profile
+        </Dropdown.Item>
+        <Dropdown.Item
+          onClick={() => history.push(`/profiles/${id}/edit/username`)}
+          aria-label="edit-username"
+        >
+          <i className="far fa-id-card" />
+          change username
+        </Dropdown.Item>
+        <Dropdown.Item
+          onClick={() => history.push(`/profiles/${id}/edit/password`)}
+          aria-label="edit-password"
+        >
+          <i className="fas fa-key" />
+          change password
+        </Dropdown.Item>
+      </Dropdown.Menu>
+    </Dropdown>
+  );
+}
