@@ -1,52 +1,67 @@
-import React, { useEffect, useState } from 'react'
-import { Alert, Button, Col, Container, Form, Row } from 'react-bootstrap';
-import { useHistory, useParams } from 'react-router-dom/cjs/react-router-dom.min';
-import { axiosRes } from '../../api/axiosDefaults';
-import { useCurrentUser } from '../../contexts/CurrentUserContext';
+import React, { useEffect, useState } from "react";
+import { Alert, Button, Col, Container, Form, Row } from "react-bootstrap";
+import {
+  useHistory,
+  useParams,
+} from "react-router-dom/cjs/react-router-dom.min";
+import { axiosRes } from "../../api/axiosDefaults";
+import { useCurrentUser } from "../../contexts/CurrentUserContext";
 
 import btnStyles from "../../styles/Button.module.css";
 import appStyles from "../../App.module.css";
 
+/**
+ * Renders form to change password
+ */
 const PasswordForm = () => {
-    const history = useHistory();
-    const { id } = useParams();
-    const currentUser = useCurrentUser();
-  
-    const [userData, setUserData] = useState({
-      new_password1: "",
-      new_password2: "",
-    });
-    const { new_password1, new_password2 } = userData;
-  
-    const [errors, setErrors] = useState({});
-  
-    const handleChange = (event) => {
-      setUserData({
-        ...userData,
-        [event.target.name]: event.target.value,
-      });
-    };
-  
-    useEffect(() => {
-      if (currentUser?.profile_id?.toString() !== id) {
-        // redirect user if they are not the owner of this profile
-        history.push("/");
-      }
-    }, [currentUser, history, id]);
-  
-    const handleSubmit = async (event) => {
-      event.preventDefault();
-      try {
-        await axiosRes.post("/dj-rest-auth/password/change/", userData);
-        history.goBack();
-      } catch (err) {
-        console.log(err);
-        setErrors(err.response?.data);
-      }
-    };
+  const history = useHistory();
+  const { id } = useParams();
+  const currentUser = useCurrentUser();
 
+  const [userData, setUserData] = useState({
+    new_password1: "",
+    new_password2: "",
+  });
+  const { new_password1, new_password2 } = userData;
+
+  const [errors, setErrors] = useState({});
+
+  /**
+   * Populate empty variable strings
+   */
+  const handleChange = (event) => {
+    setUserData({
+      ...userData,
+      [event.target.name]: event.target.value,
+    });
+  };
+
+  useEffect(() => {
+    if (currentUser?.profile_id?.toString() !== id) {
+      // redirect user if they are not the owner of this profile
+      history.push("/");
+    }
+  }, [currentUser, history, id]);
+
+  /**
+   * Update Gamer Verse API with new password data
+   */
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    try {
+      await axiosRes.post("/dj-rest-auth/password/change/", userData);
+      history.goBack();
+    } catch (err) {
+      console.log(err);
+      setErrors(err.response?.data);
+    }
+  };
+
+  /**
+   * Update password form
+   */
   return (
-   <Row>
+    <Row>
       <Col className="py-2 mx-auto text-center" md={6}>
         <Container className={appStyles.Content}>
           <Form onSubmit={handleSubmit}>
@@ -86,10 +101,7 @@ const PasswordForm = () => {
             >
               Cancel
             </Button>
-            <Button
-              type="submit"
-              className={btnStyles.Button}
-            >
+            <Button type="submit" className={btnStyles.Button}>
               Save
             </Button>
           </Form>
@@ -99,4 +111,4 @@ const PasswordForm = () => {
   );
 };
 
-export default PasswordForm
+export default PasswordForm;

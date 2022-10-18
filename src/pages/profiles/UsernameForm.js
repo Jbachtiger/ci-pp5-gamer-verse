@@ -51,6 +51,10 @@ const UsernameForm = () => {
       setErrors(err.response?.data);
     }
   };
+  
+  /**
+   * Update username form
+   */
   return (
     <Row>
       <Col className="py-2 mx-auto text-center" md={6}>
