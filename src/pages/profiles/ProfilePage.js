@@ -86,6 +86,13 @@ function ProfilePage() {
             </Col>
           </Row>
         </Col>
+
+        <Col lg={12}>
+          <p>About Me: {profile?.description}</p>
+
+          <p>Favourite Game: {profile?.favourite_game}</p>
+        </Col>
+
         <Col lg={3} className="text-lg-right">
           {currentUser &&
             !is_owner &&
