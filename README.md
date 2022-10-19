@@ -186,6 +186,8 @@ validation errors not showing for post create form. Updated model in drf api to 
 
 The submitted data was not a file. Check the encoding type on the form. fixed by changing formData.append('image', image) needed to be changed to formData.append('image', imageInput.current.files[0]);
 
+game publisher and developer fields not clickable - fixed by change as to type in form field
+
 ## Known Bugs
 
 ## Technologies Used
