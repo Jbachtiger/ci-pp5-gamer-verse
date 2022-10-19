@@ -26,7 +26,7 @@ const Review = (props) => {
     game_publisher,
     game_developer,
     title,
-    ReviewPage,
+    reviewPage,
   } = props;
 
   const currentUser = useCurrentUser();
@@ -63,7 +63,7 @@ const Review = (props) => {
 
           <div className="d-flex align-items-center">
             <span>Created on: {created_on}</span>
-            {is_owner && ReviewPage && (
+            {is_owner && reviewPage && (
               <MoreDropdown
                 handleEdit={handleEdit}
                 handleDelete={handleDelete}
