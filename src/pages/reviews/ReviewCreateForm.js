@@ -17,7 +17,15 @@ const ReviewCreateForm = () => {
     game_developer: "",
   });
 
-  const { title, description, game_medium, image } = reviewData;
+  const {
+    title,
+    content,
+    image,
+    genre,
+    game_score,
+    game_publisher,
+    game_developer,
+  } = reviewData;
 
   const imageInput = useRef(null);
   const history = useHistory();
@@ -50,8 +58,12 @@ const ReviewCreateForm = () => {
     const formData = new FormData();
 
     formData.append("title", title);
-    formData.append("description", description);
+    formData.append("content", content);
     formData.append("image", imageInput.current.files[0]);
+    formData.append("genre", genre);
+    formData.append("game_score", game_score);
+    formData.append("game_publisher", game_publisher);
+    formData.append("game_developer", game_developer);
 
     try {
       const { data } = await axiosReq.post("/reviews/", formData);
