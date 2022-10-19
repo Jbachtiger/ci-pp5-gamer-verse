@@ -11,12 +11,14 @@ import Upload from "../../assets/upload.png";
 import appStyles from "../../App.module.css";
 import btnStyles from "../../styles/Button.module.css";
 import createFormStyles from "../../styles/PostCreateForm.module.css";
+import { useRedirect } from "../../hooks/useRedirect";
 
 /**
  * Render PostCreate form
  * Provide user with input fields to create a post
  */
 const PostCreateForm = () => {
+  useRedirect("loggedOut");
   const [errors, setErrors] = useState({});
 
   const [postData, setPostData] = useState({
@@ -61,7 +63,7 @@ const PostCreateForm = () => {
     formData.append("title", title);
     formData.append("description", description);
     formData.append("game_medium", game_medium);
-    formData.append('image', imageInput.current.files[0]);
+    formData.append("image", imageInput.current.files[0]);
 
     try {
       const { data } = await axiosReq.post("/posts/", formData);
@@ -80,7 +82,9 @@ const PostCreateForm = () => {
         Share your passion for everything gaming
       </h1>
       <strong>
-        <p className={`${createFormStyles.Paragraph} ${createFormStyles.BlackFont}`}>
+        <p
+          className={`${createFormStyles.Paragraph} ${createFormStyles.BlackFont}`}
+        >
           Discuss your favourite games, gaming art or gaming related topic! Our
           community is inclusive and we'd love to see what you've got to share!
         </p>
@@ -160,8 +164,12 @@ const PostCreateForm = () => {
               </div>
             </>
           ) : (
-            <Form.Label htmlFor="image-upload" >
-              <Asset className={createFormStyles.Asset} src={Upload} message="Click here to upload an image" />
+            <Form.Label htmlFor="image-upload">
+              <Asset
+                className={createFormStyles.Asset}
+                src={Upload}
+                message="Click here to upload an image"
+              />
             </Form.Label>
           )}
 
