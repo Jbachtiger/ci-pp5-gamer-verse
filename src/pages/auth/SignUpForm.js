@@ -4,12 +4,14 @@ import { Form, Button, Container, Alert } from "react-bootstrap";
 import styles from "../../styles/SignUpForm.module.css";
 import btnStyles from "../../styles/Button.module.css";
 import axios from "axios";
+import { useRedirect } from "../../hooks/useRedirect";
 
 /**
  * Renders SignUp form
  * Moments walkthrough used as a guide for variables, data handling and error handling code
  */
 const SignUpForm = () => {
+  useRedirect("loggedIn");
   const [signUpData, setSignUpData] = useState({
     username: "",
     password1: "",
@@ -30,7 +32,7 @@ const SignUpForm = () => {
       [event.target.name]: event.target.value,
     });
   };
-  
+
   /**
    * Pushes data to API
    * Redirects the user to signin page
