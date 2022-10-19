@@ -5,7 +5,7 @@ import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 import { axiosRes } from "../../api/axiosDefaults";
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
 import Avatar from '../../components/Avatar';
-import { MoreDropdown } from '../../components/DropdownMenu';
+import { MoreDropdown } from '../../components/MoreDropdown';
 import styles from "../../styles/Post.module.css";
 
 /**
