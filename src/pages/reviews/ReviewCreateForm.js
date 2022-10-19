@@ -179,8 +179,7 @@ const ReviewCreateForm = () => {
         <Form.Group>
           <Form.Label>Game Publisher:</Form.Label>
           <Form.Control
-            as="text"
-            defaultValue="Choose..."
+            type="text"
             name="game_publisher"
             onChange={handleChange}
             aria-label="game publisher"
@@ -197,8 +196,7 @@ const ReviewCreateForm = () => {
         <Form.Group>
           <Form.Label>Game Developer:</Form.Label>
           <Form.Control
-            as="text"
-            defaultValue="Choose..."
+            type="text"
             name="game_developer"
             onChange={handleChange}
             aria-label="game developer"
