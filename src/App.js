@@ -17,6 +17,7 @@ import ProfileEditForm from "./pages/profiles/ProfileEditForm";
 import ReviewCreateForm from "./pages/reviews/ReviewCreateForm";
 import ReviewEditForm from "./pages/reviews/ReviewEditForm";
 import ReviewPage from "./pages/reviews/ReviewPage";
+import ReviewsPage from "./pages/reviews/ReviewsPage";
 
 function App() {
   const currentUser = useCurrentUser();
@@ -52,7 +53,7 @@ function App() {
               />
             )}
           />
-          <Route exact path="/reviews" render={() => <h1>Reviews</h1>} />
+          <Route exact path="/reviews" render={() => <ReviewsPage />} />
           <Route exact path="/reviews/create" render={() => <ReviewCreateForm />} />
           <Route exact path="/reviews/:id/edit" render={() => <ReviewEditForm />} />
           <Route exact path="/reviews/:id" render={() => <ReviewPage />} />

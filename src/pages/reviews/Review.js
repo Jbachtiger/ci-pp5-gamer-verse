@@ -4,8 +4,8 @@ import { Link } from "react-router-dom";
 import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 import { axiosRes } from "../../api/axiosDefaults";
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
-import Avatar from '../../components/Avatar';
-import { MoreDropdown } from '../../components/MoreDropdown';
+import Avatar from "../../components/Avatar";
+import { MoreDropdown } from "../../components/MoreDropdown";
 import styles from "../../styles/Post.module.css";
 
 /**
@@ -60,7 +60,7 @@ const Review = (props) => {
             <Avatar src={profile_image} height={55} />
             {owner}
           </Link>
-              
+
           <div className="d-flex align-items-center">
             <span>Created on: {created_on}</span>
             {is_owner && ReviewPage && (
@@ -72,16 +72,20 @@ const Review = (props) => {
           </div>
         </Media>
       </Card.Body>
-  {title && <Card.Title className="text-center">{title}</Card.Title>}
       <Link to={`/reviews/${id}`}>
         <Card.Img src={image} alt={title} />
       </Link>
-      <Card.Body> 
-         {content && <Card.Text>{content}</Card.Text>}
+      <Card.Body>
+        {title && <Card.Title className="text-center">{title}</Card.Title>}
+        {content && <Card.Text>{content}</Card.Text>}
         {genre && <Card.Text>Genre: {genre}</Card.Text>}
         {game_score && <Card.Text>Rating: {game_score}</Card.Text>}
-        {game_publisher && <Card.Text>Game Publisher: {game_publisher}</Card.Text>}
-        {game_developer && <Card.Text>Game Developer: {game_developer}</Card.Text>}
+        {game_publisher && (
+          <Card.Text>Game Publisher: {game_publisher}</Card.Text>
+        )}
+        {game_developer && (
+          <Card.Text>Game Developer: {game_developer}</Card.Text>
+        )}
         {modified_on && <Card.Text>Last modified: {modified_on}</Card.Text>}
       </Card.Body>
     </Card>
