@@ -19,6 +19,7 @@ import ReviewEditForm from "./pages/reviews/ReviewEditForm";
 import ReviewPage from "./pages/reviews/ReviewPage";
 import ReviewsPage from "./pages/reviews/ReviewsPage";
 import About from "./pages/about/About";
+import EventCreateForm from "./pages/events/EventCreateForm";
 
 function App() {
   const currentUser = useCurrentUser();
@@ -59,6 +60,7 @@ function App() {
           <Route exact path="/reviews/:id/edit" render={() => <ReviewEditForm />} />
           <Route exact path="/reviews/:id" render={() => <ReviewPage />} />
           <Route exact path="/events" render={() => <h1>Events</h1>} />
+          <Route exact path="/events/create" render={() => <EventCreateForm />} />
           <Route exact path="/signin" render={() => <SignInForm />} />
           <Route exact path="/signup" render={() => <SignUpForm />} />
           <Route exact path="/posts/create" render={() => <PostCreateForm />} />
