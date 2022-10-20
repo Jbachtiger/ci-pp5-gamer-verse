@@ -188,6 +188,8 @@ The submitted data was not a file. Check the encoding type on the form. fixed by
 
 game publisher and developer fields not clickable - fixed by change as to type in form field
 
+image not displaying for reviews page - needed to modifiy reviews serializer to include image for field
+
 ## Known Bugs
 
 ## Technologies Used

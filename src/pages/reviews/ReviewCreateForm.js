@@ -11,7 +11,7 @@ import appStyles from "../../App.module.css";
 import btnStyles from "../../styles/Button.module.css";
 import createFormStyles from "../../styles/PostCreateForm.module.css";
 
-const ReviewCreateForm = () => {
+function ReviewCreateForm() {
   useRedirect("loggedOut");
   const [errors, setErrors] = useState({});
 
@@ -72,12 +72,13 @@ const ReviewCreateForm = () => {
     formData.append("game_score", game_score);
     formData.append("game_publisher", game_publisher);
     formData.append("game_developer", game_developer);
-
+    
     try {
       const { data } = await axiosReq.post("/reviews/", formData);
       history.push(`/reviews/${data.id}`);
+      console.log(formData);
     } catch (err) {
-      // console.log(err);
+      console.log(err);
       if (err.response?.status !== 401) {
         setErrors(err.response?.data);
       }
@@ -184,8 +185,7 @@ const ReviewCreateForm = () => {
             onChange={handleChange}
             aria-label="game publisher"
             placeholder="Publisher name"
-          >
-          </Form.Control>
+          ></Form.Control>
         </Form.Group>
         {errors?.game_publisher?.map((message, idx) => (
           <Alert variant="warning" key={idx}>
@@ -201,8 +201,7 @@ const ReviewCreateForm = () => {
             onChange={handleChange}
             aria-label="game developer"
             placeholder="Developer name"
-          >
-          </Form.Control>
+          ></Form.Control>
         </Form.Group>
         {errors?.game_developer?.map((message, idx) => (
           <Alert variant="warning" key={idx}>
@@ -259,9 +258,10 @@ const ReviewCreateForm = () => {
           Cancel
         </Button>
       </Form>
+      console.log(Form);
       <br />
     </Container>
   );
-};
+}
 
 export default ReviewCreateForm;

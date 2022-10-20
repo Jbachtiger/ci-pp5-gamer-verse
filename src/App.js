@@ -18,6 +18,7 @@ import ReviewCreateForm from "./pages/reviews/ReviewCreateForm";
 import ReviewEditForm from "./pages/reviews/ReviewEditForm";
 import ReviewPage from "./pages/reviews/ReviewPage";
 import ReviewsPage from "./pages/reviews/ReviewsPage";
+import About from "./pages/about/About";
 
 function App() {
   const currentUser = useCurrentUser();
@@ -79,7 +80,7 @@ function App() {
             path="/profiles/:id/edit"
             render={() => <ProfileEditForm />}
           />
-          <Route exact path="/about" render={() => <h1>About</h1>} />
+          <Route exact path="/about" render={() => <About />} />
           <Route render={() => <h1>Page not found!</h1>} />
         </Switch>
       </Container>
