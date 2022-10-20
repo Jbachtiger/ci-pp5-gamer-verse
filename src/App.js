@@ -22,6 +22,7 @@ import About from "./pages/about/About";
 import EventCreateForm from "./pages/events/EventCreateForm";
 import EventEditForm from "./pages/events/EventEditForm";
 import EventPage from "./pages/events/EventPage";
+import EventsPage from "./pages/events/EventsPage";
 
 function App() {
   const currentUser = useCurrentUser();
@@ -61,7 +62,7 @@ function App() {
           <Route exact path="/reviews/create" render={() => <ReviewCreateForm />} />
           <Route exact path="/reviews/:id/edit" render={() => <ReviewEditForm />} />
           <Route exact path="/reviews/:id" render={() => <ReviewPage />} />
-          <Route exact path="/events" render={() => <h1>Events</h1>} />
+          <Route exact path="/events" render={() => <EventsPage />} />
           <Route exact path="/events/create" render={() => <EventCreateForm />} />
           <Route exact path="/events/:id/edit" render={() => <EventEditForm />} />
           <Route exact path="/events/:id" render={() => <EventPage />} />
