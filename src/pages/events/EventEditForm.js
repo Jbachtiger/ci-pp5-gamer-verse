@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useHistory } from "react-router-dom";
 import { useRedirect } from "../../hooks/useRedirect";
 import { axiosReq } from "../../api/axiosDefaults";
@@ -6,8 +6,9 @@ import { Alert, Button, Container, Form } from "react-bootstrap";
 
 import btnStyles from "../../styles/Button.module.css";
 import createFormStyles from "../../styles/PostCreateForm.module.css";
+import { useParams } from "react-router-dom/cjs/react-router-dom.min";
 
-const EventCreateForm = () => {
+const EventEditForm = () => {
   useRedirect("loggedOut");
   const [errors, setErrors] = useState({});
 
@@ -38,6 +39,50 @@ const EventCreateForm = () => {
   } = eventData;
 
   const history = useHistory();
+  const { id } = useParams();
+
+  /**
+   * Populate EditForm fields with previously added data
+   */
+  useEffect(() => {
+    const handleMount = async () => {
+      try {
+        const { data } = await axiosReq.get(`/events/${id}/`);
+        const {
+          title,
+          content,
+          date,
+          time,
+          city,
+          address,
+          price,
+          created_on,
+          modified_on,
+          event_link,
+          is_owner,
+        } = data;
+
+        is_owner
+          ? setEventData({
+              title,
+              content,
+              date,
+              time,
+              city,
+              address,
+              price,
+              created_on,
+              modified_on,
+              event_link,
+            })
+          : history.push("/");
+      } catch (err) {
+        // console.log(err);
+      }
+    };
+
+    handleMount();
+  }, [history, id]);
 
   /**
    * Populate the eventData strings
@@ -220,4 +265,4 @@ const EventCreateForm = () => {
   );
 };
 
-export default EventCreateForm;
+export default EventEditForm;
