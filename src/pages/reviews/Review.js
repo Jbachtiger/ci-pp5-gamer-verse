@@ -6,7 +6,7 @@ import { axiosRes } from "../../api/axiosDefaults";
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
 import Avatar from "../../components/Avatar";
 import { MoreDropdown } from "../../components/MoreDropdown";
-import styles from "../../styles/Post.module.css";
+import styles from "../../styles/Review.module.css";
 
 /**
  * Render the data of a single review
@@ -53,7 +53,7 @@ const Review = (props) => {
   };
 
   return (
-    <Card className={styles.Post}>
+    <Card className={styles.Review}>
       <Card.Body>
         <Media className="align-items-center justify-content-between">
           <Link to={`/profiles/${profile_id}`}>
@@ -76,17 +76,19 @@ const Review = (props) => {
         <Card.Img src={image} alt={title} />
       </Link>
       <Card.Body>
-        {title && <Card.Title className="text-center">{title}</Card.Title>}
-        {content && <Card.Text>{content}</Card.Text>}
-        {genre && <Card.Text>Genre: {genre}</Card.Text>}
-        {game_score && <Card.Text>Rating: {game_score}</Card.Text>}
+        {title && <Card.Title className={styles.ReviewTitle}>{title}</Card.Title>}
+        <hr/>
+        {genre && <Card.Text className="text-center">Genre: {genre}</Card.Text>}
+        {game_score && <Card.Text className="text-center">Rating: {game_score}</Card.Text>}
         {game_publisher && (
-          <Card.Text>Game Publisher: {game_publisher}</Card.Text>
+          <Card.Text className="text-center">Game Publisher: {game_publisher}</Card.Text>
         )}
         {game_developer && (
-          <Card.Text>Game Developer: {game_developer}</Card.Text>
+          <Card.Text className="text-center">Game Developer: {game_developer}</Card.Text>
         )}
-        {modified_on && <Card.Text>Last modified: {modified_on}</Card.Text>}
+        {modified_on && <Card.Text className="text-center">Last modified: {modified_on}</Card.Text>}
+        <hr/>
+        {content && <Card.Text>{content}</Card.Text>}
       </Card.Body>
     </Card>
   );
