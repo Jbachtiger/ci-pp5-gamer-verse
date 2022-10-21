@@ -89,8 +89,9 @@ const Post = (props) => {
             <Avatar src={profile_image} height={55} />
             {owner}
           </Link>
-          <div className="d-flex align-items-center">
+          <div className={`${styles.PostCreatedOn} d-flex align-items-center`}>
             <span>Created on: {created_on}</span>
+            <span>Last updated: {modified_on}</span>
             {is_owner && postPage && (
               <MoreDropdown
                 handleEdit={handleEdit}
@@ -107,7 +108,6 @@ const Post = (props) => {
         {title && <Card.Title className="text-center">{title}</Card.Title>}
         {game_medium && <Card.Text>Game Medium: {game_medium}</Card.Text>}
         {description && <Card.Text>{description}</Card.Text>}
-        {modified_on && <Card.Text>Last modified: {modified_on}</Card.Text>}
 
         <div>
           {is_owner ? (

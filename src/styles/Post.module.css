@@ -24,5 +24,10 @@
     color: #f85032;
   }
 
+  .PostCreatedOn {
+    flex-direction: column-reverse;
+  }
+
+
 
   

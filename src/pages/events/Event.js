@@ -59,7 +59,7 @@ const Event = (props) => {
             <Avatar src={profile_image} height={55} />
             {owner}
           </Link>
-          <div className={`${styles.EventCreated} d-flex align-items-center`}>
+          <div className={`${styles.EventCreatedOn} d-flex align-items-center`}>
             <span>Created on: {created_on}</span>
             <span>Last updated: {modified_on}</span>
             {is_owner && eventPage && (

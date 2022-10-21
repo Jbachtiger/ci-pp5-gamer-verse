@@ -11,10 +11,14 @@
     margin: 0 0;
   }
 
-
 .ReviewTitle {
     text-align: center;
     font-size: 2rem;
 }
+
+.ReviewCreatedOn {
+  flex-direction: column-reverse;
+}
+
 
   

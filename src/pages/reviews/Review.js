@@ -61,8 +61,9 @@ const Review = (props) => {
             {owner}
           </Link>
 
-          <div className="d-flex align-items-center">
+          <div className={`${styles.ReviewCreatedOn} d-flex align-items-center`}>
             <span>Created on: {created_on}</span>
+            <span>Last updated: {modified_on}</span>
             {is_owner && reviewPage && (
               <MoreDropdown
                 handleEdit={handleEdit}
@@ -86,7 +87,6 @@ const Review = (props) => {
         {game_developer && (
           <Card.Text className="text-center">Game Developer: {game_developer}</Card.Text>
         )}
-        {modified_on && <Card.Text className="text-center">Last modified: {modified_on}</Card.Text>}
         <hr/>
         {content && <Card.Text>{content}</Card.Text>}
       </Card.Body>
