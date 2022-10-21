@@ -17,7 +17,7 @@ const Comment = (props) => {
     profile_id,
     profile_image,
     owner,
-    updated_on,
+    modified_on,
     content,
     id,
     setPost,
@@ -60,7 +60,7 @@ const Comment = (props) => {
         </Link>
         <Media.Body className="align-self-center ml-2">
           <span className={styles.Owner}>{owner}</span>
-          <span className={styles.Date}>{updated_on}</span>
+          <span className={styles.Date}>{modified_on}</span>
           {showEditForm ? (
             <CommentEditForm
               id={id}
