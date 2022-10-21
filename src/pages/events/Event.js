@@ -7,7 +7,7 @@ import Avatar from "../../components/Avatar";
 import { MoreDropdown } from "../../components/MoreDropdown";
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
 
-import styles from "../../styles/Post.module.css";
+import styles from "../../styles/Event.module.css";
 
 const Event = (props) => {
   const {
@@ -52,17 +52,16 @@ const Event = (props) => {
   };
 
   return (
-    <Card className={styles.Post}>
+    <Card className={styles.Event}>
       <Card.Body>
         <Media className="align-items-center justify-content-between">
           <Link to={`/profiles/${profile_id}`}>
             <Avatar src={profile_image} height={55} />
             {owner}
           </Link>
-
-          <div className="d-flex align-items-center">
+          <div className={`${styles.EventCreated} d-flex align-items-center`}>
             <span>Created on: {created_on}</span>
-            <span>Modified on: {modified_on}</span>
+            <span>Last updated: {modified_on}</span>
             {is_owner && eventPage && (
               <MoreDropdown
                 handleEdit={handleEdit}
@@ -72,17 +71,22 @@ const Event = (props) => {
           </div>
         </Media>
       </Card.Body>
+      <hr />
       <Card.Body>
-        <Link to={`/events/${id}`}>
-          {title && <Card.Title className="text-center">{title}</Card.Title>}
-        </Link>
-        {price && <Card.Text>Event Price: {price}</Card.Text>}
+        <div>
+          <Link to={`/events/${id}`}>
+            {title && <Card.Title className="text-center pb-3">{title}</Card.Title>}
+          </Link>
+        </div>
+        {price && <Card.Text>Event Price: £{price}</Card.Text>}
         {date && <Card.Text>Date: {date} </Card.Text>}
         {time && <Card.Text>Time: {time} </Card.Text>}
         {address && <Card.Text>Address: {address} </Card.Text>}
         {city && <Card.Text>City: {city} </Card.Text>}
-        {content && <Card.Text>{content}</Card.Text>}
-        {event_link && <Card.Text>URL: {event_link} </Card.Text>}
+        {content && <Card.Text>Details: {content}</Card.Text>}
+        {event_link && (
+          <Card.Link href={event_link}>URL: {event_link} </Card.Link>
+        )}
       </Card.Body>
     </Card>
   );

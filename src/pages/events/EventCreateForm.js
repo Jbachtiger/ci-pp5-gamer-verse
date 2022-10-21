@@ -203,6 +203,23 @@ const EventCreateForm = () => {
           </Alert>
         ))}
 
+        <Form.Group>
+          <Form.Label>URL:</Form.Label>
+          <Form.Control
+            type="url"
+            name="event_link"
+            value={event_link}
+            onChange={handleChange}
+            aria-label="event_link"
+            placeholder="Add a link to your event"
+          />
+        </Form.Group>
+        {errors?.event_link?.map((message, idx) => (
+          <Alert variant="warning" key={idx}>
+            {message}
+          </Alert>
+        ))}
+
         <Button className={`${btnStyles.Button}`} type="submit">
           Post
         </Button>
