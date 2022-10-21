@@ -26,16 +26,6 @@ const NavBar = () => {
     }
   };
 
-  const addPostIcon = (
-    <NavLink
-      className={styles.NavLink}
-      activeClassName={styles.Active}
-      to="/posts/create"
-    >
-      <i className="far fa-plus-square"></i>Add post
-    </NavLink>
-  );
-
   const loggedInIcons = (
     <>
       <NavLink
@@ -50,7 +40,7 @@ const NavBar = () => {
         className={styles.NavLink}
         activeClassName={styles.Active}
       >
-        <i className="fas fa-star"></i>Favourites
+        <i class="fas fa-bookmark"></i>Favourites
       </NavLink>
       <NavLink to="/" className={styles.NavLink} onClick={handleSignOut}>
         <i className="fas fa-sign-out-alt"></i>Sign out
@@ -95,7 +85,6 @@ const NavBar = () => {
             <img src={logo} alt="logo" height="60px" />
           </Navbar.Brand>
         </NavLink>
-        {currentUser && addPostIcon}
         <Navbar.Toggle
           ref={ref}
           onClick={() => setExpanded(!expanded)}
@@ -109,7 +98,7 @@ const NavBar = () => {
               activeClassName={styles.Active}
               to="/"
             >
-              <i className="fas fa-users"></i> Community Hub
+              <i className="fas fa-users"></i> Community
             </NavLink>
             <NavLink
               className={styles.NavLink}
