@@ -73,7 +73,9 @@ const Event = (props) => {
         </Media>
       </Card.Body>
       <Card.Body>
-        {title && <Card.Title className="text-center">{title}</Card.Title>}
+        <Link to={`/events/${id}`}>
+          {title && <Card.Title className="text-center">{title}</Card.Title>}
+        </Link>
         {price && <Card.Text>Event Price: {price}</Card.Text>}
         {date && <Card.Text>Date: {date} </Card.Text>}
         {time && <Card.Text>Time: {time} </Card.Text>}
