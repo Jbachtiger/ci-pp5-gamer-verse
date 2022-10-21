@@ -2,9 +2,11 @@ import React, { useEffect, useState } from "react";
 import { Row, Col, Container } from "react-bootstrap";
 import { useParams } from "react-router-dom/cjs/react-router-dom.min";
 import { axiosReq } from "../../api/axiosDefaults";
+
 import appStyles from "../../App.module.css";
-import { useCurrentUser } from "../../contexts/CurrentUserContext";
 import postPageStyle from "../../styles/PostPage.module.css";
+
+import { useCurrentUser } from "../../contexts/CurrentUserContext";
 import CommentCreateForm from "../comments/CommentCreateForm";
 import Post from "./Post";
 import Comment from "../comments/Comment";
@@ -58,7 +60,7 @@ const PostPage = () => {
               setComments={setComments}
             />
           ) : comments.results.length ? (
-            "Comments"
+            <h5 className={postPageStyle.CommentsHeading}>Comments</h5>
           ) : null}
           <div className={postPageStyle.CommentsBox}>
           {comments.results.length ? (
