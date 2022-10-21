@@ -42,7 +42,7 @@ function PostsPage({ message, filter = "" }) {
       activeClassName={styles.Active}
       to="/posts/create"
     >
-      <Button className={`${styles.AddButton} ${btnStyles.Button}`}><i className="far fa-plus-square"></i><strong>Add Post</strong></Button>
+      <Button className={`${styles.AddPost} ${btnStyles.Button}`}><i className="far fa-plus-square"></i><strong>Add Post</strong></Button>
     </NavLink>
   );
 

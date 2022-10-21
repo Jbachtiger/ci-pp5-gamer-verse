@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Container, Form } from "react-bootstrap";
+import { Container, Form, Button } from "react-bootstrap";
 
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
@@ -7,7 +7,8 @@ import { useLocation } from "react-router-dom/cjs/react-router-dom.min";
 import { axiosReq } from "../../api/axiosDefaults";
 
 import appStyles from "../../App.module.css";
-import styles from "../../styles/PostsPage.module.css";
+import styles from "../../styles/ReviewsPage.module.css";
+import btnStyles from "../../styles/Button.module.css";
 
 import Asset from "../../components/Asset";
 import { fetchMoreData } from "../../utils/utils";
@@ -41,7 +42,7 @@ function ReviewsPage({ message, filter = "" }) {
       activeClassName={styles.Active}
       to="/reviews/create"
     >
-      <i className="far fa-plus-square"></i>Add Review
+      <Button className={`${styles.AddReview} ${btnStyles.Button}`}><i className="far fa-plus-square"></i><strong>Add Review</strong></Button>
     </NavLink>
   );
 
@@ -72,7 +73,7 @@ function ReviewsPage({ message, filter = "" }) {
 
   return (
     <Row className="h-100">
-      <Col className="py-2 p-0 p-lg-2" lg={8}>
+      <Col className="py-2 p-0 p-lg-4" lg={8}>
         <Container>{currentUser && addReviewIcon}</Container>
         <PopularProfiles mobile />
         <i className={`fas fa-search ${styles.SearchIcon}`} />
