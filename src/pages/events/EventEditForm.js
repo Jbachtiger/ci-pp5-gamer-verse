@@ -20,8 +20,6 @@ const EventEditForm = () => {
     city: "",
     address: "",
     price: "",
-    created_on: "",
-    modified_on: "",
     event_link: "",
   });
 
@@ -33,8 +31,6 @@ const EventEditForm = () => {
     city,
     address,
     price,
-    created_on,
-    modified_on,
     event_link,
   } = eventData;
 
@@ -56,8 +52,6 @@ const EventEditForm = () => {
           city,
           address,
           price,
-          created_on,
-          modified_on,
           event_link,
           is_owner,
         } = data;
@@ -71,8 +65,6 @@ const EventEditForm = () => {
               city,
               address,
               price,
-              created_on,
-              modified_on,
               event_link,
             })
           : history.push("/");
@@ -109,8 +101,6 @@ const EventEditForm = () => {
     formData.append("city", city);
     formData.append("address", address);
     formData.append("price", price);
-    formData.append("created_on", created_on);
-    formData.append("modified_on", modified_on);
     formData.append("event_link", event_link);
 
     try {

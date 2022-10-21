@@ -190,6 +190,8 @@ game publisher and developer fields not clickable - fixed by change as to type i
 
 image not displaying for reviews page - needed to modifiy reviews serializer to include image for field
 
+Warning: Invalid DOM property `class`. Did you mean `className`? - didn't add className rather class for favourite navbar
+
 ## Known Bugs
 
 ## Technologies Used

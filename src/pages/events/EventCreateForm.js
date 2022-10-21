@@ -19,8 +19,6 @@ const EventCreateForm = () => {
     city: "",
     address: "",
     price: "",
-    created_on: "",
-    modified_on: "",
     event_link: "",
   });
 
@@ -32,8 +30,6 @@ const EventCreateForm = () => {
     city,
     address,
     price,
-    created_on,
-    modified_on,
     event_link,
   } = eventData;
 
@@ -64,8 +60,6 @@ const EventCreateForm = () => {
     formData.append("city", city);
     formData.append("address", address);
     formData.append("price", price);
-    formData.append("created_on", created_on);
-    formData.append("modified_on", modified_on);
     formData.append("event_link", event_link);
 
     try {

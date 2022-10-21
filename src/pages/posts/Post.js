@@ -106,7 +106,7 @@ const Post = (props) => {
       </Link>
       <Card.Body>
         {title && <Card.Title className="text-center">{title}</Card.Title>}
-        {game_medium && <Card.Text>Game Medium: {game_medium}</Card.Text>}
+        {game_medium && <Card.Text>Category: {game_medium}</Card.Text>}
         {description && <Card.Text>{description}</Card.Text>}
 
         <div>

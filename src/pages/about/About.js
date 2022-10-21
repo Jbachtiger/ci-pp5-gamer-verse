@@ -50,7 +50,7 @@ function About() {
             aria-label="Visit my Github page (opens in a new tab)"
             className="p-3"
           >
-            <i class="fab fa-github"> GitHub</i>
+            <i className="fab fa-github"> GitHub</i>
           </a>
 
           <a
@@ -59,7 +59,7 @@ function About() {
             rel="noreferrer"
             aria-label="Visit my LinkedIn page (opens in a new tab)"
           >
-            <i class="fab fa-linkedin">LinkedIn</i>
+            <i className="fab fa-linkedin">LinkedIn</i>
           </a>
           <hr />
           <p>
