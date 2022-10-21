@@ -67,7 +67,7 @@ const Comment = (props) => {
               profile_id={profile_id}
               content={content}
               profileImage={profile_image}
-              setComments={setComments}
+              setComments={setComments} 
               setShowEditForm={setShowEditForm}
             />
           ) : (

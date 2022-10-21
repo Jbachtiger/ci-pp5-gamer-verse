@@ -38,14 +38,14 @@ const Profile = (props) => {
           !is_owner &&
           (following_id ? (
             <Button
-              className={btnStyles.Button}
+              className={`${btnStyles.Button} ${styles.ButtonSize}`}
               onClick={() => handleUnfollow(profile)}
             >
               Unfollow
             </Button>
           ) : (
             <Button
-              className={btnStyles.Button}
+              className={`${btnStyles.Button} ${styles.ButtonSize}`}
               onClick={() => handleFollow(profile)}
             >
               Follow

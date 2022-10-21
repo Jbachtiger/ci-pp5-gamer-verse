@@ -1,3 +1,8 @@
 .WordBreak {
     word-break: break-all;
+    color: #fff;
+  }
+
+  .ButtonSize {
+    font-size: 1.2em;
   }
