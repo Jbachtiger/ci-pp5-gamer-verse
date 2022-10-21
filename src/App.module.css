@@ -44,9 +44,8 @@ input[type="file"] {
 }
 
 .Content {
-  background-color: #ffffff;
+  background-color: #856BA5;
   padding: 10px;
   border-radius: 2px;
-  border: 1px solid #dadadf;
   margin-top: 25px;
 }

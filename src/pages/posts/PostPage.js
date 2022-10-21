@@ -45,7 +45,7 @@ const PostPage = () => {
 
   return (
     <Row className="h-100">
-      <Col className="py-2 p-0 p-lg-2" lg={8}>
+      <Col className="py-2 p-0 p-lg-4" lg={8}>
         <PopularProfiles className={postPageStyle.TextColour} mobile />
         <Post {...post.results[0]} setPosts={setPost} postPage />
         <Container className={appStyles.Content}>
@@ -60,6 +60,7 @@ const PostPage = () => {
           ) : comments.results.length ? (
             "Comments"
           ) : null}
+          <div className={postPageStyle.CommentsBox}>
           {comments.results.length ? (
             <InfiniteScroll
               children={comments.results.map((comment) => (
@@ -82,9 +83,10 @@ const PostPage = () => {
           ) : (
             <span>No comments, login to leave a comment</span>
           )}
+          </div>
         </Container>
       </Col>
-      <Col lg={4} className="d-none d-lg-block p-0 p-lg-2">
+      <Col lg={4} className="d-none d-lg-block p-0 p-lg-0">
         <PopularProfiles />
       </Col>
     </Row>

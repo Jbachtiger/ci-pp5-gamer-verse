@@ -1,4 +1,7 @@
 .TextColour {
-    color: #000;
+    color: #fff;
 }
 
+.CommentsBox{
+    padding: 10px;
+}
