@@ -109,7 +109,7 @@ const Post = (props) => {
         {description && <Card.Text>{description}</Card.Text>}
         {modified_on && <Card.Text>Last modified: {modified_on}</Card.Text>}
 
-        <div className={styles.PostBar}>
+        <div>
           {is_owner ? (
             <OverlayTrigger
               placement="top"

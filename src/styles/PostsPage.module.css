@@ -1,4 +1,5 @@
-.SearchBar, .SearchIcon {
+.SearchBar,
+.SearchIcon {
   margin-top: 25px;
   margin-bottom: 25px;
 }
@@ -20,4 +21,8 @@
 .SearchIcon:hover {
   cursor: default;
   color: #856ba5;
+}
+
+.AddButton {
+  font-size: 1.1em;
 }

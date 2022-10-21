@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Container, Form } from "react-bootstrap";
+import { Container, Form, Button } from "react-bootstrap";
 
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
@@ -8,6 +8,7 @@ import { axiosReq } from "../../api/axiosDefaults";
 
 import appStyles from "../../App.module.css";
 import styles from "../../styles/PostsPage.module.css";
+import btnStyles from "../../styles/Button.module.css";
 
 import Post from "./Post";
 import Asset from "../../components/Asset";
@@ -41,7 +42,7 @@ function PostsPage({ message, filter = "" }) {
       activeClassName={styles.Active}
       to="/posts/create"
     >
-      <i className="far fa-plus-square"></i>Add post
+      <Button className={`${styles.AddButton} ${btnStyles.Button}`}><i className="far fa-plus-square"></i><strong>Add Post</strong></Button>
     </NavLink>
   );
 
