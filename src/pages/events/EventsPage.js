@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Col, Container, Form, Row } from "react-bootstrap";
+import { Col, Container, Form, Row, Button } from "react-bootstrap";
 import InfiniteScroll from "react-infinite-scroll-component";
 import { NavLink } from "react-router-dom";
 import { useLocation } from "react-router-dom/cjs/react-router-dom.min";
@@ -7,8 +7,9 @@ import { axiosReq } from "../../api/axiosDefaults";
 import Asset from "../../components/Asset";
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
 
-import styles from "../../styles/PostsPage.module.css";
+import styles from "../../styles/EventsPage.module.css";
 import appStyles from "../../App.module.css";
+import btnStyles from "../../styles/Button.module.css";
 
 import NoResults from "../../assets/no-results.png";
 import { fetchMoreData } from "../../utils/utils";
@@ -36,7 +37,10 @@ const EventsPage = ({ message, filter = "" }) => {
       activeClassName={styles.Active}
       to="/events/create"
     >
-      <i className="far fa-plus-square"></i>Add Event
+      <Button className={`${styles.AddEvent} ${btnStyles.Button}`}>
+        <i className="far fa-plus-square"></i>
+        <strong>Add Event</strong>
+      </Button>
     </NavLink>
   );
 

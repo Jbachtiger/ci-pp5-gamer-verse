@@ -2,8 +2,10 @@ import React from 'react'
 import { Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { useCurrentUser } from '../../contexts/CurrentUserContext';
+
 import styles from '../../styles/Profile.module.css'
 import btnStyles from '../../styles/Button.module.css'
+
 import Avatar from "../../components/Avatar";
 import { useSetProfileData } from '../../contexts/ProfileDataContext';
 

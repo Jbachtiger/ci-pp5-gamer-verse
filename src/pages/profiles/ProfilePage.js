@@ -146,7 +146,7 @@ function ProfilePage() {
     <Row>
       <Col className="py-2 p-0 p-lg-2" lg={8}>
         <PopularProfiles mobile />
-        <Container className={appStyles.Content}>
+        <Container className={styles.ProfileContent}>
           {hasLoaded ? (
             <>
               {profilePageHeader} {mainProfilePosts}{" "}
