@@ -104,7 +104,7 @@ const EventEditForm = () => {
     formData.append("event_link", event_link);
 
     try {
-      const { data } = await axiosReq.post("/events/", formData);
+      const { data } = await axiosReq.put(`/events/${id}/`, formData);
       history.push(`/events/${data.id}`);
       console.log(formData);
     } catch (err) {
