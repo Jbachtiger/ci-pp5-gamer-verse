@@ -61,7 +61,9 @@ const Review = (props) => {
             {owner}
           </Link>
 
-          <div className={`${styles.ReviewCreatedOn} d-flex align-items-center`}>
+          <div
+            className={`${styles.ReviewCreatedOn} d-flex align-items-center`}
+          >
             <span>Created on: {created_on}</span>
             <span>Last updated: {modified_on}</span>
             {is_owner && reviewPage && (
@@ -77,17 +79,25 @@ const Review = (props) => {
         <Card.Img src={image} alt={title} />
       </Link>
       <Card.Body>
-        {title && <Card.Title className={styles.ReviewTitle}>{title}</Card.Title>}
-        <hr/>
+        {title && (
+          <Card.Title className={styles.ReviewTitle}>{title}</Card.Title>
+        )}
+        <hr />
         {genre && <Card.Text className="text-center">Genre: {genre}</Card.Text>}
-        {game_score && <Card.Text className="text-center">Rating: {game_score}/5</Card.Text>}
+        {game_score && (
+          <Card.Text className="text-center">Rating: {game_score}/5</Card.Text>
+        )}
         {game_publisher && (
-          <Card.Text className="text-center">Game Publisher: {game_publisher}</Card.Text>
+          <Card.Text className="text-center">
+            Game Publisher: {game_publisher}
+          </Card.Text>
         )}
         {game_developer && (
-          <Card.Text className="text-center">Game Developer: {game_developer}</Card.Text>
+          <Card.Text className="text-center">
+            Game Developer: {game_developer}
+          </Card.Text>
         )}
-        <hr/>
+        <hr />
         {content && <Card.Text>{content}</Card.Text>}
       </Card.Body>
     </Card>

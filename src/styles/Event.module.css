@@ -1,20 +1,16 @@
 .Event {
-    background-color: #856BA5;
-    border: 1px solid #dadadf;
-    border-radius: 2px;
-    margin-bottom: 16px;
-    color: #fff;
-  }
-  
-  .Event figure,
-  h5 {
-    margin: 0 0;
-  }
+  background-color: #856ba5;
+  border: 1px solid #dadadf;
+  border-radius: 2px;
+  margin-bottom: 16px;
+  color: #fff;
+}
 
-  .EventCreatedOn {
-    flex-direction: column-reverse;
-  }
+.Event figure,
+h5 {
+  margin: 0 0;
+}
 
-
-
-  
+.EventCreatedOn {
+  flex-direction: column-reverse;
+}

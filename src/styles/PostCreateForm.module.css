@@ -1,34 +1,35 @@
-.Container{
-    background-color: #096A2E;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: rgba(1, 99, 1, 0.15) 1.95px 1.95px 2.6px;
+.Container {
+  background-color: #096a2e;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: rgba(1, 99, 1, 0.15) 1.95px 1.95px 2.6px;
 }
 
-.Container h1, form {
-    color: #fff;
+.Container h1,
+form {
+  color: #fff;
 }
 
 a:hover {
-    text-decoration: none;
-    color: #72A6FF;
-  }
+  text-decoration: none;
+  color: #72a6ff;
+}
 
-
-.MainTitle, .Paragraph {
-    text-align: center;
-    display: flex;
-    flex-direction: column;
+.MainTitle,
+.Paragraph {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
 }
 
 .BlackFont {
-    color: #000;
+  color: #000;
 }
 
-.FormLabels{
-    color: #fff;
+.FormLabels {
+  color: #fff;
 }
 
 .Asset {
-    color: #fff;
+  color: #fff;
 }

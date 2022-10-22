@@ -38,8 +38,8 @@ const ReviewPage = () => {
           <Review {...review.results[0]} setReview={setReview} reviewPage />
         </Col>
         <Col lg={4} className="d-none d-lg-block p-0 p-lg-0">
-        <PopularProfiles />
-      </Col>
+          <PopularProfiles />
+        </Col>
       </Row>
     </Container>
   );

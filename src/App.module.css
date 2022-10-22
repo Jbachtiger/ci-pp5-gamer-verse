@@ -1,36 +1,35 @@
 * {
-    box-sizing: border-box;
-  }
+  box-sizing: border-box;
+}
 
 .App {
-    font-family: "Roboto", sans-serif;
-    background-color: #E9EFFF;
-    min-height: 100vh;
+  font-family: "Roboto", sans-serif;
+  background-color: #e9efff;
+  min-height: 100vh;
 }
 
 .Main {
-    padding-top: 81px;
-  }
+  padding-top: 81px;
+}
 
 a {
-    color: #fff;
-    transition: color ease-in-out 0.3s;
+  color: #fff;
+  transition: color ease-in-out 0.3s;
 }
 
 a:hover {
   text-decoration: none;
-  color: #096A2E;
+  color: #096a2e;
 }
 
 a:hover i {
-    color: #096A2E;
-    transition: color ease-in-out 0.3s;
+  color: #096a2e;
+  transition: color ease-in-out 0.3s;
 }
 
 i {
   font-size: 1.4rem;
   padding: 3px;
-  
 }
 
 .Image {
@@ -44,7 +43,7 @@ input[type="file"] {
 }
 
 .Content {
-  background-color: #856BA5;
+  background-color: #856ba5;
   padding: 10px;
   border-radius: 2px;
   margin-top: 25px;

@@ -1,13 +1,11 @@
-import React from 'react'
-import { Button } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
-import { useCurrentUser } from '../../contexts/CurrentUserContext';
-
-import styles from '../../styles/Profile.module.css'
-import btnStyles from '../../styles/Button.module.css'
-
+import React from "react";
+import { Button } from "react-bootstrap";
+import { Link } from "react-router-dom";
+import { useCurrentUser } from "../../contexts/CurrentUserContext";
+import styles from "../../styles/Profile.module.css";
+import btnStyles from "../../styles/Button.module.css";
 import Avatar from "../../components/Avatar";
-import { useSetProfileData } from '../../contexts/ProfileDataContext';
+import { useSetProfileData } from "../../contexts/ProfileDataContext";
 
 /**
  * Displays profile avatar and follow/unfollow buttons
@@ -20,8 +18,8 @@ const Profile = (props) => {
   const currentUser = useCurrentUser();
   const is_owner = currentUser?.username === owner;
 
-  const {handleFollow, handleUnfollow} = useSetProfileData();
-  
+  const { handleFollow, handleUnfollow } = useSetProfileData();
+
   return (
     <div
       className={`my-3 d-flex align-items-center ${mobile && "flex-column"}`}
@@ -58,4 +56,4 @@ const Profile = (props) => {
   );
 };
 
-export default Profile
+export default Profile;

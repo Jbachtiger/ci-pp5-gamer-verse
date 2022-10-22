@@ -1,14 +1,14 @@
 .TextColour {
-    color: #fff;
+  color: #fff;
 }
 
-.CommentsBox{
-    padding: 10px;
-    color: #fff;
+.CommentsBox {
+  padding: 10px;
+  color: #fff;
 }
 
 .CommentsHeading {
-    display: flex;
-    justify-content: center;
-    color: #fff;
+  display: flex;
+  justify-content: center;
+  color: #fff;
 }

@@ -2,12 +2,17 @@ import React from "react";
 import { Card, Container } from "react-bootstrap";
 import styles from "../../styles/About.module.css";
 
+/**
+ * Renders about page
+ */
 function About() {
   return (
     <Container>
       <Card className={styles.About}>
         <Card.Body>
-          <Card.Title><h1>About Gamer Verse</h1></Card.Title>
+          <Card.Title>
+            <h1>About Gamer Verse</h1>
+          </Card.Title>
           <hr />
           <Card.Text>
             {" "}

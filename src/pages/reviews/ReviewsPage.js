@@ -1,18 +1,14 @@
 import React, { useEffect, useState } from "react";
 import { Container, Form, Button } from "react-bootstrap";
-
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 import { useLocation } from "react-router-dom/cjs/react-router-dom.min";
 import { axiosReq } from "../../api/axiosDefaults";
-
 import appStyles from "../../App.module.css";
 import styles from "../../styles/ReviewsPage.module.css";
 import btnStyles from "../../styles/Button.module.css";
-
 import Asset from "../../components/Asset";
 import { fetchMoreData } from "../../utils/utils";
-
 import NoResults from "../../assets/no-results.png";
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
 import { NavLink } from "react-router-dom";
@@ -34,26 +30,32 @@ function ReviewsPage({ message, filter = "" }) {
   const currentUser = useCurrentUser();
 
   /**
- * Displays addReview icon
- */
+   * Displays addReview icon
+   */
   const addReviewIcon = (
     <NavLink
       className={styles.NavLink}
       activeClassName={styles.Active}
       to="/reviews/create"
     >
-      <Button className={`${styles.AddReview} ${btnStyles.Button}`}><i className="far fa-plus-square"></i><strong>Add Review</strong></Button>
+      <Button className={`${styles.AddReview} ${btnStyles.Button}`}>
+        <i className="far fa-plus-square"></i>
+        <strong>Add Review</strong>
+      </Button>
     </NavLink>
   );
 
-   /**
- * Fetches reviews from Gamer Verse API
- * Returns search results
- */
+  /**
+   * Fetches events from Gamer Verse API
+   * Returns search results
+   * Prevents API requests on each keystroke in the searchbar
+   */
   useEffect(() => {
-    const fetchReviews= async () => {
+    const fetchReviews = async () => {
       try {
-        const { data } = await axiosReq.get(`/reviews/?${filter}search=${query}`);
+        const { data } = await axiosReq.get(
+          `/reviews/?${filter}search=${query}`
+        );
         setReviews(data);
         setHasLoaded(true);
       } catch (err) {

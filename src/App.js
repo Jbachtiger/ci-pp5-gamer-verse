@@ -59,12 +59,28 @@ function App() {
             )}
           />
           <Route exact path="/reviews" render={() => <ReviewsPage />} />
-          <Route exact path="/reviews/create" render={() => <ReviewCreateForm />} />
-          <Route exact path="/reviews/:id/edit" render={() => <ReviewEditForm />} />
+          <Route
+            exact
+            path="/reviews/create"
+            render={() => <ReviewCreateForm />}
+          />
+          <Route
+            exact
+            path="/reviews/:id/edit"
+            render={() => <ReviewEditForm />}
+          />
           <Route exact path="/reviews/:id" render={() => <ReviewPage />} />
           <Route exact path="/events" render={() => <EventsPage />} />
-          <Route exact path="/events/create" render={() => <EventCreateForm />} />
-          <Route exact path="/events/:id/edit" render={() => <EventEditForm />} />
+          <Route
+            exact
+            path="/events/create"
+            render={() => <EventCreateForm />}
+          />
+          <Route
+            exact
+            path="/events/:id/edit"
+            render={() => <EventEditForm />}
+          />
           <Route exact path="/events/:id" render={() => <EventPage />} />
           <Route exact path="/signin" render={() => <SignInForm />} />
           <Route exact path="/signup" render={() => <SignUpForm />} />

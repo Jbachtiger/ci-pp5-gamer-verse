@@ -1,32 +1,33 @@
-.Container{
-    background-color: #096A2E;
-    padding: 20px;
-    margin: 50px auto;
-    max-width: 675px;
-    border-radius: 20px;
-    box-shadow: rgba(1, 99, 1, 0.15) 1.95px 1.95px 2.6px;
+.Container {
+  background-color: #096a2e;
+  padding: 20px;
+  margin: 50px auto;
+  max-width: 675px;
+  border-radius: 20px;
+  box-shadow: rgba(1, 99, 1, 0.15) 1.95px 1.95px 2.6px;
 }
 
 .Container h1 {
-    padding-bottom: 15px;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
+  padding-bottom: 15px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
 }
 
-.Container h1, form {
-    color: #fff;
+.Container h1,
+form {
+  color: #fff;
 }
 
 a:hover {
-    text-decoration: none;
-    color: #72A6FF;
-  }
+  text-decoration: none;
+  color: #72a6ff;
+}
 
 p {
-    margin-top: 5px;
+  margin-top: 5px;
 }
 
 .WhiteText {
-    color: #fff;
+  color: #fff;
 }

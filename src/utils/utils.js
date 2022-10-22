@@ -1,9 +1,9 @@
 import { axiosReq } from "../api/axiosDefaults";
 
 /**
-* Enable infinite scroll
-* Code provided in Moments walkthrough
-*/
+ * Enable infinite scroll
+ * Code provided in Moments walkthrough
+ */
 
 export const fetchMoreData = async (resource, setResource) => {
   try {

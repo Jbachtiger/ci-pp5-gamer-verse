@@ -5,6 +5,7 @@ import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 
 /**
  * Moments walkthrough used as a guide for variables and functions
+ * Checks the logged-in status
  */
 
 export const CurrentUserContext = createContext();
@@ -13,6 +14,10 @@ export const SetCurrentUserContext = createContext();
 export const useCurrentUser = () => useContext(CurrentUserContext);
 export const useSetCurrentUser = () => useContext(SetCurrentUserContext);
 
+/**
+ * Retrieve user data from Gamer Verse API on component mount
+ * Provides user data to child components
+ */
 export const CurrentUserProvider = ({ children }) => {
   const [currentUser, setCurrentUser] = useState(null);
   const history = useHistory();
@@ -32,25 +37,24 @@ export const CurrentUserProvider = ({ children }) => {
 
   useMemo(() => {
     axiosReq.interceptors.request.use(
-        async (config) => {
-          try {
-            await axios.post("/dj-rest-auth/token/refresh/");
-          } catch (err) {
-            setCurrentUser((prevCurrentUser) => {
-              if (prevCurrentUser) {
-                history.push("/signin");
-              }
-              return null;
-            });
-            return config;
-          }
+      async (config) => {
+        try {
+          await axios.post("/dj-rest-auth/token/refresh/");
+        } catch (err) {
+          setCurrentUser((prevCurrentUser) => {
+            if (prevCurrentUser) {
+              history.push("/signin");
+            }
+            return null;
+          });
           return config;
-        },
-        (err) => {
-          return Promise.reject(err);
         }
-      );
-
+        return config;
+      },
+      (err) => {
+        return Promise.reject(err);
+      }
+    );
 
     axiosRes.interceptors.response.use(
       (response) => response,

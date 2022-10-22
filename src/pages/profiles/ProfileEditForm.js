@@ -1,5 +1,13 @@
 import React, { useEffect, useRef, useState } from "react";
-import { Alert, Button, Col, Container, Form, Image, Row } from "react-bootstrap";
+import {
+  Alert,
+  Button,
+  Col,
+  Container,
+  Form,
+  Image,
+  Row,
+} from "react-bootstrap";
 import {
   useHistory,
   useParams,
@@ -9,7 +17,6 @@ import {
   useCurrentUser,
   useSetCurrentUser,
 } from "../../contexts/CurrentUserContext";
-
 import btnStyles from "../../styles/Button.module.css";
 import appStyles from "../../App.module.css";
 
@@ -31,6 +38,10 @@ const ProfileEditForm = () => {
 
   const [errors, setErrors] = useState({});
 
+  /**
+   * If an authenticated user than retrieve existing data
+   * If not then redirect to homepage
+   */
   useEffect(() => {
     const handleMount = async () => {
       if (currentUser?.profile_id?.toString() === id) {
@@ -50,6 +61,9 @@ const ProfileEditForm = () => {
     handleMount();
   }, [currentUser, history, id]);
 
+  /**
+   * Updates empty key:value pairs in variable
+   */
   const handleChange = (event) => {
     setProfileData({
       ...profileData,
@@ -57,6 +71,9 @@ const ProfileEditForm = () => {
     });
   };
 
+  /**
+   * Update the Gamer Verse API with new profile data
+   */
   const handleSubmit = async (event) => {
     event.preventDefault();
     const formData = new FormData();

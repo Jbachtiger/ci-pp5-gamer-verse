@@ -28,6 +28,9 @@ const PostPage = () => {
   const profile_image = currentUser?.profile_image;
   const [comments, setComments] = useState({ results: [] });
 
+  /**
+   * Retrieve a single posts data and associated comments
+   */
   useEffect(() => {
     const handleMount = async () => {
       try {
@@ -63,28 +66,28 @@ const PostPage = () => {
             <h5 className={postPageStyle.CommentsHeading}>Comments</h5>
           ) : null}
           <div className={postPageStyle.CommentsBox}>
-          {comments.results.length ? (
-            <InfiniteScroll
-              children={comments.results.map((comment) => (
-                <Comment
-                  key={comment.id}
-                  {...comment}
-                  setPost={setPost}
-                  setComments={setComments}
-                />
-              ))}
-              dataLength={comments.results.length}
-              loader={<Asset spinner />}
-              hasMore={!!comments.next}
-              next={() => fetchMoreData(comments, setComments)}
-            />
-          ) : currentUser ? (
-            <span>
-              No comments posted, kick things off and be the first to comment!
-            </span>
-          ) : (
-            <span>No comments, login to leave a comment</span>
-          )}
+            {comments.results.length ? (
+              <InfiniteScroll
+                children={comments.results.map((comment) => (
+                  <Comment
+                    key={comment.id}
+                    {...comment}
+                    setPost={setPost}
+                    setComments={setComments}
+                  />
+                ))}
+                dataLength={comments.results.length}
+                loader={<Asset spinner />}
+                hasMore={!!comments.next}
+                next={() => fetchMoreData(comments, setComments)}
+              />
+            ) : currentUser ? (
+              <span>
+                No comments posted, kick things off and be the first to comment!
+              </span>
+            ) : (
+              <span>No comments, login to leave a comment</span>
+            )}
           </div>
         </Container>
       </Col>

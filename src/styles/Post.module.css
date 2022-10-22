@@ -1,33 +1,29 @@
 .Post {
-    background-color: #856BA5;
-    border: 1px solid #dadadf;
-    border-radius: 2px;
-    margin-bottom: 16px;
-    text-align: center;
-    color: #fff;
-  }
-  
-  .Post figure,
-  h5 {
-    margin: 0 0;
-  }
+  background-color: #856ba5;
+  border: 1px solid #dadadf;
+  border-radius: 2px;
+  margin-bottom: 16px;
+  text-align: center;
+  color: #fff;
+}
 
-  .Heart {
-    color: #f85032;
-  }
-  
-  .Heart:hover {
-    color: #2142b2;
-  }
-  
-  .HeartOutline:hover {
-    color: #f85032;
-  }
+.Post figure,
+h5 {
+  margin: 0 0;
+}
 
-  .PostCreatedOn {
-    flex-direction: column-reverse;
-  }
+.Heart {
+  color: #f85032;
+}
 
+.Heart:hover {
+  color: #2142b2;
+}
 
+.HeartOutline:hover {
+  color: #f85032;
+}
 
-  
+.PostCreatedOn {
+  flex-direction: column-reverse;
+}

@@ -8,6 +8,9 @@ import btnStyles from "../../styles/Button.module.css";
 import createFormStyles from "../../styles/PostCreateForm.module.css";
 import { useParams } from "react-router-dom/cjs/react-router-dom.min";
 
+/**
+ * Render edit event form
+ */
 const EventEditForm = () => {
   useRedirect("loggedOut");
   const [errors, setErrors] = useState({});
@@ -23,16 +26,8 @@ const EventEditForm = () => {
     event_link: "",
   });
 
-  const {
-    title,
-    content,
-    date,
-    time,
-    city,
-    address,
-    price,
-    event_link,
-  } = eventData;
+  const { title, content, date, time, city, address, price, event_link } =
+    eventData;
 
   const history = useHistory();
   const { id } = useParams();

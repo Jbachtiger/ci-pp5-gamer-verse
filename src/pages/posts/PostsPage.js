@@ -34,22 +34,26 @@ function PostsPage({ message, filter = "" }) {
   const currentUser = useCurrentUser();
 
   /**
- * Displays addPost icon
- */
+   * Displays addPost icon
+   */
   const addPostIcon = (
     <NavLink
       className={styles.NavLink}
       activeClassName={styles.Active}
       to="/posts/create"
     >
-      <Button className={`${styles.AddPost} ${btnStyles.Button}`}><i className="far fa-plus-square"></i><strong>Add Post</strong></Button>
+      <Button className={`${styles.AddPost} ${btnStyles.Button}`}>
+        <i className="far fa-plus-square"></i>
+        <strong>Add Post</strong>
+      </Button>
     </NavLink>
   );
 
-   /**
- * Fetches posts from Gamer Verse API
- * Returns search results
- */
+  /**
+   * Fetches events from Gamer Verse API
+   * Returns search results
+   * Prevents API requests on each keystroke in the searchbar
+   */
   useEffect(() => {
     const fetchPosts = async () => {
       try {

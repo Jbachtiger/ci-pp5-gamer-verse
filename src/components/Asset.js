@@ -17,3 +17,4 @@ const Asset = ({ spinner, src, message }) => {
 };
 
 export default Asset;
+

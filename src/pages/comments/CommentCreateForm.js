@@ -13,6 +13,9 @@ function CommentCreateForm(props) {
     setContent(event.target.value);
   };
 
+  /**
+   * Posts comments data to Gamer Verse API
+   */
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {

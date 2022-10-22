@@ -56,6 +56,9 @@ const PostCreateForm = () => {
     }
   };
 
+  /**
+   * Push data to Gamer Verse API
+   */
   const handleSubmit = async (event) => {
     event.preventDefault();
     const formData = new FormData();

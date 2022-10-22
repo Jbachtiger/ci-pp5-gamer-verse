@@ -9,7 +9,7 @@ import { useCurrentUser } from "../../contexts/CurrentUserContext";
 import styles from "../../styles/Post.module.css";
 
 /**
- * Code used by Moments walkthrough as foundation and tweaked to suite project
+ * Code used by Moments walkthrough as foundation and edited to suite project
  * Displays a single post
  */
 
@@ -36,10 +36,16 @@ const Post = (props) => {
   const is_owner = currentUser?.username === owner;
   const history = useHistory();
 
+  /**
+   * Redirect user to Edit page
+   */
   const handleEdit = () => {
     history.push(`/posts/${id}/edit`);
   };
 
+  /**
+   * Delete chosen post from Gamer Verse API
+   */
   const handleDelete = async () => {
     try {
       await axiosRes.delete(`/posts/${id}/`);
@@ -49,6 +55,10 @@ const Post = (props) => {
     }
   };
 
+  /**
+   * Return the like count from the Gamer Verse API
+   * Increment the count by 1
+   */
   const handleLike = async () => {
     try {
       const { data } = await axiosRes.post("/likes/", { post: id });
@@ -65,6 +75,10 @@ const Post = (props) => {
     }
   };
 
+  /**
+   * Return the like count from the Gamer Verse API
+   * Decrement the count by 1
+   */
   const handleUnlike = async () => {
     try {
       await axiosRes.delete(`/likes/${like_id}/`);

@@ -47,6 +47,7 @@ const EventsPage = ({ message, filter = "" }) => {
   /**
    * Fetches events from Gamer Verse API
    * Returns search results
+   * Prevents API requests on each keystroke in the searchbar
    */
   useEffect(() => {
     const fetchEvents = async () => {

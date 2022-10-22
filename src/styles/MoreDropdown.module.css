@@ -1,15 +1,15 @@
 .DropdownItem {
-    display: inline-block;
-    max-width: 50%;
-    padding: 0px;
-  }
-  
-  .Absolute {
-    position: absolute;
-    right: 0;
-    z-index: 99;
-  }
+  display: inline-block;
+  max-width: 50%;
+  padding: 0px;
+}
 
-  .Ellipsis {
-    padding-left: 8px;
-  }
+.Absolute {
+  position: absolute;
+  right: 0;
+  z-index: 99;
+}
+
+.Ellipsis {
+  padding-left: 8px;
+}

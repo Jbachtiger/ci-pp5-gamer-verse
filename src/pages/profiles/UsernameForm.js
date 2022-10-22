@@ -9,7 +9,6 @@ import {
   useCurrentUser,
   useSetCurrentUser,
 } from "../../contexts/CurrentUserContext";
-
 import appStyles from "../../App.module.css";
 import btnStyles from "../../styles/Button.module.css";
 
@@ -35,7 +34,7 @@ const UsernameForm = () => {
   }, [currentUser, history, id]);
 
   /**
-   * Update API with edited username.
+   * Update API with edited username
    */
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -51,7 +50,7 @@ const UsernameForm = () => {
       setErrors(err.response?.data);
     }
   };
-  
+
   /**
    * Update username form
    */

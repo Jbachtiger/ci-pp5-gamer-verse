@@ -1,24 +1,22 @@
 .Form {
-    border: none;
-    border-bottom: 2px #856ba5 solid;
-    font-size: 1em;
-  }
-  
-  .Button {
-    border: none;
-    background-color: #096a2e;
-    color: #fff;
-    border-radius: 100px;
-    padding: 4px 10px;
-    min-width: 75px;
-    margin: 5px;
-    font-size: 1em;
-  }
-  
-  .Button:hover {
-    opacity: 0.8;
-    border-color: transparent;
-    cursor: pointer;
-  }
+  border: none;
+  border-bottom: 2px #856ba5 solid;
+  font-size: 1em;
+}
 
-  
+.Button {
+  border: none;
+  background-color: #096a2e;
+  color: #fff;
+  border-radius: 100px;
+  padding: 4px 10px;
+  min-width: 75px;
+  margin: 5px;
+  font-size: 1em;
+}
+
+.Button:hover {
+  opacity: 0.8;
+  border-color: transparent;
+  cursor: pointer;
+}

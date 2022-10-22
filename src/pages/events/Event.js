@@ -6,9 +6,11 @@ import { axiosRes } from "../../api/axiosDefaults";
 import Avatar from "../../components/Avatar";
 import { MoreDropdown } from "../../components/MoreDropdown";
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
-
 import styles from "../../styles/Event.module.css";
 
+/**
+ * Event data to be displated in browser
+ */
 const Event = (props) => {
   const {
     id,

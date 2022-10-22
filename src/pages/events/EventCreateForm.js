@@ -7,6 +7,9 @@ import { Alert, Button, Container, Form } from "react-bootstrap";
 import btnStyles from "../../styles/Button.module.css";
 import createFormStyles from "../../styles/PostCreateForm.module.css";
 
+/**
+ * Render create an event form
+ */
 const EventCreateForm = () => {
   useRedirect("loggedOut");
   const [errors, setErrors] = useState({});
@@ -22,16 +25,8 @@ const EventCreateForm = () => {
     event_link: "",
   });
 
-  const {
-    title,
-    content,
-    date,
-    time,
-    city,
-    address,
-    price,
-    event_link,
-  } = eventData;
+  const { title, content, date, time, city, address, price, event_link } =
+    eventData;
 
   const history = useHistory();
 
@@ -73,6 +68,7 @@ const EventCreateForm = () => {
       }
     }
   };
+
   return (
     <Container>
       <h1 className={`${createFormStyles.MainTitle} mt-5`}>Submit an Event:</h1>

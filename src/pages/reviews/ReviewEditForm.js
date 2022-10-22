@@ -6,7 +6,6 @@ import {
   useParams,
 } from "react-router-dom/cjs/react-router-dom.min";
 import { axiosReq } from "../../api/axiosDefaults";
-
 import appStyles from "../../App.module.css";
 import btnStyles from "../../styles/Button.module.css";
 import createFormStyles from "../../styles/PostCreateForm.module.css";
@@ -18,7 +17,7 @@ import createFormStyles from "../../styles/PostCreateForm.module.css";
 const ReviewEditForm = () => {
   const [errors, setErrors] = useState({});
 
-   const [reviewData, setReviewData] = useState({
+  const [reviewData, setReviewData] = useState({
     title: "",
     content: "",
     image: "",
@@ -49,10 +48,27 @@ const ReviewEditForm = () => {
     const handleMount = async () => {
       try {
         const { data } = await axiosReq.get(`/reviews/${id}/`);
-        const { title, content, image, genre, game_score, game_publisher, game_developer, is_owner } = data;
+        const {
+          title,
+          content,
+          image,
+          genre,
+          game_score,
+          game_publisher,
+          game_developer,
+          is_owner,
+        } = data;
 
         is_owner
-          ? setReviewData({ title, content, image, genre, game_score, game_publisher, game_developer })
+          ? setReviewData({
+              title,
+              content,
+              image,
+              genre,
+              game_score,
+              game_publisher,
+              game_developer,
+            })
           : history.push("/");
       } catch (err) {
         console.log(err);
@@ -112,7 +128,7 @@ const ReviewEditForm = () => {
   };
 
   return (
-     <Container>
+    <Container>
       <h1 className={`${createFormStyles.MainTitle} mt-5`}>
         Submit a Games Review:
       </h1>
@@ -211,8 +227,7 @@ const ReviewEditForm = () => {
             onChange={handleChange}
             aria-label="game publisher"
             placeholder="Publisher name"
-          >
-          </Form.Control>
+          ></Form.Control>
         </Form.Group>
         {errors?.game_publisher?.map((message, idx) => (
           <Alert variant="warning" key={idx}>
@@ -228,8 +243,7 @@ const ReviewEditForm = () => {
             onChange={handleChange}
             aria-label="game developer"
             placeholder="Developer name"
-          >
-          </Form.Control>
+          ></Form.Control>
         </Form.Group>
         {errors?.game_developer?.map((message, idx) => (
           <Alert variant="warning" key={idx}>

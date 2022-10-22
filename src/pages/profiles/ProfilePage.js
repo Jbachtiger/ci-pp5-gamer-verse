@@ -7,15 +7,11 @@ import {
   useProfileData,
   useSetProfileData,
 } from "../../contexts/ProfileDataContext";
-
 import Asset from "../../components/Asset";
-
 import PopularProfiles from "./PopularProfiles";
 import { ProfileEditDropdown } from "../../components/MoreDropdown";
-
 import styles from "../../styles/ProfilePage.module.css";
 import btnStyles from "../../styles/Button.module.css";
-
 import InfiniteScroll from "react-infinite-scroll-component";
 import { fetchMoreData } from "../../utils/utils";
 import Post from "../posts/Post";
@@ -98,14 +94,14 @@ function ProfilePage() {
             !is_owner &&
             (profile?.following_id ? (
               <Button
-              className={`${btnStyles.Button} ${styles.ButtonSize}`}
+                className={`${btnStyles.Button} ${styles.ButtonSize}`}
                 onClick={() => handleUnfollow(profile)}
               >
                 Unfollow
               </Button>
             ) : (
               <Button
-              className={`${btnStyles.Button} ${styles.ButtonSize}`}
+                className={`${btnStyles.Button} ${styles.ButtonSize}`}
                 onClick={() => handleFollow(profile)}
               >
                 Follow

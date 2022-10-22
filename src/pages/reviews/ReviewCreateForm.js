@@ -4,13 +4,15 @@ import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 import { axiosReq } from "../../api/axiosDefaults";
 import Asset from "../../components/Asset";
 import { useRedirect } from "../../hooks/useRedirect";
-
 import Upload from "../../assets/upload.png";
-
 import appStyles from "../../App.module.css";
 import btnStyles from "../../styles/Button.module.css";
 import createFormStyles from "../../styles/PostCreateForm.module.css";
 
+/**
+ * Render ReviewCreate form
+ * Provide user with input fields to create a post
+ */
 function ReviewCreateForm() {
   useRedirect("loggedOut");
   const [errors, setErrors] = useState({});
@@ -72,7 +74,7 @@ function ReviewCreateForm() {
     formData.append("game_score", game_score);
     formData.append("game_publisher", game_publisher);
     formData.append("game_developer", game_developer);
-    
+
     try {
       const { data } = await axiosReq.post("/reviews/", formData);
       history.push(`/reviews/${data.id}`);
