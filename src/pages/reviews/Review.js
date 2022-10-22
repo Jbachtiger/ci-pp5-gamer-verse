@@ -80,7 +80,7 @@ const Review = (props) => {
         {title && <Card.Title className={styles.ReviewTitle}>{title}</Card.Title>}
         <hr/>
         {genre && <Card.Text className="text-center">Genre: {genre}</Card.Text>}
-        {game_score && <Card.Text className="text-center">Rating: {game_score}</Card.Text>}
+        {game_score && <Card.Text className="text-center">Rating: {game_score}/5</Card.Text>}
         {game_publisher && (
           <Card.Text className="text-center">Game Publisher: {game_publisher}</Card.Text>
         )}
