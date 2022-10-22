@@ -1,5 +1,5 @@
 import React from "react";
-import { Card, Media } from "react-bootstrap";
+import { Card, Col, Media, Row } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 import { axiosRes } from "../../api/axiosDefaults";
@@ -75,15 +75,29 @@ const Event = (props) => {
       <Card.Body>
         <div>
           <Link to={`/events/${id}`}>
-            {title && <Card.Title className="text-center pb-3">{title}</Card.Title>}
+            {title && (
+              <Card.Title className="text-center pb-3">{title}</Card.Title>
+            )}
           </Link>
         </div>
-        {price && <Card.Text>Event Price: £{price}</Card.Text>}
-        {date && <Card.Text>Date: {date} </Card.Text>}
-        {time && <Card.Text>Time: {time} </Card.Text>}
+        <Col>
+          <Row>
+            {content && (
+              <Card.Text className="mb-3">Details: {content}</Card.Text>
+            )}
+          </Row>
+        </Col>
+        <Col>
+          <Row className="justify-content-between">
+            {price && <Card.Text>Event Price: £{price}</Card.Text>}
+            {date && <Card.Text>Date: {date} </Card.Text>}
+            {time && <Card.Text>Time: {time} </Card.Text>}
+          </Row>
+        </Col>
+
         {address && <Card.Text>Address: {address} </Card.Text>}
         {city && <Card.Text>City: {city} </Card.Text>}
-        {content && <Card.Text>Details: {content}</Card.Text>}
+
         {event_link && (
           <Card.Link href={event_link}>URL: {event_link} </Card.Link>
         )}
