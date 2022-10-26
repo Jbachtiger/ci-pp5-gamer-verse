@@ -1,6 +1,6 @@
 import React from "react";
 import { Container } from "react-bootstrap";
-import NoResults from "../assets/no-results.png";
+import NoResults404 from "../assets/no-results-404.png";
 import Asset from "./Asset";
 import styles from "../styles/NotFound.module.css";
 
@@ -9,7 +9,7 @@ const NotFound = () => {
     <Container>
       <div className={styles.NotFoundGraphic}>
         <Asset
-          src={NoResults}
+          src={NoResults404}
         />
       </div>
     </Container>
