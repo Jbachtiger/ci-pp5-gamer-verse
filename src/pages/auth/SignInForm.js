@@ -12,7 +12,7 @@ import { useRedirect } from "../../hooks/useRedirect";
 import { setTokenTimestamp } from "../../utils/utils";
 
 /**
- * Renders SignUp form
+ * Renders SignIn form
  * Moments walkthrough used as a guide for variables, data handling and error handling code
  */
 function SignInForm() {

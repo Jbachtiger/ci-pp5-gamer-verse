@@ -128,11 +128,21 @@ Below are links to each of the individual user stories that were completed withi
 ## Testing
 
 ### Manual Testing
-I have manually tested all the features of the website making sure to go through them with different browsers and device sizes. I have also checked the features of the site against the original user stories to ensure they have all been actioned. 
+I have manually tested all the features of the website making sure to go through them with different browsers and device sizes. I have also checked the features of the site against the original user stories to ensure they have all been actioned.
+
+- CRUD functionality has been tested for the following: Posts, Reviews, Events, Comments, Likes, Follows and Profile on both the development and deployed version of the site
+- All Nav links open in the correct page
+- All external links open in a new browser
+- Authentication works displaying a different set of options for logged in users compared to logged out
+- Pages that are intended for logged in users only will redirect any users who are not logged in back to homepage
+- Validation on forms works
+- Not found pages display correctly when a non-existent url is searched or a Post, Review or Event that doesn't exist is searched
 
 __User Stories__
 
-![Manual User Stories Testing]()
+![User Story Testing](docs/testing/gamer_verse_manual_testing.png)
+
+![User Story Testing](docs/testing/gamer_verse_manual_testing_1.png)
 
 __Features__
 
@@ -164,6 +174,7 @@ The website was viewed on a variety of devices of all sizes including:
 - iPad Pro
 - Surface Duo
 
+The website is fully responsive and no issues found.
 
 ### W3C Validatior
 The official W3C Markup Validator was used to validate both the HTML and CSS of the project to ensure there were no syntax errors within the site. 
@@ -173,13 +184,20 @@ __W3C HTML Markup Validator__
 
 __W3C CSS Markup Validatior__ - https://jigsaw.w3.org/css-validator/validator
 
-![CSS Validation]()
+All CSS code passed through the validator without any issues.
+
+![CSS Validation](docs/testing/css_validated.png)
 
 ### JS Lint
 
 ### Colour Contrast Checks
 
+The website passed the colour contrast accessibility validator by A11y.
+
+![Colour Contrast Checker](docs/testing/color-contrast-accessibilit-validator.png)
+
 ### Lighthouse Tool
+
 
 ## Solved Bugs
 validation errors not showing for post create form. Updated model in drf api to make field required.
