@@ -2,8 +2,10 @@ import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
 import { useRedirect } from "../../hooks/useRedirect";
 import { axiosReq } from "../../api/axiosDefaults";
-import { Alert, Button, Container, Form } from "react-bootstrap";
-
+import Alert from "react-bootstrap/Alert";
+import Button from "react-bootstrap/Button";
+import Container from "react-bootstrap/Container";
+import Form from "react-bootstrap/Form";
 import btnStyles from "../../styles/Button.module.css";
 import createFormStyles from "../../styles/PostCreateForm.module.css";
 
@@ -109,7 +111,7 @@ const EventCreateForm = () => {
         ))}
 
         <Form.Group>
-          <Form.Label>Price:</Form.Label>
+          <Form.Label>Price (£):</Form.Label>
           <Form.Control
             type="text"
             name="price"
@@ -221,7 +223,6 @@ const EventCreateForm = () => {
           Cancel
         </Button>
       </Form>
-      console.log(Form);
       <br />
     </Container>
   );

@@ -1,5 +1,5 @@
 import React from "react";
-import { Container } from "react-bootstrap";
+import Container from "react-bootstrap/Container"
 import NoResults404 from "../assets/no-results-404.png";
 import Asset from "./Asset";
 import styles from "../styles/NotFound.module.css";

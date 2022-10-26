@@ -1,5 +1,6 @@
 import React from "react";
-import { Card, Container } from "react-bootstrap";
+import Card from "react-bootstrap/Card"
+import Container from "react-bootstrap/Container"
 import styles from "../../styles/About.module.css";
 
 /**
@@ -64,11 +65,11 @@ function About() {
             rel="noreferrer"
             aria-label="Visit my LinkedIn page (opens in a new tab)"
           >
-            <i className="fab fa-linkedin">LinkedIn</i>
+            <i className="fab fa-linkedin"> LinkedIn</i>
           </a>
           <hr />
           <p>
-            Project created by John Bachtiger and is for educational purposes
+            Project created by <strong>John Bachtiger</strong> and is for educational purposes
             only.
           </p>
         </Card.Body>

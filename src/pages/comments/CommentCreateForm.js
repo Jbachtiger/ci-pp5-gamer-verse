@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import { Form, InputGroup } from "react-bootstrap";
+import Form from "react-bootstrap/Form";
+import InputGroup from "react-bootstrap/InputGroup";
 import { Link } from "react-router-dom";
 import { axiosRes } from "../../api/axiosDefaults";
 import Avatar from "../../components/Avatar";

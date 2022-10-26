@@ -2,8 +2,10 @@ import React, { useEffect, useState } from "react";
 import { useHistory } from "react-router-dom";
 import { useRedirect } from "../../hooks/useRedirect";
 import { axiosReq } from "../../api/axiosDefaults";
-import { Alert, Button, Container, Form } from "react-bootstrap";
-
+import Alert from "react-bootstrap/Alert";
+import Button from "react-bootstrap/Button";
+import Container from "react-bootstrap/Container";
+import Form from "react-bootstrap/Form";
 import btnStyles from "../../styles/Button.module.css";
 import createFormStyles from "../../styles/PostCreateForm.module.css";
 import { useParams } from "react-router-dom/cjs/react-router-dom.min";
@@ -111,7 +113,7 @@ const EventEditForm = () => {
   };
   return (
     <Container>
-      <h1 className={`${createFormStyles.MainTitle} mt-5`}>Submit an Event:</h1>
+      <h1 className={`${createFormStyles.MainTitle} mt-5`}>Edit Event:</h1>
       <Form onSubmit={handleSubmit} className={createFormStyles.Container}>
         <Form.Group>
           <Form.Label>Event Name:</Form.Label>
@@ -149,7 +151,7 @@ const EventEditForm = () => {
         ))}
 
         <Form.Group>
-          <Form.Label>Price:</Form.Label>
+          <Form.Label>Price (£):</Form.Label>
           <Form.Control
             type="text"
             name="price"
@@ -261,7 +263,6 @@ const EventEditForm = () => {
           Cancel
         </Button>
       </Form>
-      console.log(Form);
       <br />
     </Container>
   );

@@ -1,5 +1,9 @@
 import React, { useRef, useState } from "react";
-import { Alert, Button, Container, Form, Image } from "react-bootstrap";
+import Alert from "react-bootstrap/Alert";
+import Button from "react-bootstrap/Button";
+import Container from "react-bootstrap/Container";
+import Form from "react-bootstrap/Form";
+import Image from "react-bootstrap/Image";
 import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 import { axiosReq } from "../../api/axiosDefaults";
 import Asset from "../../components/Asset";

@@ -1,5 +1,9 @@
 import React, { useEffect, useState } from "react";
-import { Col, Container, Form, Row, Button } from "react-bootstrap";
+import Col from "react-bootstrap/Col";
+import Container from "react-bootstrap/Container";
+import Form from "react-bootstrap/Form";
+import Row from "react-bootstrap/Row";
+import Button from "react-bootstrap/Button";
 import InfiniteScroll from "react-infinite-scroll-component";
 import { NavLink } from "react-router-dom";
 import { useLocation } from "react-router-dom/cjs/react-router-dom.min";

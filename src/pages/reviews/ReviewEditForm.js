@@ -1,6 +1,9 @@
 import React, { useEffect, useRef, useState } from "react";
-
-import { Container, Form, Button, Alert, Image } from "react-bootstrap";
+import Container from "react-bootstrap/Container";
+import Form from "react-bootstrap/Form";
+import Button from "react-bootstrap/Button";
+import Alert from "react-bootstrap/Alert";
+import Image from "react-bootstrap/Image";
 import {
   useHistory,
   useParams,

@@ -1,5 +1,8 @@
 import React from "react";
-import { Card, Col, Media, Row } from "react-bootstrap";
+import Card from "react-bootstrap/Card";
+import Col from "react-bootstrap/Col";
+import Media from "react-bootstrap/Media";
+import Row from "react-bootstrap/Row";
 import { Link } from "react-router-dom";
 import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 import { axiosRes } from "../../api/axiosDefaults";

@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
-import { Row, Col, Container } from "react-bootstrap";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
+import Container from "react-bootstrap/Container";
 import { useParams } from "react-router-dom/cjs/react-router-dom.min";
 import { axiosReq } from "../../api/axiosDefaults";
-
 import appStyles from "../../App.module.css";
 import postPageStyle from "../../styles/PostPage.module.css";
-
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
 import CommentCreateForm from "../comments/CommentCreateForm";
 import Post from "./Post";
