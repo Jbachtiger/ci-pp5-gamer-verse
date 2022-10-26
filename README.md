@@ -237,6 +237,7 @@ boardgame art - https://islaythedragon.com/featured/a-top-10-board-game-art-id-l
 ### Media
 https://logo.com/
 https://favicon.io/favicon-converter/
+https://www.freepik.com/free-vector/404-error-concept-with-blue-robot_1535153.htm#page=4&query=404%20not%20found&position=38&from_view=keyword
 
 <a href="https://www.freepik.com/free-vector/oops-404-error-with-broken-robot-concept-illustration_8030430.htm#query=404&position=3&from_view=search">Image by storyset</a> on Freepik
 
