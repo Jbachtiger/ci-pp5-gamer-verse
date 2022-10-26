@@ -133,7 +133,7 @@ const ReviewEditForm = () => {
   return (
     <Container>
       <h1 className={`${createFormStyles.MainTitle} mt-5`}>
-        Submit a Games Review:
+        Edit Games Review:
       </h1>
       <Form onSubmit={handleSubmit} className={createFormStyles.Container}>
         <Form.Group>

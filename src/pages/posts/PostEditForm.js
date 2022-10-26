@@ -105,16 +105,8 @@ const PostEditForm = () => {
   return (
     <Container>
       <h1 className={`${createFormStyles.MainTitle} mt-5`}>
-        Share your passion for everything gaming
+        Edit Post:
       </h1>
-      <strong>
-        <p
-          className={`${createFormStyles.Paragraph} ${createFormStyles.BlackFont}`}
-        >
-          Discuss your favourite games, gaming art or gaming related topic! Our
-          community is inclusive and we'd love to see what you've got to share!
-        </p>
-      </strong>
       <Form onSubmit={handleSubmit} className={createFormStyles.Container}>
         <Form.Group>
           <Form.Label>Title</Form.Label>
