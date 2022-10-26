@@ -94,9 +94,9 @@ const Event = (props) => {
         </Col>
         <Col>
           <Row className="justify-content-between">
-            {price && <Card.Text>Event Price: £{price}</Card.Text>}
-            {date && <Card.Text>Date: {date} </Card.Text>}
-            {time && <Card.Text>Time: {time} </Card.Text>}
+            <Card.Text>Event Price: £{price}</Card.Text>
+            <Card.Text>Date: {date} </Card.Text>
+            <Card.Text>Time: {time} </Card.Text>
           </Row>
         </Col>
 
