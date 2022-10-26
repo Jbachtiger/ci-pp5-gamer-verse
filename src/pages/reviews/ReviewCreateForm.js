@@ -82,9 +82,8 @@ function ReviewCreateForm() {
     try {
       const { data } = await axiosReq.post("/reviews/", formData);
       history.push(`/reviews/${data.id}`);
-      console.log(formData);
     } catch (err) {
-      console.log(err);
+      // console.log(err);
       if (err.response?.status !== 401) {
         setErrors(err.response?.data);
       }
@@ -264,7 +263,6 @@ function ReviewCreateForm() {
           Cancel
         </Button>
       </Form>
-      console.log(Form);
       <br />
     </Container>
   );

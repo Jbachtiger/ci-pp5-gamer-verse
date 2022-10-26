@@ -103,9 +103,8 @@ const EventEditForm = () => {
     try {
       const { data } = await axiosReq.put(`/events/${id}/`, formData);
       history.push(`/events/${data.id}`);
-      console.log(formData);
     } catch (err) {
-      console.log(err);
+      // console.log(err);
       if (err.response?.status !== 401) {
         setErrors(err.response?.data);
       }

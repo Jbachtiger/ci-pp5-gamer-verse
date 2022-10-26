@@ -25,7 +25,7 @@ const EventPage = () => {
         ]);
         setEvent({ results: [event] });
       } catch (err) {
-        console.log(err);
+        // console.log(err);
       }
     };
 

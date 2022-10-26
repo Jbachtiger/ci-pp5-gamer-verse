@@ -25,7 +25,7 @@ const ReviewPage = () => {
         ]);
         setReview({ results: [review] });
       } catch (err) {
-        console.log(err);
+        // console.log(err);
       }
     };
 

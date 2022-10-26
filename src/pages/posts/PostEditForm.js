@@ -46,7 +46,7 @@ const PostEditForm = () => {
           ? setPostData({ title, description, game_medium, image })
           : history.push("/");
       } catch (err) {
-        console.log(err);
+        // console.log(err);
       }
     };
 
