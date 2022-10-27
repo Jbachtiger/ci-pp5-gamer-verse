@@ -177,6 +177,7 @@ A kanban board was created using GitHub Projects [here](https://github.com/users
 
 
 ## Database Schema
+DrawSQL was used to create a database schema to visualise the types of custom models this project might require. This schema was used as a guide to what needed to be added to each model within the API component of the project.
 
 ![Database Schema](docs/database_schema/gamer_verse%20_database_schema.png)
 

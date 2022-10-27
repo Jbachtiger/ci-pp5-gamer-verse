@@ -88,8 +88,8 @@ function ProfilePage() {
         </Col>
 
         <Col lg={12}>
+          <p>Name: {profile?.name}</p>
           <p>About Me: {profile?.description}</p>
-
           <p>Favourite Game: {profile?.favourite_game}</p>
         </Col>
 
