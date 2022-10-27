@@ -84,10 +84,55 @@ __Sites Ideal Users__
 ### User Stories 
 Below are links to each of the individual user stories that were completed within the project's initial release.
 
-1. Initial Django Setup
-    - Install Django and supporting libraries [#2](https://github.com/Jbachtiger/ci-pp4-the-unconventional-programmer/issues/2)
-    - Keep secret keys secure [#3](https://github.com/Jbachtiger/ci-pp4-the-unconventional-programmer/issues/3)
-    - Early deployment of the site to Heroku [#4](https://github.com/Jbachtiger/ci-pp4-the-unconventional-programmer/issues/4)
+1. Initial Django REST and React Setup
+    - Install Django REST and supporting libraries for backend API [#8](https://github.com/Jbachtiger/ci-pp5-gamer-verse/issues/8)
+    - Install REACT and supporting libraries for frontend [#9](https://github.com/Jbachtiger/ci-pp5-gamer-verse/issues/9)
+    - Keep secret keys secure [#10](https://github.com/Jbachtiger/ci-pp5-gamer-verse/issues/10)
+    - Early deployment of the site to Heroku [#11](https://github.com/Jbachtiger/ci-pp5-gamer-verse/issues/11)
+
+2. Authentication
+    - Register for an account [#12](https://github.com/Jbachtiger/ci-pp5-gamer-verse/issues/12)]
+    - Sign in with your account [#13](https://github.com/Jbachtiger/ci-pp5-gamer-verse/issues/13)]
+    - Logged in/out user status [#14](https://github.com/Jbachtiger/ci-pp5-gamer-verse/issues/14)
+    - Sign out [#15](https://github.com/Jbachtiger/ci-pp5-gamer-verse/issues/15)
+    - Access tokens [#16](https://github.com/Jbachtiger/ci-pp5-gamer-verse/issues/16)
+
+3. Navigation
+    - View navbar on every page [#17](https://github.com/Jbachtiger/ci-pp5-gamer-verse/issues/17) 
+    - Navigate through pages without having to refresh each time [#18](https://github.com/Jbachtiger/ci-pp5-gamer-verse/issues/18)
+    - Clear sign in/sign up options [#19](https://github.com/Jbachtiger/ci-pp5-gamer-verse/issues/19)
+    - Infinite scroll [#20](https://github.com/Jbachtiger/ci-pp5-gamer-verse/issues/20)
+
+4. Posts
+    - Create, View, Edit and Delete Posts [#21](https://github.com/Jbachtiger/ci-pp5-gamer-verse/issues/21)
+    - Like posts [#22](https://github.com/Jbachtiger/ci-pp5-gamer-verse/issues/22)
+    - View a list of liked posts [#23](https://github.com/Jbachtiger/ci-pp5-gamer-verse/issues/23)
+    - Search posts [#24](https://github.com/Jbachtiger/ci-pp5-gamer-verse/issues/24)
+    - Follow users [#25](https://github.com/Jbachtiger/ci-pp5-gamer-verse/issues/25)
+
+5. Comments
+    - Create, Edit, View and Delete Comments [#41](https://github.com/Jbachtiger/ci-pp5-gamer-verse/issues/41)
+    - View comment date [#42](https://github.com/Jbachtiger/ci-pp5-gamer-verse/issues/42)
+
+6. Profiles
+    - View profile pages [#26](https://github.com/Jbachtiger/ci-pp5-gamer-verse/issues/26)
+    - See most popular profiles [#27](https://github.com/Jbachtiger/ci-pp5-gamer-verse/issues/27)
+    - User statistics [#28](https://github.com/Jbachtiger/ci-pp5-gamer-verse/issues/28)
+    - Follow/Unfollow a user [#29](https://github.com/Jbachtiger/ci-pp5-gamer-verse/issues/29)
+    - View all posts by a specific user [#30](https://github.com/Jbachtiger/ci-pp5-gamer-verse/issues/30)
+    - Edit profile [#31](https://github.com/Jbachtiger/ci-pp5-gamer-verse/issues/31)
+    - Update username and password [#32](https://github.com/Jbachtiger/ci-pp5-gamer-verse/issues/32)
+    - View user's avatar [#33](https://github.com/Jbachtiger/ci-pp5-gamer-verse/issues/33)
+    - Set user avatar [#34](https://github.com/Jbachtiger/ci-pp5-gamer-verse/issues/34)
+
+7. Events
+    - Create, Edit, View and Delete Event [#35](https://github.com/Jbachtiger/ci-pp5-gamer-verse/issues/35)
+    - Search all events [#36](https://github.com/Jbachtiger/ci-pp5-gamer-verse/issues/36)
+
+8. Reviews
+    - Create, Edit, View and Delete Reviews [#37](https://github.com/Jbachtiger/ci-pp5-gamer-verse/issues/37)
+    - Search all reviews [#39](https://github.com/Jbachtiger/ci-pp5-gamer-verse/issues/39)
+    - View all reviews [#40](https://github.com/Jbachtiger/ci-pp5-gamer-verse/issues/40)
 
 ## Design
 ### Wireframes
