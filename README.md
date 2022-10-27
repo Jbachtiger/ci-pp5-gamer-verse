@@ -315,12 +315,6 @@ __User Stories__
 
 ![User Story Testing](docs/testing/gamer_verse_manual_testing_1.png)
 
-__Features__
-
-![Manual Features Testing]()
-
-### Automated Testing
-
 ### Browser and Device Testing
 
 __Browsers__
@@ -350,16 +344,14 @@ The website is fully responsive and no issues found.
 ### W3C Validatior
 The official W3C Markup Validator was used to validate both the HTML and CSS of the project to ensure there were no syntax errors within the site. 
 
-__W3C HTML Markup Validator__
-
-
 __W3C CSS Markup Validatior__ - https://jigsaw.w3.org/css-validator/validator
 
 All CSS code passed through the validator without any issues.
 
 ![CSS Validation](docs/testing/css_validated.png)
 
-### JS Lint
+### ES Lint
+The ESLint extension was downloaded on Gitpod and integrated throughout the entire project. Any errors that it picked up were corrected, however, most of these were minor and to do with spelling mistakes. Each page was meticulaiously scanned for probelms and fixed if any came up.
 
 ### Colour Contrast Checks
 
@@ -368,6 +360,10 @@ The website passed the colour contrast accessibility validator by A11y.
 ![Colour Contrast Checker](docs/testing/color-contrast-accessibilit-validator.png)
 
 ### Lighthouse Tool
+
+The website has performed really well in the Lighthouse tool, in particular for Accessibility on all pages. Below is an example of the scores for the About page which is reflective for all pages:
+
+![About](docs/testing/lighthouse.png)
 
 
 ## Solved Bugs
