@@ -177,6 +177,115 @@ A kanban board was created using GitHub Projects [here](https://github.com/users
 
 ## Features
 
+### Homepage
+A clean homepage with minimal distractions ensuring the users main focus is on the list of posts. The posts are displayed in a single list, styled as cards to give a clean seperation between posts. Each post includes a title, description and category.This provides the user with a good summary of information to see if they would like to interact with the post further by clicking into it and leave a comment on it or like it. Users do not need to be registered to view a post but do need to be logged in to like or comment on a post. There are different features and navbars available dependent on if a user is signed in or not. 
+
+- Homepage signed in
+![Homepage](docs/features/homepage_signed_in.png)
+
+- Homepage signed out
+![Homepage](docs/features/homepage_not_signed_in.png)
+
+### Navbar
+The navbar is featured on all pages, is responsive and has active links functionality so the the user knows which link they are on by hovering on it in the navbar. It is identical on all pages and is easy to use providing a good user experience. For mobile view, the navbar reduces to a burger menu. The purpose of this feature is to allow users to navigate all pages easily across all devices without having to use a back button to get to the next page. There is also authentication in place which will change what displays on the navbar depending on whether a user is logged in or not.
+
+- Logged out Navbar
+
+![Navbar](docs/features/navbar_signed_out.png)
+
+
+- Logged in Navbar
+
+![Navbar](docs/features/navbar_signedin.png)
+
+### Sign in, Sign out and Sign Up
+The website has a sign up functionality which then redirects the user to sign in once submitted and then once signed in there is an option to sign out.
+
+![Sign up](docs/features/sign_up_form.png)
+
+![Sign in](docs/features/sign_in_form.png)
+
+![Sign in](docs/features/sign_out.png)
+
+### Posts
+
+- Post
+
+![Post](docs/features/posts.png)
+
+- Post page with comments section signed out
+
+![Post with comments signed out](docs/features/post_comment_page_signed_out.png)
+
+- Post page with comments section signed in
+
+![Post with comments signed in](docs/features/post_comment_page_signed_in.png)
+
+- Add post form
+
+![Post form](docs/features/add_post.png)
+
+- Edit post form
+
+![Edit post form](docs/features/edit_post.png)
+
+### Reviews
+
+- Review
+
+![Review](docs/features/reviews.png)
+
+- Add review form
+
+![Add review](docs/features/add_review.png)
+
+- Edit review form
+
+![Edit review](docs/features/edit_review.png)
+
+### Events
+
+- Event
+
+![Event](docs/features/events_page.png)
+
+- Add event form
+
+![Add event](docs/features/add_event.png)
+
+- Edit event form
+
+![Edit event](docs/features/edit_event.png)
+
+### Profiles
+- Most Active Community Gamers
+
+![Most active profiles](docs/features/popular_profiles.png)
+
+- Profile (signed out)
+
+![Profile signed out](docs/features/profiles_page.png)
+
+- Profile (signed in)
+
+![Profile signed in](docs/features/profiles_page_signed_in.png)
+
+- Edit Profile
+
+![Edit details](docs/features/edit_details.png)
+
+- Edit Username
+
+![Edit username](docs/features/edit_username.png)
+
+- Edit Password
+
+![Edit password](docs/features/edit_password.png)
+
+### About
+
+![About](docs/features/about_page.png)
+
 
 ## Future Development
 
