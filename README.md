@@ -24,7 +24,6 @@ DEPLOYED BACKEND REPOSITORY - [CLICK HERE](https://github.com/Jbachtiger/ci-pp5-
     - [Colour Scheme](#color-scheme)
     - [Fonts](#fonts)
 - [Agile](#agile)
-- [Database Schema](#database-schema)
 - [Features](#features)
 - [Future Development](#future-development)
 - [Testing](#testing)
@@ -175,11 +174,6 @@ A kanban board was created using GitHub Projects [here](https://github.com/users
 
 ![Kanban complete](docs/kanban/kanban_done.png)
 
-
-## Database Schema
-DrawSQL was used to create a database schema to visualise the types of custom models this project might require. This schema was used as a guide to what needed to be added to each model within the API component of the project.
-
-![Database Schema](docs/database_schema/gamer_verse%20_database_schema.png)
 
 ## Features
 
