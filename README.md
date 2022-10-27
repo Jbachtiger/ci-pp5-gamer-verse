@@ -162,7 +162,7 @@ Supporting Pallettes:
 ![Colour Palette](docs/color_scheme/colour_pallet_3.png)
 
 ### Fonts
-
+The font used in this project was Roboto with a backup of sans-serif. It was chosen for its easy readability for users. Fonts were imported using Google Fonts.
 
 ## Agile
 
