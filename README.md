@@ -153,8 +153,13 @@ Below are links to each of the individual user stories that were completed withi
 
 ### Color Scheme
 
-![Colour Palette]()
+Various colors where used throughout the website. There was a main color scheme used with supporting color pallets also. Below are the various pallets that were used.
 
+Main Pallete:
+![Colour Palette](docs/color_scheme/colour_pallet.png)
+
+Supporting Pallettes:
+![Colour Palette](docs/color_scheme/colour_pallet_3.png)
 
 ### Fonts
 
