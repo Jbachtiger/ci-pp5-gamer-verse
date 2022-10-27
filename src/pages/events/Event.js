@@ -104,7 +104,7 @@ const Event = (props) => {
         {city && <Card.Text>City: {city} </Card.Text>}
 
         {event_link && (
-          <Card.Link href={event_link}>URL: {event_link} </Card.Link>
+          <Card.Link href={event_link} target="_blank">URL: {event_link} </Card.Link>
         )}
       </Card.Body>
     </Card>
