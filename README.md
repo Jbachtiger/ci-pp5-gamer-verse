@@ -286,8 +286,15 @@ The website has a sign up functionality which then redirects the user to sign in
 
 ![About](docs/features/about_page.png)
 
-
 ## Future Development
+- Like and comment ability for reviews and events pages
+- Private messaging between users
+- Group messaging between users
+- Interactive gaming session where users can play browser games together on the website
+- Gamer scoreboard
+- Notifications for when a user recives a new follow, comment or like
+- A contact form so user can get in touch with site admins/provide feedback
+
 
 ## Testing
 
