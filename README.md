@@ -381,8 +381,29 @@ Warning: Invalid DOM property `class`. Did you mean `className`? - didn't add cl
 
 ## Technologies Used
 ### Languages Used
+- HTML5
+- CSS3
+- JavaScript
+- Python
+- PostgreSQL
 
 ### Frameworks, Libraries and Programs
+- Heroku - this was the platform used to deploy the application
+- Django - used to build the backend database that serves the API for the frontend
+- React-Bootstrap - CSS framework used to develop responsiveness and mobile-first approach
+- Gitpod - this was my code editor for this project
+- Git - was used for version control using the terminal through Gitpod to commit to Git and push to Github
+- Github - is used to store the code for this project after being pushed from Git
+- Techsini - was used to generate multi-device website mockups
+- Fireshot - this was a Google Chrome extension used to take screenshots
+- Google Fonts - used to import fonts to website
+- Font Awesome - library of icons used for social media and services we offer
+- Balsamiq - was used to create the wireframes during the design process.
+- GoogleDev Tools - was used to help investigate issues with code and visually see what code was related to which area on the page
+- ColorSpace - used to generate colour pallets for use on website
+- a11y - used to check website colour contrast and accessibility
+- Raw Pixel - used to find royalty-free images
+- Favicon.io - generated the websites favicon
  
 ### Databases
 - SQLite: local database used to test during development
