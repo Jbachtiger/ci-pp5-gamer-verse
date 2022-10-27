@@ -70,7 +70,7 @@ __Sites Ideal Users__
 
 
 ### Epics
-8 Epics were created which were further developed into 32 User Stories. The details of each epic along with the associated user stories can be found in the kanban board [here](https://github.com/users/Jbachtiger/projects/3). 
+8 Epics were created which were further developed into 34 User Stories. The details of each epic along with the associated user stories can be found in the kanban board [here](https://github.com/users/Jbachtiger/projects/3). 
 
 1. Initial Django REST and React Setup [#1](https://github.com/Jbachtiger/ci-pp5-gamer-verse/issues/1)
 2. Authentication [#2](https://github.com/Jbachtiger/ci-pp5-gamer-verse/issues/2)
@@ -156,15 +156,25 @@ Below are links to each of the individual user stories that were completed withi
 Various colors where used throughout the website. There was a main color scheme used with supporting color pallets also. Below are the various pallets that were used.
 
 Main Pallete:
+
 ![Colour Palette](docs/color_scheme/colour_pallet.png)
 
 Supporting Pallettes:
+
 ![Colour Palette](docs/color_scheme/colour_pallet_3.png)
 
 ### Fonts
 The font used in this project was Roboto with a backup of sans-serif. It was chosen for its easy readability for users. Fonts were imported using Google Fonts.
 
 ## Agile
+Throughout this project, an agile approach was used to develop the website. Each activity was broken down into smaller bite-sized more manageable actions from initially creating 8 Epics, which were then broken down into 34 smaller user stories. Each of the user stories then had an acceptance criterion and a list of tasks to complete. This made the overall project much more manageable to build. GitHub labels were used to categorise the user stories using the MoSCoW Prioritisation technique. This made it easy to categorise tasks by importance, prioritise the focus on these and get the project completed.
+
+A kanban board was created using GitHub Projects [here](https://github.com/users/Jbachtiger/projects/3/views/1) to help keep track of all the tasks including Todo, In Progress and Done.
+
+![Kanban in progress](docs/kanban/kanban.png)
+
+![Kanban complete](docs/kanban/kanban_done.png)
+
 
 ## Database Schema
 
