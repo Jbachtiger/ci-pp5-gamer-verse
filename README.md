@@ -424,7 +424,69 @@ No known bugs left. If you find any please contact the project owner.
 - PostgreSQL: database used in Heroku to store data on deployment
 
 ## Deployment
+This application has been deployed using Heroku by following these steps:
+
+### Workspace and Deployment Setup
+
+1. Create a new repository in GitHub
+2. Create a new Gitpod workspace
+3. Once workspace has been loaded, run following command, enter y to confirm installing the create-react-app package and wait until all packages have installed. This will pre-install all neccessary packages to make your project work.
+
+```
+npx create-react-app . --template git+https://github.com/Code-Institute-Org/cra-template-moments.git --use-npm
+```
+
+ - Alternalively, you can use the following however, you may see different outcomes to this project as the dependencies will be different versions.
+
+```
+npx create-react-app . --use-npm
+```
+
+4. Once the app has installed, run the terminal command ```npm start``` to check the app is working.
+5. Remove the React default logo import in App.js and replace the React header with a custom h1 element containing some test text
+6. Confirm changes have rendered correctly to browser preview and add, commit and push changes to GitHub
+7. Create a new app in Heroku
+8. Click on the 'Deploy' tab and go to 'Deployment Method' and choose GitHub
+9. Navigate to 'App connected to GitHub' and search for the relevant repository
+10. Select the repository you wish to deploy and click 'Connect'
+11. Navigate to 'Manual Deploy' and click 'Deploy Branch'
+12. Check the build logs to monitor build and ensure deployment is successful
+13. The build is complete when the log states 'Build succeeded!'
+14. Click the 'Open App' button to view deployed app
+15. Navigate to Gitpod, install react-bootstrap by running the following terminal command:
+
+```
+npm install react-bootstrap@1.6.3 bootstrap@4.6.0
+```
+
+### Connecting to API
+1. Navigate to your Heroku app for your DRF-API project and under the 'Settings' tab add the following config vars:
+- Key: Client_Origin | Value: [https://react-app-name.herokuapp.com](https://react-app-name.herokuapp.com)
+- Key: Client_Origin_Dev | Value: [https://your-gitpod-browser-link.ws-eu73.gitpod.io](https://your-gitpod-browser-link.ws-eu73.gitpod.io)
+
+2. Ensure that the trailing ```\``` is removed from the end of both links and save the config vars
+3. Install the Axios package, and create the supporting ```axiosDefaults.js``` file
+
 ### Deploying to Heroku
+1. If you have used the dependencies template method in point 3 of the pre-deployment steps you do not need to do points 2 or 3. Please skip to point 4
+2. Navigate to package.json in Gitpod and in the scripts section add the following command:
+```
+"heroku-prebuild": "npm install -g serve,"
+```
+3. Add a Procfile to the root of the project with the following:
+```
+web: serve -s build
+```
+4. Add the following code to your package.json file:
+```
+"engines": {
+"node": "16.14.2",
+"npm": "8.5.0"
+}
+```
+5. Git add, commit and push your code
+6. Navigate to Heroku and deploy the project via the deploy button under the 'Deploy' tab
+
 
 ### Forking Repository
 You can fork the GitHub repository to make a copy of the original to view and change without affecting the original. This can be done by:
