@@ -459,8 +459,9 @@ No known bugs left. If you find any please contact the project owner.
 ### Frameworks, Libraries and Programs
 - [Heroku](https://www.heroku.com/) - this was the platform used to deploy the application
 - [Django](https://www.djangoproject.com/) - used to build the backend database that serves the API for the frontend
+- [ReactJS](https://reactjs.org/) - was used to build components that collectively form the frontend application
 - [React-Bootstrap](https://react-bootstrap-v4.netlify.app/) - CSS framework used to develop responsiveness and mobile-first approach
-- [Gitpod](https://gitpod.io/projects) - this was my code editor for this project
+- [Gitpod](https://gitpod.io/projects) - this was my code editor for this project and used to create JSX and CSS files before pushing to GitHub
 - [Git](https://git-scm.com/) - was used for version control using the terminal through Gitpod to commit to Git and push to GitHub
 - [GitHub](https://github.com/) - is used to store the code for this project after being pushed from Git
 - [Techsini](http://techsini.com/multi-mockup/index.php) - was used to generate multi-device website mockups
