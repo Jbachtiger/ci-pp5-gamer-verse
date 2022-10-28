@@ -188,10 +188,16 @@ A kanban board was created using GitHub Projects [here](https://github.com/users
 A clean homepage with minimal distractions ensures the user's main focus is on the list of posts. The posts are displayed in a single list, styled as cards to give a clean separation between posts. Each post includes a title, description and category. This provides the user with a good summary of information to see if they would like to interact with the post further by clicking on it and leaving a comment on it or liking it. Users do not need to be registered to view a post but do need to be logged in to like or comment on a post. There are different features and navbars available dependent on if a user is signed in or not.
 
 - Homepage signed in
+
 ![Homepage](docs/features/homepage_signed_in.png)
 
 - Homepage signed out
+
 ![Homepage](docs/features/homepage_not_signed_in.png)
+
+### Homepage - Mobile
+
+![Homepage - Mobile](docs/features/homepage_mobile.png)
 
 ### Navbar
 The navbar is featured on all pages, is responsive and has active links functionality so the user knows which link they are on by hovering on it in the navbar. It is identical on all pages and is easy to use providing a good user experience. For mobile view, the navbar reduces to a burger menu. The purpose of this feature is to allow users to navigate all pages easily across all devices without having to use a back button to get to the next page. There is also authentication in place which will change what displays on the navbar depending on whether a user is logged in or not.
@@ -206,90 +212,123 @@ The navbar is featured on all pages, is responsive and has active links function
 ![Navbar](docs/features/navbar_signedin.png)
 
 ### Sign in, Sign out and Sign up
-The website has a sign up functionality which then redirects the user to sign in once submitted and then once signed in there is an option to sign out.
+The website has a sign up functionality which then redirects the user to sign in once submitted and then once signed in there is an option to sign out. These pages are needed to provide authenication and to allow users access to content that is restricted to those who have created a login.
+
+- Sign up
 
 ![Sign up](docs/features/sign_up_form.png)
 
+- Sign in
+
 ![Sign in](docs/features/sign_in_form.png)
 
-![Sign in](docs/features/sign_out.png)
+- Sign out
+
+![Sign out](docs/features/sign_out.png)
 
 ### Posts
+Each post includes a title, category/game medium type and description. There is also the functionality to leave a comment and like a post. It has been created in way so users can easily digest the content of a post and interact with it if they wish.
 
 - Post
 
 ![Post](docs/features/posts.png)
 
-- Post page with comments section signed out
+If a user navigates to a post whilst being signed out then they will be able to view the post, read other users comments and see how many likes a post has however, won't be able to leave their own comments or likes. 
+
+- Post with comments signed out
 
 ![Post with comments signed out](docs/features/post_comment_page_signed_out.png)
 
-- Post page with comments section signed in
+If a user navigates to a post and is signed in they will be able to read the post, leave a like or comment. If the user owns the post then they will also have the option to edit the post or delete it.
+
+- Post with comments signed in
 
 ![Post with comments signed in](docs/features/post_comment_page_signed_in.png)
 
-- Add post form
+The add a post form is a simple form design taking the user through the journey of each field that needs to be added before being able to submit a post. There is also validation in place to ensure the user fills out all neccessary fields.
+ 
+- Post form
 
 ![Post form](docs/features/add_post.png)
 
-- Edit post form
+The edit post form is identical to the post form and allows the user to edit existing data that they have posted previously using the post form.
+
+-Edit post form
 
 ![Edit post form](docs/features/edit_post.png)
 
 ### Reviews
+Each review includes a title, genre, rating, game publisher, game developer and content. The review section provides all the interesting and neccessary information for a user to be able to then go off and do further research about the game. This page is designed to provide short and informational opinions of a game.
 
 - Review
 
 ![Review](docs/features/reviews.png)
 
-- Add review form
+The add a review form is a simple form design taking the user through the journey of each field that needs to be added before being able to submit a post. There is also validation in place to ensure the user fills out all neccessary fields.
+
+- Add review
 
 ![Add review](docs/features/add_review.png)
 
-- Edit review form
+The edit review form is identical to the post form and allows the user to edit existing data that they have posted previously using the review form.
+
+- Edit review
 
 ![Edit review](docs/features/edit_review.png)
 
 ### Events
+Each event includes a title, content, price, date, time, address, city and url. The event page is designed to be concise and easy to read providing all the neccessary details of an event. There is also an option to add URL so users can find out more about the event. The URL opens up in a new tab so as not to take the user away from the site permanently.
 
 - Event
 
 ![Event](docs/features/events_page.png)
 
-- Add event form
+The add an event form is a simple form design taking the user through the journey of each field that needs to be added before being able to submit an event. There is also validation in place to ensure the user fills out all neccessary fields.
+
+- Add event
 
 ![Add event](docs/features/add_event.png)
 
-- Edit event form
+The edit an event form is identical to the post form and allows the user to edit existing data that they have posted previously using the event form.
+
+- Edit event
 
 ![Edit event](docs/features/edit_event.png)
 
 ### Profiles
-- Most Active Community Gamers
+Most active community gamer profiles display to the right of the website on most pages or at the top of the page on smaller device. This gives a snapshot of users avatars and profile name which can then be clicked on to find out more information about individual users. 
+
+- Most active community gamers
 
 ![Most active profiles](docs/features/popular_profiles.png)
+A signed out user can view another users profile, read what they have added in their bio, see that users stats and the posts they follow.
 
-- Profile (signed out)
+- Profile signed out
 
 ![Profile signed out](docs/features/profiles_page.png)
+A signed in user can do everything a signed out user can do but also follow/unfollow profiles, edit their profile, change their username and change their password. The stats on the profile for posts created, number of followers and following autmotically update.
 
-- Profile (signed in)
+- Profile signed in
 
 ![Profile signed in](docs/features/profiles_page_signed_in.png)
+The edit profile page provides a user to edit their own details including adding a their name, favourite game, add/update their profile image and a section to give a summary about who they are.
 
-- Edit Profile
+- Profile edit details
 
 ![Edit details](docs/features/edit_details.png)
+The edit details page allows a user to change their username.
 
-- Edit Username
+- Profile edit username
 
 ![Edit username](docs/features/edit_username.png)
+The edit password page allows user to change their existing password to a new one. 
 
-- Edit Password
+- Profile edit password
 
 ![Edit password](docs/features/edit_password.png)
 
 ### About
+The about page is a clean and follows the styling of the rest of the website. It provides the user with information about the project, it's intent and links to the creators socials. 
 
 ![About](docs/features/about_page.png)
 
