@@ -3,15 +3,11 @@
 ## Introduction
 Gamer Verse is a content sharing platform to share reviews, posts and have social interactions with likeminded individuals about games. Users will be able to find posts and reviews relating to the gaming space, along with community events in local cities. This is the frontend section of the project built to work in conjuction with the backend DRF API as the database.
 
-DEPLOYED FRONTEND (HEROKU) - CLICK HERE
+DEPLOYED FRONTEND (HEROKU) - [CLICK HERE](https://gamer-verse.herokuapp.com/)
 DEPLOYED API (HEROKU) - [CLICK HERE](https://gamer-verse-drf-api.herokuapp.com/)
 DEPLOYED BACKEND REPOSITORY - [CLICK HERE](https://github.com/Jbachtiger/ci-pp5-gamer-verse-drf-api)
 
-
 ![Mockup]()
-
-## Live Site
-[Click here to view live site]()
 
 ## Table of Contents
 - [User Experience (UX)](#user-experience)
@@ -450,3 +446,5 @@ https://www.freepik.com/free-vector/404-error-concept-with-blue-robot_1535153.ht
 ### Resources
 
 ### Acknowledgements
+- My partner for her patience and continuing support
+- Code institute Slack Community and Tutor Support
