@@ -158,7 +158,7 @@ Below are links to each of the individual user stories that were completed withi
 - Profile
 ![Profile](docs/wireframes/profile.png)
 
-### Color Scheme
+### Colour Scheme
 
 Various colours were used throughout the website. There was the main colour scheme used with supporting colour pallets also. Below are the various pallets that were used.
 
@@ -197,6 +197,7 @@ A clean homepage with minimal distractions ensures the user's main focus is on t
 ![Homepage](docs/features/homepage_not_signed_in.png)
 
 ### Homepage - Mobile
+When the homepage and website is view on smaller screen sizes the navigation bar turns into a burger menu to ensure a good user experience. 
 
 ![Homepage - Mobile](docs/features/homepage_mobile.png)
 
