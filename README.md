@@ -510,20 +510,31 @@ You can create a clone of your repository by:
 ### Code
 
 ### Content 
-god of war - https://www.radiotimes.com/technology/gaming/god-of-war-ragnarok-release-date/
-skyrim - https://www.eurogamer.net/the-elder-scrolls-5-skyrim-review
-everdale - https://boardgamegeek.com/image/3918905/everdell
-zelda - eurogamer
-boardgame art - https://islaythedragon.com/featured/a-top-10-board-game-art-id-like-to-frame/
+Content for the various posts, events and reviews have either been written by myself or snippets taken from the below sources:
+- [IGN - The Last of Us](https://www.ign.com/articles/the-last-of-us-part-i-review) 
+- [IGN - Zelda](https://www.ign.com/articles/2017/03/02/the-legend-of-zelda-breath-of-the-wild-review) 
+- [IGN - God of War](https://www.ign.com/articles/2018/04/12/god-of-war-review) 
 
 ### Media
-https://logo.com/
-https://favicon.io/favicon-converter/
-https://www.freepik.com/free-vector/404-error-concept-with-blue-robot_1535153.htm#page=4&query=404%20not%20found&position=38&from_view=keyword
+Various images were sources for the content of the website including:
+- [God of War](https://www.radiotimes.com/technology/gaming/god-of-war-ragnarok-release-date/)
+- [Skyrim](https://www.eurogamer.net/the-elder-scrolls-5-skyrim-review)
+- [Everdale](https://boardgamegeek.com/image/3918905/everdell)
+- [Zelda](https://www.eurogamer.net/zelda-breath-of-the-wild-walkthrough-guide-tips-4857)
+- [Boardgame Art](https://islaythedragon.com/featured/a-top-10-board-game-art-id-like-to-frame/)
+- [Alita](https://www.denofgeek.com/movies/alita-battle-angel-review-good-looking-but-confused/)
+- [Logo](https://logo.com/)
+- [Favicon](https://favicon.io/favicon-converter/)
+- [404 error robot](https://www.freepik.com/free-vector/404-error-concept-with-blue-robot_1535153.htm#page=4&query=404%20not%20found&position=38&from_view=keyword)
 
 <a href="https://www.freepik.com/free-vector/oops-404-error-with-broken-robot-concept-illustration_8030430.htm#query=404&position=3&from_view=search">Image by storyset</a> on Freepik
 
 ### Resources
+- The Code Institute Moments Walkthrough - this walkthrough was used as a step-by-step guide to create the foundations of the project which was then built upon to make my own. I have clearly credited all code throughout the project with docstrings
+- Tutor Support - I intereacted with numerous people on the tutor support team to help me debug my code
+- [Stack Overflow](https://stackoverflow.com/) - was used to help reinforce understanding and problem solve
+- [React Documentation](https://reactjs.org/) - used to improve understanding of concepts
+- [React Bootstrap](https://react-bootstrap-v4.netlify.app/components/dropdowns/#custom-dropdown-components)- used to help with styling of project
 
 ### Acknowledgements
 - My partner for her patience and continuing support
