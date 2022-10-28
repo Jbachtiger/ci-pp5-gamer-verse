@@ -24,6 +24,7 @@ DEPLOYED BACKEND REPOSITORY - [CLICK HERE](https://github.com/Jbachtiger/ci-pp5-
 - [Agile](#agile)
 - [Features](#features)
 - [Future Development](#future-development)
+- [Components](#components)
 - [Testing](#testing)
     - [Manual Testing](#manual-testing)
     - [Automated Testing](#automated-testing)
@@ -292,6 +293,20 @@ The website has a sign up functionality which then redirects the user to sign in
 - Gamer scoreboard
 - Notifications for when a user recives a new follow, comment or like
 - A contact form so user can get in touch with site admins/provide feedback
+
+## Components
+A wide selection of components have been implemented throughout this project and reused on multiple pages:
+
+1. Asset.js - this componenet supplied the loading spinner used throughout the website
+2. Avatar.js - this component adds to the improved UX by allowing users to add a profile image of their choice 
+3. MoreDropdown.js - this allowed the user to edit and delete posts, events and reviews
+4. axiosDefault.js - an efficient way to communicate with the backend Gamer Verse API
+5. NavBar.js - this component is present on every page of the website. It makes navigating the website easy for the user and collapses into a hamburger menu for screen sizes medium and below
+6. NotFound.js - this component appears when a user tries to access invalid URLs. There is a clear message that appears telling the user the page doesn't exist
+7. CurrentUserContext.js - confirms the users logged in status so that appropritate functionality can be displayed and is available to the user such as create a post
+8. ProfileDataContext.js - provides the follow/unfollow functionality to other users across the Popular Profiles and Profile Pages components
+9. useRedirect.js - redirects a user to another pafe if they are not authorised to be on the page they are trying to access
+10. utils.js - provides the functionality to all of the components that utilise the infinite scroll
 
 ## Testing
 
