@@ -4,10 +4,12 @@
 Gamer Verse is a content sharing platform to share reviews, posts and have social interactions with likeminded individuals about games. Users will be able to find posts and reviews relating to the gaming space, along with community events in local cities. This is the frontend section of the project built to work in conjuction with the backend DRF API as the database.
 
 DEPLOYED FRONTEND (HEROKU) - [CLICK HERE](https://gamer-verse.herokuapp.com/)
+
 DEPLOYED API (HEROKU) - [CLICK HERE](https://gamer-verse-drf-api.herokuapp.com/)
+
 DEPLOYED BACKEND REPOSITORY - [CLICK HERE](https://github.com/Jbachtiger/ci-pp5-gamer-verse-drf-api)
 
-![Mockup]()
+![Mockup](docs/mockups/website_mockup_generator.png)
 
 ## Table of Contents
 - [User Experience (UX)](#user-experience)
@@ -291,7 +293,6 @@ The website has a sign up functionality which then redirects the user to sign in
 - Notifications for when a user recives a new follow, comment or like
 - A contact form so user can get in touch with site admins/provide feedback
 
-
 ## Testing
 
 ### Manual Testing
@@ -384,22 +385,22 @@ Warning: Invalid DOM property `class`. Did you mean `className`? - didn't add cl
 - PostgreSQL
 
 ### Frameworks, Libraries and Programs
-- Heroku - this was the platform used to deploy the application
-- Django - used to build the backend database that serves the API for the frontend
-- React-Bootstrap - CSS framework used to develop responsiveness and mobile-first approach
-- Gitpod - this was my code editor for this project
-- Git - was used for version control using the terminal through Gitpod to commit to Git and push to Github
-- Github - is used to store the code for this project after being pushed from Git
-- Techsini - was used to generate multi-device website mockups
-- Fireshot - this was a Google Chrome extension used to take screenshots
-- Google Fonts - used to import fonts to website
-- Font Awesome - library of icons used for social media and services we offer
-- Balsamiq - was used to create the wireframes during the design process.
-- GoogleDev Tools - was used to help investigate issues with code and visually see what code was related to which area on the page
-- ColorSpace - used to generate colour pallets for use on website
-- a11y - used to check website colour contrast and accessibility
-- Raw Pixel - used to find royalty-free images
-- Favicon.io - generated the websites favicon
+- [Heroku](https://www.heroku.com/) - this was the platform used to deploy the application
+- [Django](https://www.djangoproject.com/) - used to build the backend database that serves the API for the frontend
+- [React-Bootstrap](https://react-bootstrap-v4.netlify.app/) - CSS framework used to develop responsiveness and mobile-first approach
+- [Gitpod](https://gitpod.io/projects) - this was my code editor for this project
+- [Git](https://git-scm.com/) - was used for version control using the terminal through Gitpod to commit to Git and push to Github
+- [Github](https://github.com/) - is used to store the code for this project after being pushed from Git
+- [Techsini](http://techsini.com/multi-mockup/index.php) - was used to generate multi-device website mockups
+- [Fireshot](https://chrome.google.com/webstore/detail/take-webpage-screenshots/mcbpblocgmgfnpjjppndjkmgjaogfceg?hl=en) - this was a Google Chrome extension used to take screenshots
+- [Google Fonts](https://fonts.google.com/) - used to import fonts to website
+- [Font Awesome](https://fontawesome.com/) - library of icons used for social media and services we offer
+- [Balsamiq](https://balsamiq.com/) - was used to create the wireframes during the design process.
+- [GoogleDev Tools](https://developer.chrome.com/docs/devtools/) - was used to help investigate issues with code and visually see what code was related to which area on the page
+- [ColorSpace](https://mycolor.space/?hex=%23C8E6C9&sub=1) - used to generate colour pallets for use on website
+- [a11y](https://color.a11y.com/) - used to check website colour contrast and accessibility
+- [Raw Pixel](https://www.rawpixel.com/) - used to find royalty-free images
+- [Favicon.io](https://favicon.io/favicon-generator/) - generated the websites favicon
  
 ### Databases
 - SQLite: local database used to test during development
