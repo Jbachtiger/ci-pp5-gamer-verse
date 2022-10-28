@@ -1,7 +1,7 @@
 # PP5 - Advanced Frontend  - Gamer Verse
 
 ## Introduction
-Gamer Verse is a content sharing platform to share reviews, posts and have social interactions with likeminded individuals about games. Users will be able to find posts and reviews relating to the gaming space, along with community events in local cities. This is the frontend section of the project built to work in conjuction with the backend DRF API as the database.
+Gamer Verse is a content-sharing platform to share reviews, posts and have social interactions with like-minded individuals about games. Users will be able to find posts and reviews relating to the gaming space, along with community events in local cities. This is the frontend section of the project built to work in conjunction with the backend DRF API as the database.
 
 DEPLOYED FRONTEND (HEROKU) - [CLICK HERE](https://gamer-verse.herokuapp.com/)
 
@@ -54,13 +54,13 @@ DEPLOYED BACKEND REPOSITORY - [CLICK HERE](https://github.com/Jbachtiger/ci-pp5-
 
 ## User Experience
 ### Site Purpose
-To be the go-to gaming community by sharing latest news, reviews, and interesting gaming trivia that users can then comment on and have friendly discussion to share their passion. 
+To be the go-to gaming community by sharing the latest news, reviews, and interesting gaming trivia that users can then comment on and have a friendly discussion to share their passion. 
 
 ### Site Goals
 - To provide users with the latest news, reviews, and trivia about gaming
 - To bring people together and create a sense of belonging
 - To share with the community and create interesting discussions
-- To share local events with each other
+- To share local events
 
 __Sites Ideal Users__
 - An interest in gaming no matter what medium
@@ -68,7 +68,7 @@ __Sites Ideal Users__
 
 
 ### Epics
-8 Epics were created which were further developed into 34 User Stories. The details of each epic along with the associated user stories can be found in the kanban board [here](https://github.com/users/Jbachtiger/projects/3). 
+8 Epics were created which were further developed into 34 User Stories. The details of each epic along with the associated user stories can be found on the kanban board [here](https://github.com/users/Jbachtiger/projects/3). 
 
 1. Initial Django REST and React Setup [#1](https://github.com/Jbachtiger/ci-pp5-gamer-verse/issues/1)
 2. Authentication [#2](https://github.com/Jbachtiger/ci-pp5-gamer-verse/issues/2)
@@ -151,7 +151,7 @@ Below are links to each of the individual user stories that were completed withi
 
 ### Color Scheme
 
-Various colors where used throughout the website. There was a main color scheme used with supporting color pallets also. Below are the various pallets that were used.
+Various colours were used throughout the website. There was the main colour scheme used with supporting colour pallets also. Below are the various pallets that were used.
 
 Main Pallete:
 
@@ -177,7 +177,7 @@ A kanban board was created using GitHub Projects [here](https://github.com/users
 ## Features
 
 ### Homepage
-A clean homepage with minimal distractions ensuring the users main focus is on the list of posts. The posts are displayed in a single list, styled as cards to give a clean seperation between posts. Each post includes a title, description and category.This provides the user with a good summary of information to see if they would like to interact with the post further by clicking into it and leave a comment on it or like it. Users do not need to be registered to view a post but do need to be logged in to like or comment on a post. There are different features and navbars available dependent on if a user is signed in or not. 
+A clean homepage with minimal distractions ensures the user's main focus is on the list of posts. The posts are displayed in a single list, styled as cards to give a clean separation between posts. Each post includes a title, description and category. This provides the user with a good summary of information to see if they would like to interact with the post further by clicking on it and leaving a comment on it or liking it. Users do not need to be registered to view a post but do need to be logged in to like or comment on a post. There are different features and navbars available dependent on if a user is signed in or not.
 
 - Homepage signed in
 ![Homepage](docs/features/homepage_signed_in.png)
@@ -186,7 +186,7 @@ A clean homepage with minimal distractions ensuring the users main focus is on t
 ![Homepage](docs/features/homepage_not_signed_in.png)
 
 ### Navbar
-The navbar is featured on all pages, is responsive and has active links functionality so the the user knows which link they are on by hovering on it in the navbar. It is identical on all pages and is easy to use providing a good user experience. For mobile view, the navbar reduces to a burger menu. The purpose of this feature is to allow users to navigate all pages easily across all devices without having to use a back button to get to the next page. There is also authentication in place which will change what displays on the navbar depending on whether a user is logged in or not.
+The navbar is featured on all pages, is responsive and has active links functionality so the user knows which link they are on by hovering on it in the navbar. It is identical on all pages and is easy to use providing a good user experience. For mobile view, the navbar reduces to a burger menu. The purpose of this feature is to allow users to navigate all pages easily across all devices without having to use a back button to get to the next page. There is also authentication in place which will change what displays on the navbar depending on whether a user is logged in or not.
 
 - Logged out Navbar
 
@@ -197,7 +197,7 @@ The navbar is featured on all pages, is responsive and has active links function
 
 ![Navbar](docs/features/navbar_signedin.png)
 
-### Sign in, Sign out and Sign Up
+### Sign in, Sign out and Sign up
 The website has a sign up functionality which then redirects the user to sign in once submitted and then once signed in there is an option to sign out.
 
 ![Sign up](docs/features/sign_up_form.png)
@@ -291,21 +291,21 @@ The website has a sign up functionality which then redirects the user to sign in
 - Group messaging between users
 - Interactive gaming session where users can play browser games together on the website
 - Gamer scoreboard
-- Notifications for when a user recives a new follow, comment or like
-- A contact form so user can get in touch with site admins/provide feedback
+- Notifications for when a user receives a new follow, comment or like
+- A contact form so users can get in touch with site admins/provide feedback
 
 ## Components
 A wide selection of components have been implemented throughout this project and reused on multiple pages:
 
-1. Asset.js - this componenet supplied the loading spinner used throughout the website
+1. Asset.js - this component supplied the loading spinner used throughout the website
 2. Avatar.js - this component adds to the improved UX by allowing users to add a profile image of their choice 
 3. MoreDropdown.js - this allowed the user to edit and delete posts, events and reviews
 4. axiosDefault.js - an efficient way to communicate with the backend Gamer Verse API
 5. NavBar.js - this component is present on every page of the website. It makes navigating the website easy for the user and collapses into a hamburger menu for screen sizes medium and below
 6. NotFound.js - this component appears when a user tries to access invalid URLs. There is a clear message that appears telling the user the page doesn't exist
-7. CurrentUserContext.js - confirms the users logged in status so that appropritate functionality can be displayed and is available to the user such as create a post
+7. CurrentUserContext.js - confirms the user logged in status so that appropriate functionality can be displayed and is available to the user such as creating a post
 8. ProfileDataContext.js - provides the follow/unfollow functionality to other users across the Popular Profiles and Profile Pages components
-9. useRedirect.js - redirects a user to another pafe if they are not authorised to be on the page they are trying to access
+9. useRedirect.js - redirects a user to another page if they are not authorised to be on the page they are trying to access
 10. utils.js - provides the functionality to all of the components that utilise the infinite scroll
 
 ## Testing
@@ -314,12 +314,12 @@ A wide selection of components have been implemented throughout this project and
 I have manually tested all the features of the website making sure to go through them with different browsers and device sizes. I have also checked the features of the site against the original user stories to ensure they have all been actioned.
 
 - CRUD functionality has been tested for the following: Posts, Reviews, Events, Comments, Likes, Follows and Profile on both the development and deployed version of the site
-- All Nav links open in the correct page
+- All Nav links open on the correct page
 - All external links open in a new browser
-- Authentication works displaying a different set of options for logged in users compared to logged out
-- Pages that are intended for logged in users only will redirect any users who are not logged in back to homepage
+- Authentication works displaying a different set of options for logged-in users compared to logged-out
+- Pages that are intended for logged-in users only will redirect any users who are not logged in back to the homepage
 - Validation on forms works
-- Not found pages display correctly when a non-existent url is searched or a Post, Review or Event that doesn't exist is searched
+- Not found pages display correctly when a non-existent URL is searched or a Post, Review or Event that doesn't exist is searched
 
 __User Stories__
 
@@ -351,10 +351,10 @@ The website was viewed on a variety of devices of all sizes including:
 - iPad Pro
 - Surface Duo
 
-The website is fully responsive and no issues found.
+The website is fully responsive and no issues were found.
 
 ### W3C Validatior
-The official W3C Markup Validator was used to validate both the HTML and CSS of the project to ensure there were no syntax errors within the site. 
+The official W3C Markup Validator was used to validate the CSS in the project.
 
 __W3C CSS Markup Validatior__ - https://jigsaw.w3.org/css-validator/validator
 
@@ -363,7 +363,7 @@ All CSS code passed through the validator without any issues.
 ![CSS Validation](docs/testing/css_validated.png)
 
 ### ES Lint
-The ESLint extension was downloaded on Gitpod and integrated throughout the entire project. Any errors that it picked up were corrected, however, most of these were minor and to do with spelling mistakes. Each page was meticulaiously scanned for probelms and fixed if any came up.
+The ESLint extension was downloaded on Gitpod and integrated throughout the entire project. Any errors that it picked up were corrected, however, most of these were minor and had to do with spelling mistakes. Each page was meticulously scanned for problems and fixed if any came up.
 
 ### Colour Contrast Checks
 
@@ -373,7 +373,7 @@ The website passed the colour contrast accessibility validator by A11y.
 
 ### Lighthouse Tool
 
-The website has performed really well in the Lighthouse tool, in particular for Accessibility on all pages. Below is an example of the scores for the About page which is reflective for all pages:
+The website has performed well in the Lighthouse tool, in particular for Accessibility on all pages. Below is an example of the scores for the About page which is reflective for all pages:
 
 ![About](docs/testing/lighthouse.png)
 
@@ -382,11 +382,11 @@ The website has performed really well in the Lighthouse tool, in particular for 
 
 1. Some of the validation for the post create form wasn't working as expected and allowed posts to be created without any content being added. This was an issue on the API side and was fixed by updating the Gamer Verse API post model to make the description field required.
 
-2. A 'The submitted data was not a file. Check the encoding type on the form.' error occured when trying to submit an image for the post create form. This was fixed by changing 'formData.append('image', image)' to 'formData.append('image', imageInput.current.files[0]);'. [Link to commit](https://github.com/Jbachtiger/ci-pp5-gamer-verse/commit/c6df28fc5bb59e496ad93c5217f3c81c63da4083)
+2. A 'The submitted data was not a file. Check the encoding type on the form.' error occurred when trying to submit an image for the post create form. This was fixed by changing 'formData.append('image', image)' to 'formData.append('image', imageInput.current.files[0]);'. [Link to commit](https://github.com/Jbachtiger/ci-pp5-gamer-verse/commit/c6df28fc5bb59e496ad93c5217f3c81c63da4083)
 
 3. The game publisher and developer fields were not clickable in the review create form. This was fixed by changing the fields within the form control from as="text" to type="text". [Link to commit](https://github.com/Jbachtiger/ci-pp5-gamer-verse/commit/1a20ae10a43678975b5a0787df2a49d55c9b1659) 
 
-4. An issue occured where the reviews page wasn't displaying images correctly and they just showed as broken. After much debugging and with the help of Rebecca from Tutor support the issue was finally narrowed down to being with the reviews serializer not having an image field included. Once added the images displayed as expected.
+4. An issue occurred where the reviews page wasn't displaying images correctly and they just showed as broken. After much debugging and with the help of Rebecca from Tutor support the issue was finally narrowed down to being with the reviews serializer not having an image field included. Once added the images displayed as expected.
 
 5. The following error displayed 'Warning: Invalid DOM property `class`. Did you mean `className`?'. This happened due to adding class rather than className for the favourite navbar. [Link to commit](https://github.com/Jbachtiger/ci-pp5-gamer-verse/commit/9afca9c663660f9bc6e3714ade23a1bcc72f594b)
 
@@ -406,8 +406,8 @@ No known bugs left. If you find any please contact the project owner.
 - [Django](https://www.djangoproject.com/) - used to build the backend database that serves the API for the frontend
 - [React-Bootstrap](https://react-bootstrap-v4.netlify.app/) - CSS framework used to develop responsiveness and mobile-first approach
 - [Gitpod](https://gitpod.io/projects) - this was my code editor for this project
-- [Git](https://git-scm.com/) - was used for version control using the terminal through Gitpod to commit to Git and push to Github
-- [Github](https://github.com/) - is used to store the code for this project after being pushed from Git
+- [Git](https://git-scm.com/) - was used for version control using the terminal through Gitpod to commit to Git and push to GitHub
+- [GitHub](https://github.com/) - is used to store the code for this project after being pushed from Git
 - [Techsini](http://techsini.com/multi-mockup/index.php) - was used to generate multi-device website mockups
 - [Fireshot](https://chrome.google.com/webstore/detail/take-webpage-screenshots/mcbpblocgmgfnpjjppndjkmgjaogfceg?hl=en) - this was a Google Chrome extension used to take screenshots
 - [Google Fonts](https://fonts.google.com/) - used to import fonts to website
@@ -428,15 +428,15 @@ This application has been deployed using Heroku by following these steps:
 
 ### Workspace and Deployment Setup
 
-1. Create a new repository in GitHub
+1. Create a new repository on GitHub
 2. Create a new Gitpod workspace
-3. Once workspace has been loaded, run following command, enter y to confirm installing the create-react-app package and wait until all packages have installed. This will pre-install all neccessary packages to make your project work.
+3. Once the workspace has been loaded, run the following command, enter y to confirm installing the create-react-app package and wait until all packages have been installed. This will pre-install all necessary packages to make your project work.
 
 ```
 npx create-react-app . --template git+https://github.com/Code-Institute-Org/cra-template-moments.git --use-npm
 ```
 
- - Alternalively, you can use the following however, you may see different outcomes to this project as the dependencies will be different versions.
+ - Alternatively, you can use the following however, you may see different outcomes to this project as the dependencies will be different versions.
 
 ```
 npx create-react-app . --use-npm
@@ -450,10 +450,10 @@ npx create-react-app . --use-npm
 9. Navigate to 'App connected to GitHub' and search for the relevant repository
 10. Select the repository you wish to deploy and click 'Connect'
 11. Navigate to 'Manual Deploy' and click 'Deploy Branch'
-12. Check the build logs to monitor build and ensure deployment is successful
+12. Check the build logs to monitor the build and ensure deployment is successful
 13. The build is complete when the log states 'Build succeeded!'
 14. Click the 'Open App' button to view deployed app
-15. Navigate to Gitpod, install react-bootstrap by running the following terminal command:
+15. Navigate to Gitpod, and install react-bootstrap by running the following terminal command:
 
 ```
 npm install react-bootstrap@1.6.3 bootstrap@4.6.0
@@ -501,9 +501,9 @@ You can create a clone of your repository by:
 
 1. Locate the repository you wish to clone https://github.com/Jbachtiger/ci-pp5-gamer-verse
 2. Click the arrow on the 'Code' button at the top of the list of files
-3. Select the clone by https and copy the URL using the provided clipboard
+3. Select the clone by HTTPS and copy the URL using the provided clipboard
 4. Navigate to your chosen code editor and within the terminal change the directory to the location your to clone the repository to
-5. Type 'git clone' and paste the https link you copied from GitHub
+5. Type 'git clone' and paste the HTTPS link you copied from GitHub
 6. Press enter and git will clone the repository to your local machine
 
 ## Credits
@@ -530,11 +530,11 @@ Various images were sources for the content of the website including:
 <a href="https://www.freepik.com/free-vector/oops-404-error-with-broken-robot-concept-illustration_8030430.htm#query=404&position=3&from_view=search">Image by storyset</a> on Freepik
 
 ### Resources
-- The Code Institute Moments Walkthrough - this walkthrough was used as a step-by-step guide to create the foundations of the project which was then built upon to make my own. I have clearly credited all code throughout the project with docstrings
-- Tutor Support - I intereacted with numerous people on the tutor support team to help me debug my code
-- [Stack Overflow](https://stackoverflow.com/) - was used to help reinforce understanding and problem solve
+- The Code Institute Moments Walkthrough - this walkthrough was used as a step-by-step guide to creating the foundations of the project which was then built upon to make my own. I have credited all code throughout the project with docstrings
+- Tutor Support - I interacted with numerous people on the tutor support team to help me debug my code
+- [Stack Overflow](https://stackoverflow.com/) - was used to help reinforce understanding and problem solving
 - [React Documentation](https://reactjs.org/) - used to improve understanding of concepts
-- [React Bootstrap](https://react-bootstrap-v4.netlify.app/components/dropdowns/#custom-dropdown-components)- used to help with styling of project
+- [React Bootstrap](https://react-bootstrap-v4.netlify.app/components/dropdowns/#custom-dropdown-components)- used to help with the styling of the project
 
 ### Acknowledgements
 - My partner for her patience and continuing support
