@@ -24,6 +24,7 @@ DEPLOYED BACKEND REPOSITORY - [CLICK HERE](https://github.com/Jbachtiger/ci-pp5-
 - [Agile](#agile)
 - [Features](#features)
     - [Homepage](#homepage)
+    - [Homepage - Mobile](#homepage---mobile)
     - [NavBar](#navbar)
     - [Sign in, Sign out and Sign up](#sign-in-sign-out-and-sign-up)
     - [Posts](#posts)
