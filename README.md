@@ -450,11 +450,11 @@ No known bugs left. If you find any please contact the project owner.
 
 ## Technologies Used
 ### Languages Used
-- HTML5
-- CSS3
-- JavaScript
-- Python
-- PostgreSQL
+- [HTML5](https://developer.mozilla.org/en-US/docs/Glossary/HTML5)
+- [CSS3](https://developer.mozilla.org/en-US/docs/Web/CSS)
+- [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+- [Python](https://www.python.org/)
+- [PostgreSQL](https://www.postgresql.org/)
 
 ### Frameworks, Libraries and Programs
 - [Heroku](https://www.heroku.com/) - this was the platform used to deploy the application
