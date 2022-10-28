@@ -54,7 +54,6 @@ DEPLOYED BACKEND REPOSITORY - [CLICK HERE](https://github.com/Jbachtiger/ci-pp5-
     - [Forking Repository](#forking-repository)
     - [Cloning Repository](#cloning-repository)
 - [Credits](#credits)
-    - [Code](#code)
     - [Content](#content)
     - [Media](#media)
     - [Resources](#resources)
@@ -98,8 +97,8 @@ Below are links to each of the individual user stories that were completed withi
     - Early deployment of the site to Heroku [#11](https://github.com/Jbachtiger/ci-pp5-gamer-verse/issues/11)
 
 2. Authentication
-    - Register for an account [#12](https://github.com/Jbachtiger/ci-pp5-gamer-verse/issues/12)]
-    - Sign in with your account [#13](https://github.com/Jbachtiger/ci-pp5-gamer-verse/issues/13)]
+    - Register for an account [#12](https://github.com/Jbachtiger/ci-pp5-gamer-verse/issues/12)
+    - Sign in with your account [#13](https://github.com/Jbachtiger/ci-pp5-gamer-verse/issues/13)
     - Logged in/out user status [#14](https://github.com/Jbachtiger/ci-pp5-gamer-verse/issues/14)
     - Sign out [#15](https://github.com/Jbachtiger/ci-pp5-gamer-verse/issues/15)
     - Access tokens [#16](https://github.com/Jbachtiger/ci-pp5-gamer-verse/issues/16)
@@ -197,7 +196,7 @@ A clean homepage with minimal distractions ensures the user's main focus is on t
 ![Homepage](docs/features/homepage_not_signed_in.png)
 
 ### Homepage - Mobile
-When the homepage and website is view on smaller screen sizes the navigation bar turns into a burger menu to ensure a good user experience. 
+When the homepage and website is viewed on smaller screen sizes the navigation bar turns into a burger menu to ensure a good user experience. 
 
 ![Homepage - Mobile](docs/features/homepage_mobile.png)
 
@@ -303,26 +302,31 @@ Most active community gamer profiles display to the right of the website on most
 - Most active community gamers
 
 ![Most active profiles](docs/features/popular_profiles.png)
+
 A signed out user can view another users profile, read what they have added in their bio, see that users stats and the posts they follow.
 
 - Profile signed out
 
 ![Profile signed out](docs/features/profiles_page.png)
+
 A signed in user can do everything a signed out user can do but also follow/unfollow profiles, edit their profile, change their username and change their password. The stats on the profile for posts created, number of followers and following autmotically update.
 
 - Profile signed in
 
 ![Profile signed in](docs/features/profiles_page_signed_in.png)
+
 The edit profile page provides a user to edit their own details including adding a their name, favourite game, add/update their profile image and a section to give a summary about who they are.
 
 - Profile edit details
 
 ![Edit details](docs/features/edit_details.png)
+
 The edit details page allows a user to change their username.
 
 - Profile edit username
 
 ![Edit username](docs/features/edit_username.png)
+
 The edit password page allows user to change their existing password to a new one. 
 
 - Profile edit password
@@ -369,6 +373,7 @@ I have manually tested all the features of the website making sure to go through
 - Pages that are intended for logged-in users only will redirect any users who are not logged in back to the homepage
 - Validation on forms works
 - Not found pages display correctly when a non-existent URL is searched or a Post, Review or Event that doesn't exist is searched
+- All pages are mobile responsive
 
 __User Stories__
 
@@ -382,6 +387,7 @@ __Browsers__
 
 - The website was tested on the following browsers: Google Chrome, Firefox, Microsoft Edge and Safari
 - For each browser, functionality was tested including links and the responsive design
+- It is worth noting that in order to be able to test the full sign in functionality on Safari or Firefox, the "Prevent Cross-Site Tracking" needed to be turned off in the browser settings. This is because if this isn't done, the cookies are not saved and access tokens are not refreshed. This means a user can be created however, the sign in functionality doesn't work. 
 
 __Devices Tested__
 
@@ -573,8 +579,6 @@ Various images were sources for the content of the website including:
 - [Logo](https://logo.com/)
 - [Favicon](https://favicon.io/favicon-converter/)
 - [404 error robot](https://www.freepik.com/free-vector/404-error-concept-with-blue-robot_1535153.htm#page=4&query=404%20not%20found&position=38&from_view=keyword)
-
-<a href="https://www.freepik.com/free-vector/oops-404-error-with-broken-robot-concept-illustration_8030430.htm#query=404&position=3&from_view=search">Image by storyset</a> on Freepik
 
 ### Resources
 - The Code Institute Moments Walkthrough - this walkthrough was used as a step-by-step guide to creating the foundations of the project which was then built upon to make my own. I have credited all code throughout the project with docstrings
