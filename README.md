@@ -364,17 +364,19 @@ The website has performed really well in the Lighthouse tool, in particular for 
 
 
 ## Solved Bugs
-validation errors not showing for post create form. Updated model in drf api to make field required.
 
-The submitted data was not a file. Check the encoding type on the form. fixed by changing formData.append('image', image) needed to be changed to formData.append('image', imageInput.current.files[0]);
+1. Some of the validation for the post create form wasn't working as expected and allowed posts to be created without any content being added. This was an issue on the API side and was fixed by updating the Gamer Verse API post model to make the description field required.
 
-game publisher and developer fields not clickable - fixed by change as to type in form field
+2. A 'The submitted data was not a file. Check the encoding type on the form.' error occured when trying to submit an image for the post create form. This was fixed by changing 'formData.append('image', image)' to 'formData.append('image', imageInput.current.files[0]);'. [Link to commit](https://github.com/Jbachtiger/ci-pp5-gamer-verse/commit/c6df28fc5bb59e496ad93c5217f3c81c63da4083)
 
-image not displaying for reviews page - needed to modifiy reviews serializer to include image for field
+3. The game publisher and developer fields were not clickable in the review create form. This was fixed by changing the fields within the form control from as="text" to type="text". [Link to commit](https://github.com/Jbachtiger/ci-pp5-gamer-verse/commit/1a20ae10a43678975b5a0787df2a49d55c9b1659) 
 
-Warning: Invalid DOM property `class`. Did you mean `className`? - didn't add className rather class for favourite navbar
+4. An issue occured where the reviews page wasn't displaying images correctly and they just showed as broken. After much debugging and with the help of Rebecca from Tutor support the issue was finally narrowed down to being with the reviews serializer not having an image field included. Once added the images displayed as expected.
+
+5. The following error displayed 'Warning: Invalid DOM property `class`. Did you mean `className`?'. This happened due to adding class rather than className for the favourite navbar. [Link to commit](https://github.com/Jbachtiger/ci-pp5-gamer-verse/commit/9afca9c663660f9bc6e3714ade23a1bcc72f594b)
 
 ## Known Bugs
+No known bugs left. If you find any please contact the project owner.
 
 ## Technologies Used
 ### Languages Used
