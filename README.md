@@ -23,15 +23,21 @@ DEPLOYED BACKEND REPOSITORY - [CLICK HERE](https://github.com/Jbachtiger/ci-pp5-
     - [Fonts](#fonts)
 - [Agile](#agile)
 - [Features](#features)
+    - [Homepage](#homepage)
+    - [NavBar](#navbar)
+    - [Sign in, Sign out and Sign up](#sign-in-sign-out-and-sign-up)
+    - [Posts](#posts)
+    - [Reviews](#reviews)
+    - [Events](#events)
+    - [Profiles](#profiles)
+    - [About](#about)
 - [Future Development](#future-development)
 - [Components](#components)
 - [Testing](#testing)
     - [Manual Testing](#manual-testing)
-    - [Automated Testing](#automated-testing)
     - [Browser and Device Testing](#browser-and-device-testing)
     - [W3C Validator](#w3c-validatior)
-    - [JS Lint](#js-lint)
-    - [PEP8 Linter Results](#pep8-linter-results)
+    - [ES Lint](#es-lint)
     - [Colour Contrast Checks](#colour-contrast-checks)
     - [Lighthouse Tool](#lighthouse-tool)
 - [Solved Bugs](#solved-bugs)
@@ -41,6 +47,8 @@ DEPLOYED BACKEND REPOSITORY - [CLICK HERE](https://github.com/Jbachtiger/ci-pp5-
     - [Frameworks, Libraries and Programs](#frameworks-libraries-and-programs)
     - [Databases](#databases)
 - [Deployment](#deployment)
+    - [Workspace and Deployment Setup](#workspace-and-deployment-setup)
+    - [Connecting to API](#connecting-to-api)
     - [Deploying to Heroku](#deploying-to-heroku)
     - [Forking Repository](#forking-repository)
     - [Cloning Repository](#cloning-repository)
@@ -507,8 +515,6 @@ You can create a clone of your repository by:
 6. Press enter and git will clone the repository to your local machine
 
 ## Credits
-### Code
-
 ### Content 
 Content for the various posts, events and reviews have either been written by myself or snippets taken from the below sources:
 - [IGN - The Last of Us](https://www.ign.com/articles/the-last-of-us-part-i-review) 
